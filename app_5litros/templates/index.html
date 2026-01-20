@@ -21,6 +21,15 @@
             <p><strong>Resolution:</strong> {{ video_data.get('width', 'N/A') }}x{{ video_data.get('height', 'N/A') }}</p>
             <p><strong>FPS:</strong> {{ video_data.get('fps', 'N/A') }}</p>
             
+            <h3>Metadata</h3>
+            <p><strong>Prompt:</strong> {{ metadata.get('prompt', 'N/A') }}</p>
+            <p><strong>Steps:</strong> {{ metadata.get('steps', 'N/A') }}</p>
+            
+            <h3>Parameters Used</h3>
+            <p><strong>Words in Prompt:</strong> {{ n_palabras_por_prompt }}</p>
+            <p><strong>Steps:</strong> {{ n_steps }}</p>
+            <p><strong>T Step:</strong> {{ T_step }}</p>
+            
             <h3>Water Consumption Estimate</h3>
             <p><strong>Energy for Image:</strong> {{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh</p>
             <p><strong>Energy for Data Center:</strong> {{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh</p>
@@ -39,7 +48,7 @@
     <script>
         let currentIndex = {{ current_index }};
         const totalVideos = {{ total_videos }};
-        const videoFiles = {{ video_files|tojson }};
+        const videoFiles = {{ video_files | tojson }};
         
         const videoPlayer = document.getElementById('videoPlayer');
         
