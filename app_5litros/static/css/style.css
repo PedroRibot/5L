@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-container {
+    margin: 20px 0;
+}
+
+.data {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+}

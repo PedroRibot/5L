@@ -16,9 +16,8 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions", type
         "period": period,
         "nsfw": nsfw,
         "type": type
-        
     }
-    
+
     try:
         print(f"Fetching top {limit} images from Civitai...")
         response = requests.get(base_url, params=params)
@@ -84,7 +83,7 @@ def get_file_extension(url, default_ext=".jpg"):
     
     return default_ext
 
-def download_all_media(images_data, output_dir="downloads"):
+def download_all_media(images_data, output_dir="civitai_downloads"):
     """Download all images/videos from the fetched data."""
     
     if not images_data or 'items' not in images_data:
@@ -92,14 +91,14 @@ def download_all_media(images_data, output_dir="downloads"):
         return None
     
     # Create output directory structure
-    Path(output_dir).mkdir(parents=True, exist_ok=True)
-    images_dir = Path(output_dir) / "images"
-    videos_dir = Path(output_dir) / "videos"
-    metadata_dir = Path(output_dir) / "metadata"
+    today = datetime.now().strftime('%Y-%m-%d')
+    output_dir = Path(output_dir) / today
+    output_dir.mkdir(parents=True, exist_ok=True)
+    images_dir = output_dir / "images"
+    videos_dir = output_dir / "videos"
     
     images_dir.mkdir(exist_ok=True)
     videos_dir.mkdir(exist_ok=True)
-    metadata_dir.mkdir(exist_ok=True)
     
     items = images_data['items']
     
@@ -133,7 +132,7 @@ def download_all_media(images_data, output_dir="downloads"):
             save_dir = images_dir
             media_type = "image"
         
-        filename = f"{item_id}_{idx}{file_ext}"
+        filename = f"{idx}{file_ext}"
         save_path = save_dir / filename
         
         print(f"\n[{idx}/{len(items)}] Item ID: {item_id}")
@@ -147,7 +146,7 @@ def download_all_media(images_data, output_dir="downloads"):
                 stats['images_downloaded'] += 1
             
             # Save metadata
-            metadata_file = metadata_dir / f"{item_id}_metadata.json"
+            metadata_file = save_dir / f"{idx}_metadata.json"
             with open(metadata_file, 'w', encoding='utf-8') as f:
                 json.dump(item, f, indent=2, ensure_ascii=False)
         else:
@@ -176,15 +175,6 @@ def display_download_summary(stats):
     
     print("=" * 80)
 
-def save_full_metadata(images_data, output_dir="downloads"):
-    """Save complete API response to JSON file."""
-    
-    metadata_path = Path(output_dir) / "full_response.json"
-    
-    with open(metadata_path, 'w', encoding='utf-8') as f:
-        json.dump(images_data, f, indent=2, ensure_ascii=False)
-    
-    print(f"\n✓ Full metadata saved to {metadata_path}")
 
 def main():
     """Main function to run the Civitai downloader."""
@@ -195,18 +185,17 @@ def main():
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
     # Configuration
-    LIMIT = 100
+    LIMIT = 10
     PERIOD = "Day"
     SORT = "Most Reactions"
-    OUTPUT_DIR = "civitai_downloads"
-    NSFW = True
-    IMGTYPE = "video"
+    OUTPUT_DIR = "downloads"
+    NSFW = False
+    IMGTYPE = "image"
     
     print(f"Configuration:")
     print(f"  - Limit: {LIMIT} items")
     print(f"  - Period: {PERIOD}")
     print(f"  - Sort: {SORT}")
-    print(f"  - Output: {OUTPUT_DIR}/\n")
     print(f"  - Output: {OUTPUT_DIR}/\n")
     
     # Fetch and download
@@ -216,14 +205,13 @@ def main():
         print("Failed to retrieve images from Civitai API")
         return
     
-    save_full_metadata(images_data, OUTPUT_DIR)
+    # save_full_metadata(images_data, OUTPUT_DIR)
     stats = download_all_media(images_data, OUTPUT_DIR)
     display_download_summary(stats)
     
     print(f"\nFiles saved to: {OUTPUT_DIR}/")
-    print(f"  - images/     : Downloaded image files")
-    print(f"  - videos/     : Downloaded video files")
-    print(f"  - metadata/   : Individual item metadata (JSON)")
+    print(f"  - images/     : Downloaded image files and metadata (JSON)")
+    print(f"  - videos/     : Downloaded video files and metadata (JSON)")
     print(f"  - full_response.json : Complete API response")
 
 if __name__ == "__main__":

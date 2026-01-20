@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Water Consumption Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Video Water Consumption Visualizer</h1>
+        <p>Playing video {{ current_index + 1 }} of {{ total_videos }}</p>
+        
+        <div class="video-container">
+            <video id="videoPlayer" controls autoplay width="100%">
+                <source src="/video/{{ video_files[current_index] }}" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="data">
+            <h3>Video Properties</h3>
+            <p><strong>Duration:</strong> {{ video_data.get('duration', 'N/A') }} seconds</p>
+            <p><strong>Resolution:</strong> {{ video_data.get('width', 'N/A') }}x{{ video_data.get('height', 'N/A') }}</p>
+            <p><strong>FPS:</strong> {{ video_data.get('fps', 'N/A') }}</p>
+            
+            <h3>Water Consumption Estimate</h3>
+            <p><strong>Energy for Image:</strong> {{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh</p>
+            <p><strong>Energy for Data Center:</strong> {{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh</p>
+            <p><strong>Water for Energy:</strong> {{ "%.6f" % estimate.get('water_for_energy_l', 0) }} liters</p>
+            <p><strong>Water for Data Center:</strong> {{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} liters</p>
+            <p><strong>Total Water:</strong> {{ "%.6f" % estimate.get('w_tot_l', 0) }} liters</p>
+        </div>
+        
+        <div class="controls">
+            <button onclick="previousVideo()">Previous</button>
+            <button onclick="nextVideo()">Next</button>
+            <button onclick="togglePlayPause()">Play/Pause</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = {{ current_index }};
+        const totalVideos = {{ total_videos }};
+        const videoFiles = {{ video_files|tojson }};
+        
+        const videoPlayer = document.getElementById('videoPlayer');
+        
+        videoPlayer.addEventListener('ended', function() {
+            nextVideo();
+        });
+        
+        function nextVideo() {
+            currentIndex = (currentIndex + 1) % totalVideos;
+            loadVideo();
+        }
+        
+        function previousVideo() {
+            currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
+            loadVideo();
+        }
+        
+        function togglePlayPause() {
+            if (videoPlayer.paused) {
+                videoPlayer.play();
+            } else {
+                videoPlayer.pause();
+            }
+        }
+        
+        function loadVideo() {
+            window.location.href = `/play/${currentIndex}`;
+        }
+    </script>
+</body>
+</html>
