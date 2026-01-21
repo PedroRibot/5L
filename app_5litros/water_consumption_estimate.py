@@ -13,7 +13,6 @@ I_grid = 2.5
 WUE = 1.0
 PUE = 1.65
 Token_Latency = 0.01 
-Prompt_Latency = 0.175 
 
 def get_video_properties(video_path):
     """Extract duration, resolution, and fps from mp4 file."""
@@ -52,17 +51,15 @@ def get_video_properties(video_path):
     }
 
 
-
 def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frames_per_second=30.0, n_palabras_por_prompt=70.0, n_steps=25.0, T_step = 0.4):
-    
+
     N_tokens = n_palabras_por_prompt / 4 
     Latencia = (Token_Latency * N_tokens) + (n_steps * T_step)  
-    Keyframes_generados = video_duration * frames_per_second * 0.15 if Video else 1.0
+    Keyframes_generados = video_duration * frames_per_second * 0.15 if Video else 4.0
 
-    Factor_de_iteracion = 1.0 if Video else 4.0
     Factor_de_entrenamiento = 1.2
 
-    energia_imagen = (Latencia * Potencia_Efectiva / 3600) * Keyframes_generados * Factor_de_iteracion * Factor_de_entrenamiento 
+    energia_imagen = (Latencia * Potencia_Efectiva / 3600) * Keyframes_generados * Factor_de_entrenamiento 
     energia_data_center = energia_imagen * PUE
     water_for_energy_l = energia_imagen * I_grid
     water_for_data_center_l = energia_data_center * WUE
@@ -75,21 +72,3 @@ def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frame
         "water_for_data_center_l": water_for_data_center_l,
         "w_tot_l": w_tot_l,
     }
-
-def main(type = "videos", file = 1, date = datetime.now().strftime('%Y-%m-%d')):
-    video_path = f"../downloads/{date}/{type}/{file}.mp4"
-    video_data = get_video_properties(video_path)
-    print(video_data)
-    estimate = calculate_water_consumption_estimate(
-        Video=True,
-        video_duration=video_data["duration"],
-        frames_per_second=video_data["fps"],
-        n_palabras_por_prompt=70.0,
-        n_steps=25.0
-    )
-    print(estimate)
-
-
-if __name__ == "__main__":
-    main()
-    

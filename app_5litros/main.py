@@ -24,22 +24,27 @@ class WaterEstimatorApp:
         """Run the complete workflow: fetch, download, and estimate."""
         print("Starting full workflow...")
         
-        # # Step 1: Fetch data
-        # images_data = fetch_top_civitai_images(
-        #     limit=self.limit, period=self.period, sort=self.sort, type="video"
-        # )
-        # if not images_data:
-        #     print("Failed to fetch data.")
-        #     return
+        # Step 1: Fetch data
+        images_data = fetch_top_civitai_images(
+            limit=self.limit, period=self.period, sort=self.sort, type="video"
+        )
+        if not images_data:
+            print("Failed to fetch data.")
+            return
         
-        # # Step 2: Download media
-        # stats = download_all_media(images_data, self.output_dir)
-        # if not stats:
-        #     print("Download failed.")
-        #     return
+        today = datetime.now().strftime('%Y-%m-%d')
+
+        all_data = self.output_dir / today / f"all_fetched_data_{today}.json"
+        with open(all_data, 'w') as f:
+            json.dump(images_data, f, indent=2)
+
+        # Step 2: Download media
+        stats = download_all_media(images_data, self.output_dir)
+        if not stats:
+            print("Download failed.")
+            return
         
         # Step 3: Run estimation on downloaded videos
-        today = datetime.now().strftime('%Y-%m-%d')
         video_dir = self.output_dir / today / "videos"
         estimates = {}
         if video_dir.exists():
@@ -53,7 +58,7 @@ class WaterEstimatorApp:
                 n_steps = 25
                 video_data = None
 
-                meta = self.load_meta( metadata_file)
+                meta = self.load_meta(metadata_file)
 
                 if meta.get("meta"):
                     prompt = meta.get("meta", {}).get("prompt")
@@ -74,6 +79,14 @@ class WaterEstimatorApp:
                 height = video_data.get("height", 768)
                 resolution = width * height 
 
+                new_metadata = {
+                    "id": meta.get("id", ""),
+                    "url" : meta.get("url", ""),
+                    "created_at": meta.get("createdAt", ""),
+                    "prompt": prompt,
+                    "steps": n_steps
+                }
+                
                 resolution_factor = resolution / (768 * 768) / 3 
 
                 print(f"Resolution factor for {video_file.name}: {resolution_factor}")
@@ -89,11 +102,11 @@ class WaterEstimatorApp:
                 estimates[video_file.name] = {
                     "video_data": video_data,
                     "estimate": estimate,
-                    "prompt": prompt,
+                    "metadata": new_metadata,
                 }
         
         # Save estimates to JSON
-        estimates_file = self.output_dir / today / "estimates.json"
+        estimates_file = self.output_dir / today / f"estimates_{today}.json"
         with open(estimates_file, 'w') as f:
             json.dump(estimates, f, indent=2)
         
@@ -112,5 +125,5 @@ class WaterEstimatorApp:
             time.sleep(3600)  # Check every hour
 
 if __name__ == "__main__":
-    app = WaterEstimatorApp(limit=10)  # Download 100 videos
-    app.run_continuous()  # Run continuously, downloading daily
+    app = WaterEstimatorApp(limit=10)  
+    app.run_continuous()  
