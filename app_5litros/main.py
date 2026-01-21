@@ -7,18 +7,13 @@ import json
 
 class WaterEstimatorApp:
 
-    def __init__(self, limit=10, period="Day", sort="Most Reactions", output_dir="../downloads", nsfw=False):
+    def __init__(self, limit=10, period="Day", sort="Most Reactions", output_dir="../downloads", nsfw=False, type="video"):
         self.limit = limit
         self.period = period
         self.sort = sort
         self.output_dir = Path(output_dir)
         self.nsfw = nsfw
-
-    def load_meta(self, data_file):
-        if data_file.exists():
-            with open(data_file, 'r') as f:
-                return json.load(f)
-        return {}
+        self.type = type
     
     def run_full_workflow(self):
         """Run the complete workflow: fetch, download, and estimate."""
@@ -34,82 +29,72 @@ class WaterEstimatorApp:
         
         today = datetime.now().strftime('%Y-%m-%d')
 
-        all_data = self.output_dir / today / f"all_fetched_data_{today}.json"
-        with open(all_data, 'w') as f:
-            json.dump(images_data, f, indent=2)
+        # all_data = self.output_dir / today / f"all_fetched_data_{today}.json"
+        # with open(all_data, 'w') as f:
+        #     json.dump(images_data, f, indent=2)
 
-        # Step 2: Download media
-        stats = download_all_media(images_data, self.output_dir)
-        if not stats:
-            print("Download failed.")
-            return
-        
-        # Step 3: Run estimation on downloaded videos
-        video_dir = self.output_dir / today / "videos"
+        # Step 2: Run estimation on downloaded videos
         estimates = {}
-        if video_dir.exists():
-            for video_file in sorted(video_dir.glob("*.mp4")):
-                print(f"Estimating for {video_file.name}...")
-                metadata_file = video_dir / f"{video_file.stem}_metadata.json"
+        n= 0
+        for item in images_data['items']: 
+            print(f"Estimating for {item['id']}...")
 
-                # Initialize defaults
-                prompt = ""
+            prompt = ""
+            n_palabras_por_prompt = 70
+            n_steps = 25
+            video_data = None
+
+            if item.get("meta"):
+                prompt = item.get("meta", {}).get("prompt")
+                n_palabras_por_prompt = len(prompt.split()) if prompt else 70
+                n_steps = item.get("meta", {}).get("steps", 25)
+            else:
+                prompt = "There was no prompt found"
                 n_palabras_por_prompt = 70
                 n_steps = 25
-                video_data = None
 
-                meta = self.load_meta(metadata_file)
-
-                if meta.get("meta"):
-                    prompt = meta.get("meta", {}).get("prompt")
-                    n_palabras_por_prompt = len(prompt.split()) if prompt else 70
-                    n_steps = meta.get("meta", {}).get("steps", 25)
-                else:
-                    prompt = "There was no prompt found"
-                    n_palabras_por_prompt = 70
-                    n_steps = 25
-
-                video_data = get_video_properties(str(video_file))
-                if not video_data:
-                    print(f"Error estimating {video_file.name}: Could not retrieve video properties")
-                    video_data = {"duration": 5, "width": meta.get("width", 768), "height": meta.get("height", 768), "fps": 30}
-                    
-                # Calculate resolution factor based on dimensions
-                width = video_data.get("width", 768)
-                height = video_data.get("height", 768)
-                resolution = width * height 
-
-                new_metadata = {
-                    "id": meta.get("id", ""),
-                    "url" : meta.get("url", ""),
-                    "created_at": meta.get("createdAt", ""),
-                    "prompt": prompt,
-                    "steps": n_steps
-                }
+            video_data = get_video_properties(str(item['url']))
+            if not video_data:
+                print(f"Error estimating {item['id']}: Could not retrieve video properties")
+                video_data = {"duration": 5, "width": item.get("width", 768), "height": item.get("height", 768), "fps": 30}
                 
-                resolution_factor = resolution / (768 * 768) / 3 
+            # Calculate resolution factor based on dimensions
+            width = video_data.get("width", 768)
+            height = video_data.get("height", 768)
+            resolution = width * height 
 
-                print(f"Resolution factor for {video_file.name}: {resolution_factor}")
+            new_metadata = {
+                "id": item.get("id", ""),
+                "url" : item.get("url", ""),
+                "created_at": item.get("createdAt", ""),
+                "prompt": prompt,
+                "steps": n_steps
+            }
+            
+            resolution_factor = resolution / (768 * 768) / 3 
 
-                estimate = calculate_water_consumption_estimate(
-                    Video=True,
-                    video_duration=video_data["duration"] if video_data else 5.0,
-                    frames_per_second=video_data["fps"] if video_data else 30.0,
-                    n_palabras_por_prompt=n_palabras_por_prompt,
-                    n_steps=n_steps,
-                    T_step=resolution_factor
-                )
-                estimates[video_file.name] = {
-                    "video_data": video_data,
-                    "estimate": estimate,
-                    "metadata": new_metadata,
-                }
+            estimate = calculate_water_consumption_estimate(
+                Video=True,
+                video_duration=video_data["duration"] if video_data else 5.0,
+                frames_per_second=video_data["fps"] if video_data else 30.0,
+                n_palabras_por_prompt=n_palabras_por_prompt,
+                n_steps=n_steps,
+                T_step=resolution_factor
+            )
+
+            estimates[n] = {
+                "video_data": video_data,
+                "estimate": estimate,
+                "metadata": new_metadata,
+            }
+            n += 1
         
         # Save estimates to JSON
-        estimates_file = self.output_dir / today / f"estimates_{today}.json"
+        estimates_file = self.output_dir / f"estimates_{today}.json"
         with open(estimates_file, 'w') as f:
             json.dump(estimates, f, indent=2)
         
+
         print(f"Estimates saved to {estimates_file}")
 
     def run_continuous(self):
@@ -125,5 +110,5 @@ class WaterEstimatorApp:
             time.sleep(3600)  # Check every hour
 
 if __name__ == "__main__":
-    app = WaterEstimatorApp(limit=10)  
+    app = WaterEstimatorApp(limit=40, type="video", nsfw=False)  
     app.run_continuous()  

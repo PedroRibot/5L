@@ -34,16 +34,14 @@
     </div>
 
      <div class="video-container">
-        <video id="videoPlayer" controls autoplay >
-            <!-- <source src="/video/{{ video_files[current_index] }}" type="video/mp4"> -->
-            <source src="{{ metadata.url }}" type="video/mp4">
+        <video id="videoPlayer" controls autoplay muted>
+            <source src="{{ metadata.get('url') }}" type="video/mp4">
         </video>
     </div>
 
     <script>
         let currentIndex = {{ current_index }};
         const totalVideos = {{ total_videos }};
-        const videoFiles = {{ video_files | tojson }};
         
         const videoPlayer = document.getElementById('videoPlayer');
         

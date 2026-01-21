@@ -8,9 +8,7 @@ app = Flask(__name__)
 # Path to downloads
 DOWNLOADS_DIR = Path("../downloads")
 TODAY = datetime.now().strftime('%Y-%m-%d')
-VIDEO_DIR = DOWNLOADS_DIR / TODAY / "videos"
-IMAGE_DIR = DOWNLOADS_DIR / TODAY / "images"
-ESTIMATES_FILE = DOWNLOADS_DIR / TODAY / f"estimates_{TODAY}.json"
+ESTIMATES_FILE = DOWNLOADS_DIR / f"estimates_{TODAY}.json"
 
 # Load estimates
 def load_estimates():
@@ -20,34 +18,29 @@ def load_estimates():
     return {}
 
 estimates = load_estimates()
-video_files = sorted([f for f in VIDEO_DIR.glob("*.mp4") if f.name in estimates]) if VIDEO_DIR.exists() else []
 
 @app.route('/')
 @app.route('/play/<int:index>')
 def play_video(index=0):
-    if not video_files:
+    if not estimates:
         return "No videos found. Please run the download workflow first."
     
-    if index >= len(video_files):
+    if index >= len(estimates):
         index = 0
-    
-    video_name = video_files[index].name
+
+    video_name = list(estimates.keys())[index]
     video_data = estimates.get(video_name, {}).get('video_data', {})
     estimate = estimates.get(video_name, {}).get('estimate', {})
     metadata = estimates.get(video_name, {}).get('metadata', {})
     
     return render_template('index.html',
                           current_index=index,
-                          total_videos=len(video_files),
-                          video_files=[f.name for f in video_files],
+                          total_videos=len(estimates),
                           video_data=video_data,
                           estimate=estimate,
                           metadata=metadata
                           )
 
-@app.route('/video/<filename>')
-def serve_video(filename):
-    return send_from_directory(VIDEO_DIR, filename)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8081)
