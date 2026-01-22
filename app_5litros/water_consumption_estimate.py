@@ -41,7 +41,7 @@ def get_video_properties(video_path):
     duration = float(duration_match.group(1))
     width = int(width_match.group(1))
     height = int(height_match.group(1))
-    fps = int(fps_match.group(1)) / int(fps_match.group(2)) if int(fps_match.group(2)) != 0 else 30
+    fps = int(fps_match.group(1)) / int(fps_match.group(2)) if int(fps_match.group(2)) != 0 else 0
     
     return {
         "duration": duration,

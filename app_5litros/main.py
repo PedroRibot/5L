@@ -103,6 +103,7 @@ class WaterEstimatorApp:
         last_date = None
         while True:
             current_date = datetime.now().strftime('%Y-%m-%d')
+            print(f"CHECKING DATE: {current_date}, LAST DATE: {last_date}")
             if current_date != last_date:
                 print(f"New day detected: {current_date}")
                 self.run_full_workflow()
@@ -110,5 +111,5 @@ class WaterEstimatorApp:
             time.sleep(3600)  # Check every hour
 
 if __name__ == "__main__":
-    app = WaterEstimatorApp(limit=40, type="video", nsfw=False)  
+    app = WaterEstimatorApp(limit=200, type="video", nsfw=False)  
     app.run_continuous()  
