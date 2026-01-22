@@ -58,6 +58,9 @@ class WaterEstimatorApp:
                 print(f"Error estimating {item['id']}: Could not retrieve video properties")
                 video_data = {"duration": 5, "width": item.get("width", 768), "height": item.get("height", 768), "fps": 30}
                 
+            if video_data["fps"] == 0:
+                video_data["fps"] = 30
+            
             # Calculate resolution factor based on dimensions
             width = video_data.get("width", 768)
             height = video_data.get("height", 768)
@@ -111,5 +114,5 @@ class WaterEstimatorApp:
             time.sleep(3600)  # Check every hour
 
 if __name__ == "__main__":
-    app = WaterEstimatorApp(limit=200, type="video", nsfw=False)  
+    app = WaterEstimatorApp(limit=200, type="video", nsfw=False, sort="Most Reactions", period="Day")  
     app.run_continuous()  

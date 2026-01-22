@@ -8,24 +8,24 @@
 <body>
    {% if request.path.startswith('/data') %}
     <div class="container">
-        <h1>AI Video Water Consumption Visualizer</h1>
-        <p>Playing video <span id="currentVideoNum">{{ current_index + 1 }}</span> of {{ total_videos }}</p>
+        <!-- <p>Playing video <span id="currentVideoNum">{{ current_index + 1 }}</span> of {{ total_videos }}</p> -->
         
         <div class="data" id="dataDisplay">
-            <h3>Video Properties</h3>
+            <!-- <h3>Video Properties</h3>
             <p><strong>Duration:</strong> {{ video_data.get('duration', 'N/A') }} seconds</p>
             <p><strong>Resolution:</strong> {{ video_data.get('width', 'N/A') }}x{{ video_data.get('height', 'N/A') }}</p>
-            <p><strong>FPS:</strong> {{ video_data.get('fps', 'N/A') }}</p>
+            <p><strong>FPS:</strong> {{ video_data.get('fps', 'N/A') }}</p> -->
             
-            <h3>Metadata</h3>
             <p><strong>Prompt:</strong> {{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
             
-            <h3>Water Consumption Estimate</h3>
-            <p><strong>Energy for Image:</strong> {{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh</p>
-            <p><strong>Energy for Data Center:</strong> {{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh</p>
-            <p><strong>Water for Energy:</strong> {{ "%.6f" % estimate.get('water_for_energy_l', 0) }} liters</p>
-            <p><strong>Water for Data Center:</strong> {{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} liters</p>
-            <p><strong>Total Water:</strong> {{ "%.6f" % estimate.get('w_tot_l', 0) }} liters</p>
+            <h2>Energy Consumption Estimation</h2>
+            <p><strong>{{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh</strong>  Image Creation</p>
+            <p><strong>{{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh</strong> Data Center</p>
+            <h2>Water Consumption Estimation</h2>
+            <p><strong>{{ "%.6f" % estimate.get('water_for_energy_l', 0) }} liters</strong> Image Creation</p>
+            <p><strong>{{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} liters</strong> Data Center</p>
+            <h1>{{ "%.6f" % estimate.get('w_tot_l', 0) }} liters</h1>
+            <p>Total Water consumed</p>
         </div>
         
         <!-- <div class="controls">
@@ -36,7 +36,7 @@
     </div>
     {% elif request.path.startswith('/video') %}
     <div class="video-container">
-        <video id="videoPlayer" controls autoplay muted>
+        <video id="videoPlayer" autoplay muted> 
             <source src="{{ metadata.get('url') }}" type="video/mp4">
         </video>
     </div>
