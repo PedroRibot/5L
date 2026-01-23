@@ -1,10 +1,11 @@
 html, body {
-    margin: 20px;
+    margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #000000;
     color: white;
+    overflow: hidden;
 }
 
 .video-container {
@@ -24,49 +25,138 @@ html, body {
 }
 
 .container {
-    position: relative;    /* new stacking context */
-    z-index: 1;            /* above the video */
-    padding: 20px;
+    position: fixed;   
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    padding: 2vh;      
+}
 
-    min-height: 100vh;
+
+
+.data {
     width: 100%;
-    padding: 20px; /* Optional: adds some breathing room */
+    height: 100%;
+    display: flex;       
+    flex-direction: column;
+}
+
+/* Top 50% - Prompt Section */
+.prompt-section {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.prompt {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    line-height: 1.3;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Bottom 50% remains the same */
+.energia-water {
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
 }
 
-.data {
-    overflow: hidden;
-}
-
-.data h1 {
-    font-size: clamp(2rem, 8vw, 10rem);
+.energia-water h1 {
+    font-size: clamp(1.5rem, 8vh, 6rem); 
     font-weight: bold;
-    margin: 0.3em 0 0 0;
+    margin: 0.3em 0 0.1em 0;
+    line-height: 1.2;
 }
 
-.data h2 {
-    font-size: clamp(1rem, 4vw, 5rem);
-    margin: 0.3em 0;
+.energia-water h2 {
+    font-size: clamp(1rem, 3.5vh, 3rem);
+    margin: 0.4em 0 0.2em 0;
+    line-height: 1.3;
 }
 
-.data p {
-    font-size: clamp(.5rem, 3vw, 4rem);
-    margin: 0.2em 1.5em;
-    color: rgb(210, 210, 210);
+.energia-water p {
+    font-size: clamp(0.7rem, 2.5vh, 2.5rem);
+    margin: 0.1em 0;
+    line-height: 1.3;
 }
 
-.data strong {
-    font-size: clamp(2rem, 4vw, 5rem);
+/*-----------------------------GLOBAL-------------------------------*/
+
+.container-table {
+    position: fixed;   
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    padding: 2vh;      
 }
 
-.controls {
-    margin: 20px 0;
+.data-table h1{
+    margin: 0;
+    padding: 0;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 0 10px;
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
+
+.data-table thead th {
+    text-align: left;
+    padding: 20px 15px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    letter-spacing: 0.5px;
+    /* border-bottom: 2px solid #333; */
+}
+
+.data-table tbody td {
+    padding: 25px 15px;
+    /* border-bottom: 1px solid #222; */
+}
+
+.data-table tbody tr:hover {
+    background-color: #111;
+}
+
+.platform {
+    font-weight: 500;
+}
+
+.total-row {
+    /* border-top: 2px solid #444; */
+}
+
+.total-row td {
+    font-weight: 600;
+    padding: 30px 15px;
+    font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+}
+
+.total-row em {
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .data-table {
+        font-size: 0.9rem;
+    }
+    
+    .data-table thead th,
+    .data-table tbody td {
+        padding: 15px 10px;
+    }
+}
+
+
+
+

@@ -1,0 +1,23 @@
+{
+    "StableDiffusion": {
+        "active_users": 5000000,
+        "images_per_day": 50000000
+    },
+    "GoogleGemini"   : {
+        "active_users": 4000000,
+        "images_per_day": 36000000
+    },
+    "Midjourney": { 
+        "active_users": 1000000,
+        "images_per_day": 24000000
+    },
+    "DALLE": {
+        "active_users": 450000,
+        "images_per_day": 9000000
+
+    },
+    "MetaImagine": {
+        "active_users": 2500000,
+        "images_per_day": 5000000
+    }
+}

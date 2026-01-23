@@ -1,3 +1,4 @@
+import random
 import requests
 import json
 import os
@@ -8,7 +9,7 @@ from pathlib import Path
 
 ## Water Consumption Estimate for AI Model Inference
 ## Estimates using as if they were using SDXL 1.0 model parameters
-Potencia_Efectiva = 0.41
+Potencia_Efectiva = 0.5
 I_grid = 2.5
 WUE = 1.0
 PUE = 1.65
@@ -50,6 +51,19 @@ def get_video_properties(video_path):
         "fps": fps
     }
 
+def calculate_water_average(estimates):
+    """Calculate average water consumption from estimates."""
+    total_water = 0.0
+    count = 0
+    
+    for key in estimates:
+        if 'estimate' in estimates[key] and 'w_tot_l' in estimates[key]['estimate']:
+            total_water += estimates[key]['estimate']['w_tot_l']
+            count += 1
+    
+    average = total_water / count
+    print(f"Average water consumption from {count} estimates: {average:.6f} liters")
+    return average
 
 def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frames_per_second=30.0, n_palabras_por_prompt=70.0, n_steps=25.0, T_step = 0.4):
 
@@ -57,7 +71,7 @@ def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frame
     Latencia = (Token_Latency * N_tokens) + (n_steps * T_step)  
     Keyframes_generados = video_duration * frames_per_second * 0.15 if Video else 4.0
 
-    Factor_de_entrenamiento = 1.2
+    Factor_de_entrenamiento = random.uniform(1.8, 2.2)
 
     energia_imagen = (Latencia * Potencia_Efectiva / 3600) * Keyframes_generados * Factor_de_entrenamiento 
     energia_data_center = energia_imagen * PUE

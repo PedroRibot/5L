@@ -1,0 +1,882 @@
+{
+  "0": {
+    "video_data": {
+      "duration": 4.735294,
+      "width": 528,
+      "height": 928,
+      "fps": 34.0
+    },
+    "estimate": {
+      "energia_imagen": 0.024061446607061176,
+      "energia_data_center": 0.03970138690165094,
+      "water_for_energy_l": 0.06015361651765294,
+      "water_for_data_center_l": 0.03970138690165094,
+      "w_tot_l": 0.09985500341930388
+    },
+    "metadata": {
+      "id": 118158595,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1e5884c3-bd38-4678-891f-fb2b4bb4b4a5/original=true/1e5884c3-bd38-4678-891f-fb2b4bb4b4a5.mp4",
+      "created_at": "2026-01-20T18:19:00.031Z",
+      "prompt": "ultra high quality, masterpiece, cinematic animation\n\nanime-realistic woman, perfect anatomy, consistent proportions, symmetrical face, natural skin texture, stable facial structure, no identity change\n\nclear emotional state or emotional transition, emotion is readable and unfolds naturally over time\n\neyes react first to the emotion, eyebrows support the emotional shift, mouth changes naturally with the feeling, cheeks respond subtly to tension or relaxation\n\nnatural blinking, subtle eye movement, micro facial adjustments only\n\nbody movement follows the emotional shift, gentle head or posture change, natural breathing motion\n\nsecondary motion reacts to the body movement, hair moves and settles naturally, clothing responds softly with realistic cloth physics\ncamera remains calm and cinematic, no shake, no distracting motion\n\nclean lighting with realistic highlights and shadows, shallow depth of field, clean minimal background\n\nsharp focus on the face, ultra-detailed skin texture, smooth shading\n\nrealistic physics, smooth interpolation, professional animation quality, cinematic 24fps look",
+      "steps": 25
+    }
+  },
+  "1": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118135235,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/52af82b0-5853-48f5-b2b3-c07a1ae94360/original=true/52af82b0-5853-48f5-b2b3-c07a1ae94360.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "2": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.06495798970129332,
+      "energia_data_center": 0.10718068300713397,
+      "water_for_energy_l": 0.1623949742532333,
+      "water_for_data_center_l": 0.10718068300713397,
+      "w_tot_l": 0.26957565726036725
+    },
+    "metadata": {
+      "id": 118135262,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6aab0d3f-88e6-4bb4-aa09-f7a560ddc8ee/original=true/6aab0d3f-88e6-4bb4-aa09-f7a560ddc8ee.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "(4k,8k,Ultra HD), masterpiece, best quality, ultra-detailed, very aesthetic, depth of field, best lighting, detailed illustration, detailed background, cinematic, BREAK ambient occlusion, raytracing, soft lighting, blum effect, masterpiece, absolutely eye-catching, intricate cinematic background, BREAK masterpiece, amazing quality, best quality, ultra-detailed, 8K, illustrating, CG,detailed background, cute girl, eyelashes BREAK \n1girl, adult,  white hair, short hair, blue eyes, ( two tone jacket,  white jeans bomber jacket:1.3), white shorts, red hoverboard, desert,  flying,  looking at viewer,   clouds, canyon, sandstorm, wind, riding hoverboard, reactive red boots,",
+      "steps": 30
+    }
+  },
+  "3": {
+    "video_data": {
+      "duration": 12.053,
+      "width": 834,
+      "height": 1112,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.07771596885048178,
+      "energia_data_center": 0.12823134860329494,
+      "water_for_energy_l": 0.19428992212620444,
+      "water_for_data_center_l": 0.12823134860329494,
+      "w_tot_l": 0.3225212707294994
+    },
+    "metadata": {
+      "id": 118185945,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d12bc733-cf12-4295-a7f5-83ee7379451a/original=true/d12bc733-cf12-4295-a7f5-83ee7379451a.mp4",
+      "created_at": "2026-01-21T00:21:20.948Z",
+      "prompt": "goblin",
+      "steps": 25
+    }
+  },
+  "4": {
+    "video_data": {
+      "duration": 4.735294,
+      "width": 528,
+      "height": 928,
+      "fps": 34.0
+    },
+    "estimate": {
+      "energia_imagen": 0.024061446607061176,
+      "energia_data_center": 0.03970138690165094,
+      "water_for_energy_l": 0.06015361651765294,
+      "water_for_data_center_l": 0.03970138690165094,
+      "w_tot_l": 0.09985500341930388
+    },
+    "metadata": {
+      "id": 118158594,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0a9d9345-ba54-4caa-b568-b6d455fbaba8/original=true/0a9d9345-ba54-4caa-b568-b6d455fbaba8.mp4",
+      "created_at": "2026-01-20T18:19:00.031Z",
+      "prompt": "ultra high quality, masterpiece, cinematic animation\n\nanime-realistic woman, perfect anatomy, consistent proportions, symmetrical face, natural skin texture, stable facial structure, no identity change\n\nclear emotional state or emotional transition, emotion is readable and unfolds naturally over time\n\neyes react first to the emotion, eyebrows support the emotional shift, mouth changes naturally with the feeling, cheeks respond subtly to tension or relaxation\n\nnatural blinking, subtle eye movement, micro facial adjustments only\n\nbody movement follows the emotional shift, gentle head or posture change, natural breathing motion\n\nsecondary motion reacts to the body movement, hair moves and settles naturally, clothing responds softly with realistic cloth physics\ncamera remains calm and cinematic, no shake, no distracting motion\n\nclean lighting with realistic highlights and shadows, shallow depth of field, clean minimal background\n\nsharp focus on the face, ultra-detailed skin texture, smooth shading\n\nrealistic physics, smooth interpolation, professional animation quality, cinematic 24fps look",
+      "steps": 25
+    }
+  },
+  "5": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134533,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f954367d-1017-46fa-bb1b-f2d10e1656ba/original=true/f954367d-1017-46fa-bb1b-f2d10e1656ba.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "6": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118135216,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/32eefa5a-f2e4-4d7f-98b4-e0ea9c3057fd/original=true/32eefa5a-f2e4-4d7f-98b4-e0ea9c3057fd.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "7": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118135217,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/809a7c63-8c79-47b9-82fe-3e82f518958b/original=true/809a7c63-8c79-47b9-82fe-3e82f518958b.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "8": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133469,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4ddbfc1c-134f-4f51-956d-8e24c9fb612a/original=true/4ddbfc1c-134f-4f51-956d-8e24c9fb612a.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "9": {
+    "video_data": {
+      "duration": 4.735294,
+      "width": 528,
+      "height": 928,
+      "fps": 34.0
+    },
+    "estimate": {
+      "energia_imagen": 0.024061446607061176,
+      "energia_data_center": 0.03970138690165094,
+      "water_for_energy_l": 0.06015361651765294,
+      "water_for_data_center_l": 0.03970138690165094,
+      "w_tot_l": 0.09985500341930388
+    },
+    "metadata": {
+      "id": 118158596,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9eed40f7-967f-4e88-9b16-97bac1ca17e8/original=true/9eed40f7-967f-4e88-9b16-97bac1ca17e8.mp4",
+      "created_at": "2026-01-20T18:19:00.031Z",
+      "prompt": "ultra high quality, masterpiece, cinematic animation\n\nanime-realistic woman, perfect anatomy, consistent proportions, symmetrical face, natural skin texture, stable facial structure, no identity change\n\nclear emotional state or emotional transition, emotion is readable and unfolds naturally over time\n\neyes react first to the emotion, eyebrows support the emotional shift, mouth changes naturally with the feeling, cheeks respond subtly to tension or relaxation\n\nnatural blinking, subtle eye movement, micro facial adjustments only\n\nbody movement follows the emotional shift, gentle head or posture change, natural breathing motion\n\nsecondary motion reacts to the body movement, hair moves and settles naturally, clothing responds softly with realistic cloth physics\ncamera remains calm and cinematic, no shake, no distracting motion\n\nclean lighting with realistic highlights and shadows, shallow depth of field, clean minimal background\n\nsharp focus on the face, ultra-detailed skin texture, smooth shading\n\nrealistic physics, smooth interpolation, professional animation quality, cinematic 24fps look",
+      "steps": 25
+    }
+  },
+  "10": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133467,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0fcb1162-7ea0-4538-a4aa-803df87f074d/original=true/0fcb1162-7ea0-4538-a4aa-803df87f074d.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "11": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133475,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/98a0de94-74dc-49c6-a432-bf1722319777/original=true/98a0de94-74dc-49c6-a432-bf1722319777.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "12": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133481,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4cc2e47c-99cc-4b90-bc0a-2f4d85a69449/original=true/4cc2e47c-99cc-4b90-bc0a-2f4d85a69449.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "13": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134311,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ac14b86f-3595-431f-9cff-2be2eaac88c0/original=true/ac14b86f-3595-431f-9cff-2be2eaac88c0.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "14": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134373,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5f478134-2be1-409e-b9ba-28af47e341b1/original=true/5f478134-2be1-409e-b9ba-28af47e341b1.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "15": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134374,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/514bf3a1-0605-405c-917b-5ef23b20220c/original=true/514bf3a1-0605-405c-917b-5ef23b20220c.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "16": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118135220,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/83ccb4fd-341b-4b41-ae54-bad35c0cbc48/original=true/83ccb4fd-341b-4b41-ae54-bad35c0cbc48.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "17": {
+    "video_data": {
+      "duration": 4.735294,
+      "width": 528,
+      "height": 928,
+      "fps": 34.0
+    },
+    "estimate": {
+      "energia_imagen": 0.024061446607061176,
+      "energia_data_center": 0.03970138690165094,
+      "water_for_energy_l": 0.06015361651765294,
+      "water_for_data_center_l": 0.03970138690165094,
+      "w_tot_l": 0.09985500341930388
+    },
+    "metadata": {
+      "id": 118158591,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/45e7e077-acd4-4a0f-acca-b93ebfc15c6b/original=true/45e7e077-acd4-4a0f-acca-b93ebfc15c6b.mp4",
+      "created_at": "2026-01-20T18:19:00.031Z",
+      "prompt": "ultra high quality, masterpiece, cinematic animation\n\nanime-realistic woman, perfect anatomy, consistent proportions, symmetrical face, natural skin texture, stable facial structure, no identity change\n\nclear emotional state or emotional transition, emotion is readable and unfolds naturally over time\n\neyes react first to the emotion, eyebrows support the emotional shift, mouth changes naturally with the feeling, cheeks respond subtly to tension or relaxation\n\nnatural blinking, subtle eye movement, micro facial adjustments only\n\nbody movement follows the emotional shift, gentle head or posture change, natural breathing motion\n\nsecondary motion reacts to the body movement, hair moves and settles naturally, clothing responds softly with realistic cloth physics\ncamera remains calm and cinematic, no shake, no distracting motion\n\nclean lighting with realistic highlights and shadows, shallow depth of field, clean minimal background\n\nsharp focus on the face, ultra-detailed skin texture, smooth shading\n\nrealistic physics, smooth interpolation, professional animation quality, cinematic 24fps look",
+      "steps": 25
+    }
+  },
+  "18": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133453,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b3eafdb9-4f22-4a46-b450-eb07c0b21bdb/original=true/b3eafdb9-4f22-4a46-b450-eb07c0b21bdb.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "19": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133459,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8011d417-b55b-4cc5-8f55-2cdaa5426ffa/original=true/8011d417-b55b-4cc5-8f55-2cdaa5426ffa.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "20": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133479,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f7dd49f2-6ccc-4755-a031-03b8d5ae5437/original=true/f7dd49f2-6ccc-4755-a031-03b8d5ae5437.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "21": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133483,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/59dc4769-04de-4e65-88df-c303e16c306b/original=true/59dc4769-04de-4e65-88df-c303e16c306b.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "22": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134332,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/412a3468-abba-470a-beb9-96d7e6ac715a/original=true/412a3468-abba-470a-beb9-96d7e6ac715a.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "23": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134350,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4295da99-b596-407b-b31b-e13e129285b4/original=true/4295da99-b596-407b-b31b-e13e129285b4.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "24": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134366,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/51944923-53dd-42ed-823d-e03a617dfce5/original=true/51944923-53dd-42ed-823d-e03a617dfce5.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "25": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134375,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c4401684-8363-4651-a75f-1df9c92f5491/original=true/c4401684-8363-4651-a75f-1df9c92f5491.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "26": {
+    "video_data": {
+      "duration": 10.042318,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09000242003570276,
+      "energia_data_center": 0.14850399305890954,
+      "water_for_energy_l": 0.2250060500892569,
+      "water_for_data_center_l": 0.14850399305890954,
+      "w_tot_l": 0.37351004314816644
+    },
+    "metadata": {
+      "id": 118134534,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2a925233-2218-4d7c-af44-4cc4584b4538/original=true/2a925233-2218-4d7c-af44-4cc4584b4538.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "27": {
+    "video_data": {
+      "duration": 10.042318,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09000242003570276,
+      "energia_data_center": 0.14850399305890954,
+      "water_for_energy_l": 0.2250060500892569,
+      "water_for_data_center_l": 0.14850399305890954,
+      "w_tot_l": 0.37351004314816644
+    },
+    "metadata": {
+      "id": 118134541,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2703faee-f8b3-42b6-8c2e-56cadf1baeed/original=true/2703faee-f8b3-42b6-8c2e-56cadf1baeed.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "28": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118135239,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a0957e4a-6287-4f7b-9e7a-fd8a91c3ee16/original=true/a0957e4a-6287-4f7b-9e7a-fd8a91c3ee16.mp4",
+      "created_at": "2026-01-21T10:13:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "29": {
+    "video_data": {
+      "duration": 7.966667,
+      "width": 1440,
+      "height": 2108,
+      "fps": 60.0
+    },
+    "estimate": {
+      "energia_imagen": 0.42196817924411323,
+      "energia_data_center": 0.6962474957527868,
+      "water_for_energy_l": 1.0549204481102832,
+      "water_for_data_center_l": 0.6962474957527868,
+      "w_tot_l": 1.75116794386307
+    },
+    "metadata": {
+      "id": 118172442,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6a076d5b-3ea7-48ff-85f0-8b78c28bace5/original=true/6a076d5b-3ea7-48ff-85f0-8b78c28bace5.mp4",
+      "created_at": "2026-01-20T21:51:47.326Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "30": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133461,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f5dc68e0-cd5d-47f5-94ee-536c6f5408f1/original=true/f5dc68e0-cd5d-47f5-94ee-536c6f5408f1.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "31": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134377,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6b526cff-b13f-48bc-97cd-0ef6eaa1adf9/original=true/6b526cff-b13f-48bc-97cd-0ef6eaa1adf9.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "32": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134471,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/595ab32f-04b2-4b2c-b0d5-c10a094bba0d/original=true/595ab32f-04b2-4b2c-b0d5-c10a094bba0d.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "33": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118134493,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/3198ef83-7518-46a9-b747-5f5759ce0522/original=true/3198ef83-7518-46a9-b747-5f5759ce0522.mp4",
+      "created_at": "2026-01-21T09:31:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "34": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 1080,
+      "height": 1644,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10288066858398437,
+      "energia_data_center": 0.1697531031635742,
+      "water_for_energy_l": 0.2572016714599609,
+      "water_for_data_center_l": 0.1697531031635742,
+      "w_tot_l": 0.42695477462353515
+    },
+    "metadata": {
+      "id": 118170412,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a676c0d4-a223-489a-b478-f535dde1e3f4/original=true/a676c0d4-a223-489a-b478-f535dde1e3f4.mp4",
+      "created_at": "2026-01-20T21:06:11.549Z",
+      "prompt": "(at 0 seconds: Wide night shot. One single cubist robot with chipped orange metal plates and round goggle-like eyes walks steadily to the right across fractured cubist ruins; the world is dark, only the robot\u2019s yellow eye-lamp beam cuts through dust; deep blue starry sky overhead; tracking shot left-to-right, matching the robot\u2019s pace; cubist painterly style, faceted geometry, angular brush strokes, high texture, muted blues/greys with a single yellow light source, slight film grain.)\n\n(at 1.5 seconds: The one single cubist robot continues right; the eye-lamp sweeps across broken tiles and rebar, revealing an orange flower growing from cracks in the rubble; shadows stretch sharply, everything outside the beam falls into near-black; camera tracks alongside subject at medium-wide; cubist painterly style, faceted geometry, angular brush strokes, high texture, strong chiaroscuro from the yellow beam, slight film grain.)\n\n(at 3 seconds: The robot slows, turns its head down; the yellow beam tightens onto the orange flower, making the petals glow warm against cold ruins; the robot begins to bend its knees; camera dollies in slowly to medium shot, letting the flower enter the lower foreground; cubist painterly style, faceted geometry, angular brush strokes, high texture, high-contrast single-source lighting, slight film grain.)\n\n(at 4 seconds: The robot kneels fully; one hand extends with careful, delicate servo motion; fingertip approaches and gently touches the orange flower; the eye-lamp beam steadies, illuminating petal edges and casting crisp polygonal shadows on the ground; dolly in to a close shot, shallow stylized depth-of-field; cubist painterly style, faceted geometry, angular brush strokes, high texture, warm orange + yellow highlights against dark blue, slight film grain.)\n\n(at 5 seconds: Most important shot. The camera performs an arc shot that swings behind the orange flower into a low \u201cflower POV\u201d composition: the flower large in the immediate foreground, the kneeling robot centered in the background but still in focus, its yellow eye-lamp beam forming a diagonal cone through floating dust; the robot\u2019s hand rests near the petals, motion minimal and tender; camera circles around and settles into a locked close/near-macro framing behind the flower looking up at the robot; cubist painterly style, faceted geometry, angular brush strokes, high texture, single yellow beam lighting, slight film grain.)",
+      "steps": 25
+    }
+  },
+  "35": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133454,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/69429500-910b-440c-a60d-d7934f4d5872/original=true/69429500-910b-440c-a60d-d7934f4d5872.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "36": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133462,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/57b061a5-a880-4c79-8df2-e3b33cdb492e/original=true/57b061a5-a880-4c79-8df2-e3b33cdb492e.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "37": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133464,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/61985a8f-cdc1-4033-bbd0-49e57cecf432/original=true/61985a8f-cdc1-4033-bbd0-49e57cecf432.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "38": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133465,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d4365176-e510-4079-9218-d8211050a738/original=true/d4365176-e510-4079-9218-d8211050a738.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  },
+  "39": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05415023720981111,
+      "energia_data_center": 0.08934789139618833,
+      "water_for_energy_l": 0.13537559302452778,
+      "water_for_data_center_l": 0.08934789139618833,
+      "w_tot_l": 0.2247234844207161
+    },
+    "metadata": {
+      "id": 118133466,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e9fca250-014c-4901-889e-21960e7b7017/original=true/e9fca250-014c-4901-889e-21960e7b7017.mp4",
+      "created_at": "2026-01-21T07:11:00.000Z",
+      "prompt": "There was no prompt found",
+      "steps": 25
+    }
+  }
+}

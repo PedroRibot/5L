@@ -8,21 +8,27 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key'
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
-DOWNLOADS_DIR = Path("../downloads")
+DOWNLOADS_DIR = Path("./data")
 TODAY = datetime.now().strftime('%Y-%m-%d')
 ESTIMATES_FILE = DOWNLOADS_DIR / f"estimates_{TODAY}.json"
+DAY_DATA_FILE = DOWNLOADS_DIR / "day_data.json"
+GLOBAL_DATA_FILE = DOWNLOADS_DIR / "global.json"
 
-def load_estimates():
-    if ESTIMATES_FILE.exists():
-        with open(ESTIMATES_FILE, 'r') as f:
+def load_data(file_path):
+    if file_path.exists():
+        with open(file_path, 'r') as f:
             return json.load(f)
     return {}
 
-estimates = load_estimates()
+estimates = load_data(ESTIMATES_FILE)
+day_data = load_data(DAY_DATA_FILE)
+global_data = load_data(GLOBAL_DATA_FILE)
+
 
 @app.route('/')
 @app.route('/video/play/<int:index>')
 @app.route('/data/play/<int:index>')
+@app.route('/data/video/play/<int:index>')
 @app.route('/play/<int:index>')
 def play_video(index=0):
     if not estimates:
@@ -42,6 +48,19 @@ def play_video(index=0):
                           video_data=video_data,
                           estimate=estimate,
                           metadata=metadata)
+
+@app.route('/global')
+def global_view():
+    return render_template('global.html',
+                            global_data=global_data,
+                            average_today=day_data.get(TODAY, {}).get('average_liters', 0.5))
+
+@app.template_filter('format_number')
+def format_number(value):
+    try:
+        return "{:,}".format(int(value))
+    except (ValueError, TypeError):
+        return "0"
 
 # Socket event handlers
 @socketio.on('video_control')

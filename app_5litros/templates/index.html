@@ -6,35 +6,27 @@
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 </head>
 <body>
-   {% if request.path.startswith('/data') %}
+   {% if '/data' in request.path %}
     <div class="container">
-        <!-- <p>Playing video <span id="currentVideoNum">{{ current_index + 1 }}</span> of {{ total_videos }}</p> -->
-        
-        <div class="data" id="dataDisplay">
-            <!-- <h3>Video Properties</h3>
-            <p><strong>Duration:</strong> {{ video_data.get('duration', 'N/A') }} seconds</p>
-            <p><strong>Resolution:</strong> {{ video_data.get('width', 'N/A') }}x{{ video_data.get('height', 'N/A') }}</p>
-            <p><strong>FPS:</strong> {{ video_data.get('fps', 'N/A') }}</p> -->
-            
-            <p><strong>Prompt:</strong> {{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
-            
-            <h2>Energy Consumption Estimation</h2>
-            <p><strong>{{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh</strong>  Image Creation</p>
-            <p><strong>{{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh</strong> Data Center</p>
-            <h2>Water Consumption Estimation</h2>
-            <p><strong>{{ "%.6f" % estimate.get('water_for_energy_l', 0) }} liters</strong> Image Creation</p>
-            <p><strong>{{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} liters</strong> Data Center</p>
-            <h1>{{ "%.6f" % estimate.get('w_tot_l', 0) }} liters</h1>
-            <p>Total Water consumed</p>
+        <div class="data">
+            <div class="prompt-section">
+                <p class="prompt" id="promptText">{{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
+            </div>
+            <div class="energia-water">
+                <h2>Energy Consumption Estimation</h2>
+                <p>{{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh Image Creation</p>
+                <p>{{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh Data Center</p>
+
+                <h2>Water Consumption Estimation</h2>
+                <p>{{ "%.6f" % estimate.get('water_for_energy_l', 0) }} Liters Image Creation</p>
+                <p>{{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} Liters Data Center</p>
+                <h1>{{ "%.6f" % estimate.get('w_tot_l', 0) }} Liters</h1>
+                <p>Total Water consumed</p>
+            </div>
         </div>
-        
-        <!-- <div class="controls">
-            <button onclick="previousVideo()">Previous</button>
-            <button onclick="nextVideo()">Next</button>
-            <button onclick="togglePlayPause()">Play/Pause</button>
-        </div> -->
     </div>
-    {% elif request.path.startswith('/video') %}
+    {% endif %}
+    {% if '/video' in request.path %}
     <div class="video-container">
         <video id="videoPlayer" autoplay muted> 
             <source src="{{ metadata.get('url') }}" type="video/mp4">
@@ -42,12 +34,61 @@
     </div>
     {% endif %}
     
+
     <script>
         const socket = io();
         let currentIndex = {{ current_index }};
         const totalVideos = {{ total_videos }};
         const isVideoPage = {{ 'true' if request.path.startswith('/video') else 'false' }};
-        const videoPlayer = isVideoPage ? document.getElementById('videoPlayer') : null;
+        const isCombinedPage = {{ 'true' if request.path.startswith('/data/video') else 'false' }};
+        const videoPlayer =  isCombinedPage ? document.getElementById('videoPlayer') : null;
+
+        function fitTextToHeight() {
+            const prompt = document.getElementById('promptText');
+            const container = prompt.parentElement;
+            
+            let fontSize = 24;
+            prompt.style.fontSize = fontSize + 'px';
+            
+            while (prompt.scrollHeight > container.clientHeight && fontSize > 7) {
+                fontSize -= 1;
+                prompt.style.fontSize = fontSize + 'px';
+            }
+            
+            while (prompt.scrollHeight < container.clientHeight && fontSize < 40) {
+                fontSize += 1;
+                prompt.style.fontSize = fontSize + 'px';
+                if (prompt.scrollHeight > container.clientHeight) {
+                    fontSize -= 1;
+                    prompt.style.fontSize = fontSize + 'px';
+                    break;
+                }
+            }
+        }
+
+        if (!isVideoPage) {
+            window.addEventListener('load', fitTextToHeight);
+            window.addEventListener('resize', fitTextToHeight);
+        }
+       
+        
+        
+        if (videoPlayer) {
+            videoPlayer.addEventListener('error', function(e) {
+                console.log('Video failed to load, skipping to next video');
+                console.error('Error details:', e);
+                // Automatically move to next video
+                nextVideo();
+            }, true);
+            
+            const source = videoPlayer.querySelector('source');
+            if (source) {
+                source.addEventListener('error', function(e) {
+                    console.log('Video source failed to load, skipping to next video');
+                    nextVideo();
+                }, true);
+            }
+        }
         
         // Listen for video sync events from other clients
         socket.on('sync_video', function(data) {
@@ -70,22 +111,6 @@
         
         // Send video control events
         if (videoPlayer) {
-            videoPlayer.addEventListener('play', function() {
-                socket.emit('video_control', {
-                    action: 'play',
-                    time: videoPlayer.currentTime,
-                    index: currentIndex
-                });
-            });
-            
-            videoPlayer.addEventListener('pause', function() {
-                socket.emit('video_control', {
-                    action: 'pause',
-                    time: videoPlayer.currentTime,
-                    index: currentIndex
-                });
-            });
-            
             videoPlayer.addEventListener('ended', function() {
                 nextVideo();
             });
@@ -119,8 +144,10 @@
         }
         
         function loadVideo() {
-            const pathParts = window.location.pathname.split('/');
-            const basePath = pathParts.slice(0, 2).join('/');
+            const pathname = window.location.pathname;
+            const playIndex = pathname.indexOf('/play/');
+            const basePath = playIndex !== -1 ? pathname.substring(0, playIndex) : pathname;
+
             window.location.href = `${basePath}/play/${currentIndex}`;
         }
     </script>

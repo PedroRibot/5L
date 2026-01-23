@@ -1,13 +1,14 @@
 # app_5litros/main.py
 from datetime import datetime
 from pathlib import Path
-from fetch import fetch_top_civitai_images, download_all_media  # Import from your modules
-from water_consumption_estimate import get_video_properties, calculate_water_consumption_estimate
+from fetch import fetch_top_civitai_images, download_all_media
+from water_consumption_estimate import get_video_properties, calculate_water_consumption_estimate, calculate_water_average
 import json
+import threading
 
 class WaterEstimatorApp:
 
-    def __init__(self, limit=10, period="Day", sort="Most Reactions", output_dir="../downloads", nsfw=False, type="video"):
+    def __init__(self, limit=10, period="Day", sort="Most Reactions", output_dir="./data", nsfw=False, type="video"):
         self.limit = limit
         self.period = period
         self.sort = sort
@@ -28,10 +29,6 @@ class WaterEstimatorApp:
             return
         
         today = datetime.now().strftime('%Y-%m-%d')
-
-        # all_data = self.output_dir / today / f"all_fetched_data_{today}.json"
-        # with open(all_data, 'w') as f:
-        #     json.dump(images_data, f, indent=2)
 
         # Step 2: Run estimation on downloaded videos
         estimates = {}
@@ -75,11 +72,12 @@ class WaterEstimatorApp:
             }
             
             resolution_factor = resolution / (768 * 768) / 3 
+            fps = video_data["fps"] if video_data else 30.0
 
             estimate = calculate_water_consumption_estimate(
                 Video=True,
                 video_duration=video_data["duration"] if video_data else 5.0,
-                frames_per_second=video_data["fps"] if video_data else 30.0,
+                frames_per_second=max(1.0, min(fps, 90.0)),
                 n_palabras_por_prompt=n_palabras_por_prompt,
                 n_steps=n_steps,
                 T_step=resolution_factor
@@ -92,6 +90,30 @@ class WaterEstimatorApp:
             }
             n += 1
         
+
+        average = calculate_water_average(estimates)
+        average_file = self.output_dir / "day_data.json"
+
+        # Load existing data or create empty dict
+        if average_file.exists():
+            with open(average_file, 'r') as f:
+                all_data = json.load(f)
+        else:
+            all_data = {}
+
+        # Add or update today's data
+        all_data[today] = {
+            "n_images_videos": self.limit,
+            "average_liters": average
+        }
+
+        # Save back to file
+        with open(average_file, 'w') as f:
+            json.dump(all_data, f, indent=2)
+
+        print(f"Day data saved to {average_file}")
+
+
         # Save estimates to JSON
         estimates_file = self.output_dir / f"estimates_{today}.json"
         with open(estimates_file, 'w') as f:
@@ -113,6 +135,18 @@ class WaterEstimatorApp:
                 last_date = current_date
             time.sleep(3600)  # Check every hour
 
+    def start_flask_server(self):
+        """Start Flask server in a separate thread"""
+        from web_app import socketio, app
+        socketio.run(app, debug=False, host='0.0.0.0', port=8081, 
+                     use_reloader=False, allow_unsafe_werkzeug=True)
+
 if __name__ == "__main__":
     app = WaterEstimatorApp(limit=200, type="video", nsfw=False, sort="Most Reactions", period="Day")  
+
+    # Start Flask server in background thread
+    flask_thread = threading.Thread(target=app.start_flask_server, daemon=True)
+    flask_thread.start()
+    print("Flask server started in background")
+
     app.run_continuous()  
