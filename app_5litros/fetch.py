@@ -185,12 +185,12 @@ def main():
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
     # Configuration
-    LIMIT = 10
+    LIMIT = 200
     PERIOD = "Day"
     SORT = "Most Reactions"
-    OUTPUT_DIR = "downloads"
+    OUTPUT_DIR = "../downloads"
     NSFW = False
-    IMGTYPE = "image"
+    IMGTYPE = "video"
     
     print(f"Configuration:")
     print(f"  - Limit: {LIMIT} items")
