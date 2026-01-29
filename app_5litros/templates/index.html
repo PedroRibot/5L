@@ -6,7 +6,7 @@
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 </head>
 <body>
-   {% if '/data' in request.path %}
+    {% if 'data' in request.path %}
     <div class="container">
         <div class="data">
             <div class="prompt-section">
@@ -14,39 +14,50 @@
             </div>
             <div class="energia-water">
                 <h2>Energy Consumption Estimation</h2>
-                <p>{{ "%.6f" % estimate.get('energia_imagen', 0) }} kWh Image Creation</p>
-                <p>{{ "%.6f" % estimate.get('energia_data_center', 0) }} kWh Data Center</p>
-
+                <p>{{ "%.6f"|format(estimate.get('energia_imagen', 0)) }} kWh (Image Creation)</p>
+                <p>{{ "%.6f"|format(estimate.get('energia_data_center', 0)) }} kWh (Data Center)</p>
+                
                 <h2>Water Consumption Estimation</h2>
-                <p>{{ "%.6f" % estimate.get('water_for_energy_l', 0) }} Liters Image Creation</p>
-                <p>{{ "%.6f" % estimate.get('water_for_data_center_l', 0) }} Liters Data Center</p>
-                <h1>{{ "%.6f" % estimate.get('w_tot_l', 0) }} Liters</h1>
+                <p>{{ "%.6f"|format(estimate.get('water_for_energy_l', 0)) }} Liters (Image Creation)</p>
+                <p>{{ "%.6f"|format(estimate.get('water_for_data_center_l', 0)) }} Liters (Data Center)</p>
+                
+                <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
                 <p>Total Water consumed</p>
             </div>
         </div>
     </div>
+
+    <div class="today_data">
+        <p>Today</p>
+        <p>{{ today_data.get('n_images_videos', 0) }} videos</p>
+        <p>{{ "%.6f"|format(today_data.get('total_liters', 0)) }} Liters</p>
+    </div>
     {% endif %}
-    {% if '/video' in request.path %}
+    
+    {% if 'video' in request.path %}
     <div class="video-container">
-        <video id="videoPlayer" autoplay muted> 
+        <video id="videoPlayer" autoplay>
             <source src="{{ metadata.get('url') }}" type="video/mp4">
         </video>
     </div>
     {% endif %}
     
-
     <script>
         const socket = io();
         let currentIndex = {{ current_index }};
         const totalVideos = {{ total_videos }};
-        const isVideoPage = {{ 'true' if request.path.startswith('/video') else 'false' }};
+        const isVideoPage = {{ 'true' if 'video' in request.path else 'false' }};
         const isCombinedPage = {{ 'true' if request.path.startswith('/data/video') else 'false' }};
-        const videoPlayer =  isCombinedPage ? document.getElementById('videoPlayer') : null;
-
+        const videoPlayer = isVideoPage ? document.getElementById('videoPlayer') : null;
+        
+        socket.on('data_updated', function(data) {
+            console.log('New data available:', data);
+            window.location.reload();
+        });
+        
         function fitTextToHeight() {
             const prompt = document.getElementById('promptText');
             const container = prompt.parentElement;
-            
             let fontSize = 24;
             prompt.style.fontSize = fontSize + 'px';
             
@@ -65,19 +76,16 @@
                 }
             }
         }
-
+        
         if (!isVideoPage) {
             window.addEventListener('load', fitTextToHeight);
             window.addEventListener('resize', fitTextToHeight);
         }
-       
-        
         
         if (videoPlayer) {
             videoPlayer.addEventListener('error', function(e) {
                 console.log('Video failed to load, skipping to next video');
                 console.error('Error details:', e);
-                // Automatically move to next video
                 nextVideo();
             }, true);
             
@@ -90,7 +98,6 @@
             }
         }
         
-        // Listen for video sync events from other clients
         socket.on('sync_video', function(data) {
             if (!videoPlayer) return;
             
@@ -103,13 +110,11 @@
             }
         });
         
-        // Listen for index changes from other clients
         socket.on('sync_index', function(data) {
             currentIndex = data.index;
             loadVideo();
         });
         
-        // Send video control events
         if (videoPlayer) {
             videoPlayer.addEventListener('ended', function() {
                 nextVideo();
@@ -118,6 +123,7 @@
         
         function nextVideo() {
             currentIndex = (currentIndex + 1) % totalVideos;
+                        
             socket.emit('change_video', { index: currentIndex });
             loadVideo();
         }
@@ -136,20 +142,26 @@
                     videoPlayer.pause();
                 }
             } else {
-                socket.emit('video_control', {
-                    action: 'toggle',
-                    index: currentIndex
-                });
+                socket.emit('video_control', { action: 'toggle', index: currentIndex });
             }
         }
         
         function loadVideo() {
             const pathname = window.location.pathname;
-            const playIndex = pathname.indexOf('/play/');
+            const playIndex = pathname.indexOf('play/');
             const basePath = playIndex !== -1 ? pathname.substring(0, playIndex) : pathname;
-
-            window.location.href = `${basePath}/play/${currentIndex}`;
+            window.location.href = basePath + 'play/' + currentIndex;
         }
+        
+        socket.on('more_videos_response', function(data) {
+            console.log('Response from server:', data.message);
+            if (data.action === 'reload') {
+
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            }
+        });
     </script>
 </body>
 </html>

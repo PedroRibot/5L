@@ -41,6 +41,13 @@ html, body {
     flex-direction: column;
 }
 
+.today_data {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vh;
+    text-align: right;
+}
+
 /* Top 50% - Prompt Section */
 .prompt-section {
     flex: 0 0 50%;

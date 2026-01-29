@@ -11,7 +11,7 @@ from pathlib import Path
 ## Estimates using as if they were using SDXL 1.0 model parameters
 Potencia_Efectiva = 0.5
 I_grid = 2.5
-WUE = 1.0
+WUE = 0.61
 PUE = 1.65
 Token_Latency = 0.01 
 
