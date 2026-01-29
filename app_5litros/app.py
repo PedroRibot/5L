@@ -150,7 +150,7 @@ class WaterEstimatorApp:
         socketio.run(app, debug=False, host='0.0.0.0', port=8081,
                     use_reloader=False, allow_unsafe_werkzeug=True)
 
-if __name__ == "__main__":
+if __name__ == "__app__":
     with open('./config/config.json', 'r') as config_file:
         config = json.load(config_file)
 
