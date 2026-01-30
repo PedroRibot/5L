@@ -22,7 +22,7 @@ class WaterEstimatorApp:
         
         # Step 1: Fetch data
         images_data = fetch_top_civitai_images(
-            limit=self.limit, period=self.period, sort=self.sort, type="video"
+            limit=self.limit, period=self.period, sort=self.sort, type="video", nsfw=self.nsfw
         )
         
         if not images_data:
@@ -153,9 +153,9 @@ class WaterEstimatorApp:
 if __name__ == "__main__":
     with open('./config/config.json', 'r') as config_file:
         config = json.load(config_file)
-
+    print("Starting Water Estimator App with config:", config)
     app = WaterEstimatorApp(limit=config["limit"], type=config["type"], nsfw=config["nsfw"], sort=config["sort"], period=config["period"])
-    
+    app.secret_key = 'test_secret_key' 
     # Start Flask server in background thread
     flask_thread = threading.Thread(target=app.start_flask_server, daemon=True)
     flask_thread.start()

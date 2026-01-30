@@ -45,7 +45,8 @@
         // Listen for data update notification
         socket.on('data_updated', function(data) {
             console.log('Data is now available:', data);
-            window.location.href = '/';
+            // Redirect to return URL or default to '/'
+            window.location.href = data.return_url || '/';
         });
         
         // Poll every 5 seconds to check if data is available
@@ -54,11 +55,14 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.has_data) {
-                        window.location.href = '/';
+                        // Use the return URL from the API response
+                        window.location.href = data.return_url || '/';
                     }
                 })
                 .catch(err => console.log('Checking for data...'));
         }, 5000);
     </script>
+
+
 </body>
 </html>

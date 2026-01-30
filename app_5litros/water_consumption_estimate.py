@@ -76,7 +76,7 @@ def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frame
     energia_imagen = (Latencia * Potencia_Efectiva / 3600) * Keyframes_generados * Factor_de_entrenamiento 
     energia_data_center = energia_imagen * PUE
     water_for_energy_l = energia_imagen * I_grid
-    water_for_data_center_l = energia_data_center * WUE
+    water_for_data_center_l = energia_data_center * WUE * I_grid
     w_tot_l = water_for_energy_l + water_for_data_center_l
     
     return {

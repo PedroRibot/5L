@@ -1,6 +1,7 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, session
 from flask_socketio import SocketIO, emit
 from pathlib import Path
+from flask import request
 import json
 from datetime import datetime
 
@@ -32,14 +33,15 @@ global_data = load_data(GLOBAL_DATA_FILE)
 @app.route('/data/play/<int:index>')
 @app.route('/data/video/play/')
 @app.route('/data/video/play/<int:index>')
-@app.route('/play/')
-@app.route('/play/<int:index>')
 def play_video(index=0):
     # Reload estimates to get latest data
     current_estimates = load_data(ESTIMATES_FILE)
     
     if not current_estimates:
+        session['return_url'] = request.path
         return render_template('loading.html', message="Waiting for today's data to be generated. Please wait...")
+    
+    session.pop('return_url', None)
     
     if index >= len(current_estimates):
         index = 0
@@ -64,11 +66,17 @@ def reload_data():
     estimates = load_data(ESTIMATES_FILE)
     day_data = load_data(DAY_DATA_FILE)
     global_data = load_data(GLOBAL_DATA_FILE)
+    
+    # Get the return URL from session, default to '/'
+    return_url = session.get('return_url', '/')
+    
     return jsonify({
         'success': True,
         'total_videos': len(estimates),
-        'has_data': len(estimates) > 0
+        'has_data': len(estimates) > 0,
+        'return_url': return_url
     })
+
 
 @app.route('/global')
 def global_view():

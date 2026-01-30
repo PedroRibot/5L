@@ -5190,5 +5190,555 @@
       "prompt": "the camera dives toward a tiny streak of light ripping along a road. \nthen drops tight to the rear of car   at insane speed.\nmetropolis , waterfall , cloud, ",
       "steps": 4
     }
+  },
+  "236": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 928,
+      "height": 1248,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13235580833104094,
+      "energia_data_center": 0.21838708374621754,
+      "water_for_energy_l": 0.33088952082760237,
+      "water_for_data_center_l": 0.1332161210851927,
+      "w_tot_l": 0.4641056419127951
+    },
+    "metadata": {
+      "id": 119240311,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/353c8045-4f4e-4a39-bf92-0e6e2f90553f/original=true/353c8045-4f4e-4a39-bf92-0e6e2f90553f.mp4",
+      "created_at": "2026-01-29T19:27:34.148Z",
+      "prompt": "PBRSty1e. An happy woman. She looks at the viewer, smiling. She tilts her head. Some petals flowers are floating around.",
+      "steps": 25
+    }
+  },
+  "237": {
+    "video_data": {
+      "duration": 5.083333,
+      "width": 1190,
+      "height": 1740,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.16204257455091295,
+      "energia_data_center": 0.26737024800900633,
+      "water_for_energy_l": 0.4051064363772824,
+      "water_for_data_center_l": 0.16309585128549386,
+      "w_tot_l": 0.5682022876627763
+    },
+    "metadata": {
+      "id": 119239253,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b55f36ae-420f-4f2c-a694-d7cf50f7c7ab/original=true/b55f36ae-420f-4f2c-a694-d7cf50f7c7ab.mp4",
+      "created_at": "2026-01-29T19:15:08.159Z",
+      "prompt": "Anime girl with glasses sitting on a library reading a book.",
+      "steps": 25
+    }
+  },
+  "238": {
+    "video_data": {
+      "duration": 6.020833,
+      "width": 864,
+      "height": 1280,
+      "fps": 48.0
+    },
+    "estimate": {
+      "energia_imagen": 0.18746607196153398,
+      "energia_data_center": 0.30931901873653106,
+      "water_for_energy_l": 0.46866517990383494,
+      "water_for_data_center_l": 0.18868460142928395,
+      "w_tot_l": 0.6573497813331188
+    },
+    "metadata": {
+      "id": 119238541,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2ea13ecc-4f42-44f0-9395-479b293e36b4/original=true/2ea13ecc-4f42-44f0-9395-479b293e36b4.mp4",
+      "created_at": "2026-01-29T19:07:29.988Z",
+      "prompt": "man jumps fron one portal to other portal, cinematic",
+      "steps": 25
+    }
+  },
+  "239": {
+    "video_data": {
+      "duration": 8.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09678927442108484,
+      "energia_data_center": 0.15970230279478997,
+      "water_for_energy_l": 0.24197318605271212,
+      "water_for_data_center_l": 0.09741840470482188,
+      "w_tot_l": 0.339391590757534
+    },
+    "metadata": {
+      "id": 119238423,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d68628f8-fc8d-4135-bf10-876c62a1d226/original=true/d68628f8-fc8d-4135-bf10-876c62a1d226.mp4",
+      "created_at": "2026-01-29T19:01:51.418Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "240": {
+    "video_data": {
+      "duration": 3.708333,
+      "width": 720,
+      "height": 1280,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05309471191423504,
+      "energia_data_center": 0.0876062746584878,
+      "water_for_energy_l": 0.1327367797855876,
+      "water_for_data_center_l": 0.05343982754167756,
+      "w_tot_l": 0.18617660732726515
+    },
+    "metadata": {
+      "id": 119238411,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b7167fde-97cb-4ef1-bb2d-03359fcc95cb/original=true/b7167fde-97cb-4ef1-bb2d-03359fcc95cb.mp4",
+      "created_at": "2026-01-29T19:01:31.696Z",
+      "prompt": "outdoor shower scene, standing under running water, wet skin and hair, soft curves, moody low light, concrete walls, cinematic shadows, intimate atmosphere, realistic, candid photo look\n\nkeep the same face provided",
+      "steps": 25
+    }
+  },
+  "241": {
+    "video_data": {
+      "duration": 4.84,
+      "width": 1280,
+      "height": 704,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.06672780116876814,
+      "energia_data_center": 0.11010087192846743,
+      "water_for_energy_l": 0.16681950292192035,
+      "water_for_data_center_l": 0.06716153187636513,
+      "w_tot_l": 0.23398103479828547
+    },
+    "metadata": {
+      "id": 119238185,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7451fab5-fdf3-41d1-ba1b-bceb90c4cf9f/original=true/7451fab5-fdf3-41d1-ba1b-bceb90c4cf9f.mp4",
+      "created_at": "2026-01-29T18:57:54.047Z",
+      "prompt": "that the television floats on water and eventually sinks",
+      "steps": 25
+    }
+  },
+  "242": {
+    "video_data": {
+      "duration": 8.0625,
+      "width": 560,
+      "height": 720,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03245560975571984,
+      "energia_data_center": 0.05355175609693773,
+      "water_for_energy_l": 0.0811390243892996,
+      "water_for_data_center_l": 0.032666571219132017,
+      "w_tot_l": 0.11380559560843162
+    },
+    "metadata": {
+      "id": 117455546,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/994bfb49-4d08-40b5-adbe-53c32f3e771d/original=true/994bfb49-4d08-40b5-adbe-53c32f3e771d.mp4",
+      "created_at": "2026-01-29T18:33:00.000Z",
+      "prompt": "A woman in a flowing pink dress balances gracefully in a perfect split between two tall cliffs high above the clouds as the sun glows behind her. Suddenly, the rocks begin to tremble, small pieces breaking loose and falling into the mist below. Her balance wavers, and she looks down in shock. The cliffs pull slightly apart, and she slips, falling gently through the glowing clouds. Her dress billows like wings as she descends slowly, disappearing into the golden light.",
+      "steps": 25
+    }
+  },
+  "243": {
+    "video_data": {
+      "duration": 15.020833,
+      "width": 1024,
+      "height": 1344,
+      "fps": 48.0
+    },
+    "estimate": {
+      "energia_imagen": 0.650431273146906,
+      "energia_data_center": 1.0732116006923949,
+      "water_for_energy_l": 1.626078182867265,
+      "water_for_data_center_l": 0.6546590764223609,
+      "w_tot_l": 2.280737259289626
+    },
+    "metadata": {
+      "id": 119235985,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/854c10c3-e07f-4482-8977-5db445e6830d/original=true/854c10c3-e07f-4482-8977-5db445e6830d.mp4",
+      "created_at": "2026-01-29T18:30:20.625Z",
+      "prompt": "part_1: \nthe woman is making hand gestures, spilling some wine.\nthe woman is agitated: \"of course I drink a lot. I'm under constant stress. What's the use of hyrul's best swordsman, when i could be kidnapped anytime when he is absent taking an hour long restroom session?!\" \n\npart_2:\nthe camera quickly pans to the right fast\n\npart_3:\n[long pause]\n\npart_4:\nthe young man is making a sarcastic remark: \"well excuuuse me princess!\"\n\n\nSynopsis:\nA princess and a young man are sitting at the same dinner table.\nThey are talking to each other. throughouth the video you hear the sound of a indoor fireplace cracking.",
+      "steps": 25
+    }
+  },
+  "244": {
+    "video_data": {
+      "duration": 5.99,
+      "width": 960,
+      "height": 1280,
+      "fps": 71.99612089865848
+    },
+    "estimate": {
+      "energia_imagen": 0.30165852611003563,
+      "energia_data_center": 0.49773656808155875,
+      "water_for_energy_l": 0.7541463152750891,
+      "water_for_data_center_l": 0.30361930652975083,
+      "w_tot_l": 1.05776562180484
+    },
+    "metadata": {
+      "id": 119234511,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/dc97c461-6e1c-48a4-bc65-88afbf2c1494/original=true/dc97c461-6e1c-48a4-bc65-88afbf2c1494.mp4",
+      "created_at": "2026-01-29T18:22:46.022Z",
+      "prompt": "no",
+      "steps": 25
+    }
+  },
+  "245": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029294103002471913,
+      "energia_data_center": 0.048335269954078657,
+      "water_for_energy_l": 0.07323525750617979,
+      "water_for_data_center_l": 0.02948451467198798,
+      "w_tot_l": 0.10271977217816777
+    },
+    "metadata": {
+      "id": 119235409,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/653b1877-3f32-4ee5-a7ce-3aa78e8ae426/original=true/653b1877-3f32-4ee5-a7ce-3aa78e8ae426.mp4",
+      "created_at": "2026-01-29T18:19:41.432Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "246": {
+    "video_data": {
+      "duration": 5.038005,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.19092091586804094,
+      "energia_data_center": 0.3150195111822675,
+      "water_for_energy_l": 0.47730228967010235,
+      "water_for_data_center_l": 0.19216190182118317,
+      "w_tot_l": 0.6694641914912856
+    },
+    "metadata": {
+      "id": 119235062,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/25f26cb4-fd28-4653-9dd1-c6d541fd5133/original=true/25f26cb4-fd28-4653-9dd1-c6d541fd5133.mp4",
+      "created_at": "2026-01-29T18:15:57.063Z",
+      "prompt": "One continuous cinematic shot of a massive dragon flying low overhead across a rocky canyon. The camera tracks from below as wings beat powerfully, stirring dust and wind. Firelight glows faintly in its throat. Dramatic lighting, epic scale, no cuts, smooth camera motion.",
+      "steps": 25
+    }
+  },
+  "247": {
+    "video_data": {
+      "duration": 10.053991,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.4000813735073408,
+      "energia_data_center": 0.6601342662871122,
+      "water_for_energy_l": 1.000203433768352,
+      "water_for_data_center_l": 0.40268190243513846,
+      "w_tot_l": 1.4028853362034905
+    },
+    "metadata": {
+      "id": 119235071,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/60249e56-f3f7-4858-9302-43450b4bbd71/original=true/60249e56-f3f7-4858-9302-43450b4bbd71.mp4",
+      "created_at": "2026-01-29T18:15:57.063Z",
+      "prompt": "One continuous cinematic shot of a massive dragon flying low overhead across a rocky canyon. The camera tracks from below as wings beat powerfully, stirring dust and wind. Firelight glows faintly in its throat. Dramatic lighting, epic scale, no cuts, smooth camera motion.",
+      "steps": 25
+    }
+  },
+  "248": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.025670521553374563,
+      "energia_data_center": 0.042356360563068025,
+      "water_for_energy_l": 0.06417630388343641,
+      "water_for_data_center_l": 0.025837379943471496,
+      "w_tot_l": 0.09001368382690791
+    },
+    "metadata": {
+      "id": 119235107,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/84168f59-38e6-4662-964b-f0f76ab6c12c/original=true/84168f59-38e6-4662-964b-f0f76ab6c12c.mp4",
+      "created_at": "2026-01-29T18:15:27.844Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "249": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03313631177510427,
+      "energia_data_center": 0.054674914428922035,
+      "water_for_energy_l": 0.08284077943776066,
+      "water_for_data_center_l": 0.03335169780164244,
+      "w_tot_l": 0.1161924772394031
+    },
+    "metadata": {
+      "id": 119234583,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/17cf7e9c-4aa6-4a72-bd62-e18177bdf809/original=true/17cf7e9c-4aa6-4a72-bd62-e18177bdf809.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "250": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031468781970531684,
+      "energia_data_center": 0.051923490251377276,
+      "water_for_energy_l": 0.07867195492632921,
+      "water_for_data_center_l": 0.03167332905334014,
+      "w_tot_l": 0.11034528397966935
+    },
+    "metadata": {
+      "id": 119234587,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2b4b2e23-e344-417b-8be1-9d606361e7ea/original=true/2b4b2e23-e344-417b-8be1-9d606361e7ea.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "251": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.032099843059022005,
+      "energia_data_center": 0.052964741047386306,
+      "water_for_energy_l": 0.08024960764755501,
+      "water_for_data_center_l": 0.032308492038905644,
+      "w_tot_l": 0.11255809968646066
+    },
+    "metadata": {
+      "id": 119234589,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/609cef48-07a3-4711-8a06-25c0c887f84c/original=true/609cef48-07a3-4711-8a06-25c0c887f84c.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "252": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03681705435916591,
+      "energia_data_center": 0.06074813969262374,
+      "water_for_energy_l": 0.09204263589791477,
+      "water_for_data_center_l": 0.03705636521250048,
+      "w_tot_l": 0.12909900111041525
+    },
+    "metadata": {
+      "id": 119234590,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e7deea62-03a0-4d3e-9fb2-9285883f25f1/original=true/e7deea62-03a0-4d3e-9fb2-9285883f25f1.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "253": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03426115515685935,
+      "energia_data_center": 0.05653090600881793,
+      "water_for_energy_l": 0.08565288789214838,
+      "water_for_data_center_l": 0.034483852665378935,
+      "w_tot_l": 0.12013674055752732
+    },
+    "metadata": {
+      "id": 119234591,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0b77ebdb-8bb5-4840-903b-6fcf4f19a356/original=true/0b77ebdb-8bb5-4840-903b-6fcf4f19a356.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "254": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.034806103945203386,
+      "energia_data_center": 0.05743007150958558,
+      "water_for_energy_l": 0.08701525986300847,
+      "water_for_data_center_l": 0.0350323436208472,
+      "w_tot_l": 0.12204760348385567
+    },
+    "metadata": {
+      "id": 119234592,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a537dc3d-0126-49b9-b64e-eab5a8c5c27a/original=true/a537dc3d-0126-49b9-b64e-eab5a8c5c27a.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "255": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03402145598817267,
+      "energia_data_center": 0.0561354023804849,
+      "water_for_energy_l": 0.08505363997043167,
+      "water_for_data_center_l": 0.03424259545209579,
+      "w_tot_l": 0.11929623542252746
+    },
+    "metadata": {
+      "id": 119234594,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9cea0413-64c4-4772-9972-c174f75954c3/original=true/9cea0413-64c4-4772-9972-c174f75954c3.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "256": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.032447287987030754,
+      "energia_data_center": 0.05353802517860074,
+      "water_for_energy_l": 0.08111821996757689,
+      "water_for_data_center_l": 0.03265819535894645,
+      "w_tot_l": 0.11377641532652333
+    },
+    "metadata": {
+      "id": 119234595,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/efed4bb2-8f88-46ca-9171-a1cfb10f5fa3/original=true/efed4bb2-8f88-46ca-9171-a1cfb10f5fa3.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "257": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03578978396440402,
+      "energia_data_center": 0.05905314354126663,
+      "water_for_energy_l": 0.08947445991101005,
+      "water_for_data_center_l": 0.036022417560172645,
+      "w_tot_l": 0.1254968774711827
+    },
+    "metadata": {
+      "id": 119234596,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ce36c6e7-2660-4205-a881-63af1583b248/original=true/ce36c6e7-2660-4205-a881-63af1583b248.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "258": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03201008649910264,
+      "energia_data_center": 0.05281664272351935,
+      "water_for_energy_l": 0.0800252162477566,
+      "water_for_data_center_l": 0.0322181520613468,
+      "w_tot_l": 0.1122433683091034
+    },
+    "metadata": {
+      "id": 119234597,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e461d261-8462-440f-b91e-78632dfceff9/original=true/e461d261-8462-440f-b91e-78632dfceff9.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "259": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03366301231317236,
+      "energia_data_center": 0.055543970316734394,
+      "water_for_energy_l": 0.08415753078293091,
+      "water_for_data_center_l": 0.03388182189320798,
+      "w_tot_l": 0.11803935267613888
+    },
+    "metadata": {
+      "id": 119234598,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fb908b6d-23d6-45ec-beda-6ea7e9f67eb1/original=true/fb908b6d-23d6-45ec-beda-6ea7e9f67eb1.mp4",
+      "created_at": "2026-01-29T18:14:56.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "260": {
+    "video_data": {
+      "duration": 10.069,
+      "width": 1106,
+      "height": 832,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17271464530525743,
+      "energia_data_center": 0.28497916475367474,
+      "water_for_energy_l": 0.4317866132631436,
+      "water_for_data_center_l": 0.1738372904997416,
+      "w_tot_l": 0.6056239037628852
+    },
+    "metadata": {
+      "id": 119234233,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6ec8ff12-28f5-4a5b-a573-61f65f76e81d/original=true/6ec8ff12-28f5-4a5b-a573-61f65f76e81d.mp4",
+      "created_at": "2026-01-29T18:04:55.371Z",
+      "prompt": "Five monsters of different sizes, textures, and colors, with bulging eyes and long hair, are holding each other by the shoulder, singing and dancing happily, against a background of blue sky and white clouds, white marble floor, 3D rendered image",
+      "steps": 25
+    }
   }
 }

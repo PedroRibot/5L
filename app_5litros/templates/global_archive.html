@@ -14,16 +14,46 @@
             </thead>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <th>PLATFORM</th>
+                    <th>ACTIVE USERS</th>
                     <th>IMAGES / DAY</th>
                     <th>LITERS / DAY</th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td class="platform">Grok AI</td>
+                    <td>{{ global_data.get('StableDiffusion', {}).get('active_users', 0)|format_number }} (Daily)</td>
+                    <td id="stable-diffusion-counter">0</td>
+                    <td id="stable-diffusion-liters">0</td>
+                </tr>
+                <tr>
+                    <td class="platform">Nano Banana Pro</td>
+                    <td>{{ global_data.get('GoogleGemini', {}).get('active_users', 0)|format_number }} (Daily)</td>
+                    <td id="google-gemini-counter">0</td>
+                    <td id="google-gemini-liters">0</td>
+                </tr>
+                <tr>
+                    <td class="platform">Midjourney</td>
+                    <td>{{ global_data.get('Midjourney', {}).get('active_users', 0)|format_number }} (Daily)</td>
+                    <td id="midjourney-counter">0</td>
+                    <td id="midjourney-liters">0</td>
+                </tr>
+                <tr>
+                    <td class="platform">DALL-E (OpenAI)</td>
+                    <td>{{ global_data.get('DALLE', {}).get('active_users', 0)|format_number }} (Daily)</td>
+                    <td id="dalle-counter">0</td>
+                    <td id="dalle-liters">0</td>
+                </tr>
+                <tr>
+                    <td class="platform">Meta Imagine</td>
+                    <td>{{ global_data.get('MetaImagine', {}).get('active_users', 0)|format_number }} (Daily)</td>
+                    <td id="meta-imagine-counter">0</td>
+                    <td id="meta-imagine-liters">0</td>
+                </tr>
                 <tr class="total-row">
-                    <td class="platform">ESTIMATED TOTAL DAILY</td>
-                    <td><em>Grok AI, NanoBanana Pro, Meta Imagine...</em></td>
+                    <td class="platform">TOTAL DAILY</td>
+                    <td><em>Global Output</em></td>
                     <td id="total-counter">0</td>
                     <td id="total-liters">0</td>
                 </tr>
@@ -65,17 +95,17 @@
 
          average_today = {{ average_today }};
         // Example for all platforms
-        // animateCounter('stable-diffusion-counter', sd_img_day);
-        // animateCounter('google-gemini-counter', google_gemini_img_day);
-        // animateCounter('midjourney-counter', midjourney_img_day);
-        // animateCounter('dalle-counter', dalle_img_day);
-        // animateCounter('meta-imagine-counter', meta_imagine_img_day);
+        animateCounter('stable-diffusion-counter', sd_img_day);
+        animateCounter('google-gemini-counter', google_gemini_img_day);
+        animateCounter('midjourney-counter', midjourney_img_day);
+        animateCounter('dalle-counter', dalle_img_day);
+        animateCounter('meta-imagine-counter', meta_imagine_img_day);
 
-        // animateCounter('stable-diffusion-liters', sd_img_day * average_today);
-        // animateCounter('google-gemini-liters', google_gemini_img_day * average_today);
-        // animateCounter('midjourney-liters', midjourney_img_day * average_today);
-        // animateCounter('dalle-liters', dalle_img_day * average_today);
-        // animateCounter('meta-imagine-liters', meta_imagine_img_day * average_today);
+        animateCounter('stable-diffusion-liters', sd_img_day * average_today);
+        animateCounter('google-gemini-liters', google_gemini_img_day * average_today);
+        animateCounter('midjourney-liters', midjourney_img_day * average_today);
+        animateCounter('dalle-liters', dalle_img_day * average_today);
+        animateCounter('meta-imagine-liters', meta_imagine_img_day * average_today);
         // For total counter
         const totalImages = sd_img_day + google_gemini_img_day + midjourney_img_day + dalle_img_day + meta_imagine_img_day;
         animateCounter('total-counter', totalImages);
