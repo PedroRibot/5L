@@ -102,6 +102,11 @@ class WaterEstimatorApp:
             
             if video_data["fps"] == 0:
                 video_data["fps"] = 30
+
+            if video_data["duration"] >= 60:
+                print(f"Warning: Video {item['id']} has a long duration of {video_data['duration']} seconds, Video skipped to avoid extreme estimates.")
+                # Skip videos longer than 60 seconds to avoid extreme estimates
+                continue
             
             # Calculate resolution factor based on dimensions
             width = video_data.get("width", 768)

@@ -1,0 +1,4402 @@
+{
+  "0": {
+    "video_data": {
+      "duration": 6.53125,
+      "width": 1080,
+      "height": 654,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02257162072832951,
+      "energia_data_center": 0.03724317420174369,
+      "water_for_energy_l": 0.05642905182082377,
+      "water_for_data_center_l": 0.05679584065765912,
+      "w_tot_l": 0.11322489247848289
+    },
+    "metadata": {
+      "id": 119841509,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7d6d2ac-c43f-4d5e-bcf6-483ef28a2f81/original=true/a7d6d2ac-c43f-4d5e-bcf6-483ef28a2f81.mp4",
+      "created_at": "2026-02-03T19:25:02.920Z",
+      "prompt": "Set against the backdrop of a traditional Japanese wooden house during a snowy daytime winter scene, inside the room sits a cozy, cushioned kotatsu table\u2014covered generously with warm fabric\u2014and atop it rests a single plate filled with several mandarin oranges.\n\nA young Japanese girl is seated cross-legged on a cushion, her legs tucked beneath the kotatsu as she knits. Half of her knitting project has already been completed.\n\nHer hair is styled in a ponytail tied with a red ribbon, and she\u2019s wearing a hairpin in her bangs. She's dressed in a warm-looking sweater, and beneath the kotatsu, a cat\u2014wearing the very same cat-sized sweater she made\u2014is playfully batting at a large ball of yarn connected to her knitting project.\n\nThe camera focuses on the girl and the cat, capturing their cozy, intimate moment.\n\nA photorealistic domestic cat with short fur and accurate feline anatomy, Cinematic, documentary-style realism, real-world lighting, realistic fur texture,\nno stylization, no illustration style.",
+      "steps": 5
+    }
+  },
+  "1": {
+    "video_data": {
+      "duration": 6.53125,
+      "width": 1080,
+      "height": 654,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.019460229784613297,
+      "energia_data_center": 0.03210937914461194,
+      "water_for_energy_l": 0.048650574461533244,
+      "water_for_data_center_l": 0.04896680319553321,
+      "w_tot_l": 0.09761737765706646
+    },
+    "metadata": {
+      "id": 119841846,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/45a8b2a3-3af8-41fd-8428-4f24f42b2fc8/original=true/45a8b2a3-3af8-41fd-8428-4f24f42b2fc8.mp4",
+      "created_at": "2026-02-03T19:25:02.920Z",
+      "prompt": "Set against the backdrop of a traditional Japanese wooden house during a snowy daytime winter scene, inside the room sits a cozy, cushioned kotatsu table\u2014covered generously with warm fabric\u2014and atop it rests a single plate filled with several mandarin oranges.\n\nA young Japanese girl is seated cross-legged on a cushion, her legs tucked beneath the kotatsu as she knits. Half of her knitting project has already been completed.\n\nHer hair is styled in a ponytail tied with a red ribbon, and she\u2019s wearing a hairpin in her bangs. She's dressed in a warm-looking sweater, and beneath the kotatsu, a cat\u2014wearing the very same cat-sized sweater she made\u2014is playfully batting at a large ball of yarn connected to her knitting project.\n\nThe camera focuses on the girl and the cat, capturing their cozy, intimate moment.\n\nA photorealistic domestic cat with short fur and accurate feline anatomy, Cinematic, documentary-style realism, real-world lighting, realistic fur texture,\nno stylization, no illustration style.",
+      "steps": 5
+    }
+  },
+  "2": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 928,
+      "height": 1248,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13853272545844153,
+      "energia_data_center": 0.2285789970064285,
+      "water_for_energy_l": 0.3463318136461038,
+      "water_for_data_center_l": 0.34858297043480346,
+      "w_tot_l": 0.6949147840809073
+    },
+    "metadata": {
+      "id": 119841915,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0e8845f9-81f1-4904-a961-950a452e865f/original=true/0e8845f9-81f1-4904-a961-950a452e865f.mp4",
+      "created_at": "2026-02-03T19:24:56.077Z",
+      "prompt": "PBRSty1e. A woman. She is looking around from left to right. The background is dark.",
+      "steps": 25
+    }
+  },
+  "3": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 1440,
+      "height": 1440,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.15376573497851717,
+      "energia_data_center": 0.2537134627145533,
+      "water_for_energy_l": 0.38441433744629294,
+      "water_for_data_center_l": 0.38691303063969384,
+      "w_tot_l": 0.7713273680859868
+    },
+    "metadata": {
+      "id": 119841337,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eacadf84-e6b6-4e24-a15f-afb0df601cea/original=true/eacadf84-e6b6-4e24-a15f-afb0df601cea.mp4",
+      "created_at": "2026-02-03T19:23:32.535Z",
+      "prompt": "realistic photography, hyper detailed, a photo of a racoon on a sledge sledging down a hill, the racoon wears a poodle hat and a red down jacket, the trees and the mountains in the background are covered with snow, the sky is blue and the sun is shining",
+      "steps": 25
+    }
+  },
+  "4": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.015482164905808728,
+      "energia_data_center": 0.0255455720945844,
+      "water_for_energy_l": 0.03870541226452182,
+      "water_for_data_center_l": 0.038956997444241206,
+      "w_tot_l": 0.07766240970876304
+    },
+    "metadata": {
+      "id": 119841830,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/21d94c7d-ed01-4cb3-b8d5-fe02e23e3da3/original=true/21d94c7d-ed01-4cb3-b8d5-fe02e23e3da3.mp4",
+      "created_at": "2026-02-03T19:23:09.839Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "5": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.014667056234858061,
+      "energia_data_center": 0.0242006427875158,
+      "water_for_energy_l": 0.03666764058714515,
+      "water_for_data_center_l": 0.03690598025096159,
+      "w_tot_l": 0.07357362083810674
+    },
+    "metadata": {
+      "id": 119841829,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4820af93-0167-4ab2-97df-42534028988b/original=true/4820af93-0167-4ab2-97df-42534028988b.mp4",
+      "created_at": "2026-02-03T19:23:08.344Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "6": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01423503842890496,
+      "energia_data_center": 0.023487813407693185,
+      "water_for_energy_l": 0.035587596072262404,
+      "water_for_data_center_l": 0.0358189154467321,
+      "w_tot_l": 0.0714065115189945
+    },
+    "metadata": {
+      "id": 119841825,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d1963c3-4541-45e5-9f91-205f9f15695d/original=true/1d1963c3-4541-45e5-9f91-205f9f15695d.mp4",
+      "created_at": "2026-02-03T19:23:02.936Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "7": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.014176753846702568,
+      "energia_data_center": 0.023391643847059235,
+      "water_for_energy_l": 0.03544188461675642,
+      "water_for_data_center_l": 0.03567225686676533,
+      "w_tot_l": 0.07111414148352174
+    },
+    "metadata": {
+      "id": 119841831,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b1733419-a52e-4254-a09e-0c16a3bffdc0/original=true/b1733419-a52e-4254-a09e-0c16a3bffdc0.mp4",
+      "created_at": "2026-02-03T19:23:01.767Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "8": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.015448967341923645,
+      "energia_data_center": 0.025490796114174014,
+      "water_for_energy_l": 0.03862241835480911,
+      "water_for_data_center_l": 0.03887346407411537,
+      "w_tot_l": 0.07749588242892448
+    },
+    "metadata": {
+      "id": 119841773,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/731dc3bf-faaf-4643-8b9b-84c74f044626/original=true/731dc3bf-faaf-4643-8b9b-84c74f044626.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "9": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01578180606588816,
+      "energia_data_center": 0.02603998000871546,
+      "water_for_energy_l": 0.0394545151647204,
+      "water_for_data_center_l": 0.039710969513291075,
+      "w_tot_l": 0.07916548467801147
+    },
+    "metadata": {
+      "id": 119841774,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2676a0d1-0a5b-48bd-9dc8-0fe8fbc6bc10/original=true/2676a0d1-0a5b-48bd-9dc8-0fe8fbc6bc10.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "10": {
+    "video_data": {
+      "duration": 5.062012,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.013793133352917954,
+      "energia_data_center": 0.022758670032314625,
+      "water_for_energy_l": 0.03448283338229489,
+      "water_for_data_center_l": 0.0347069717992798,
+      "w_tot_l": 0.06918980518157469
+    },
+    "metadata": {
+      "id": 119841775,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9bff06e8-a8db-4bdc-955f-82b0583c227c/original=true/9bff06e8-a8db-4bdc-955f-82b0583c227c.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "11": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.014641513707094739,
+      "energia_data_center": 0.02415849761670632,
+      "water_for_energy_l": 0.03660378426773685,
+      "water_for_data_center_l": 0.036841708865477135,
+      "w_tot_l": 0.07344549313321398
+    },
+    "metadata": {
+      "id": 119841776,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/92e1fcff-28e6-4241-92f0-a51ec985b9cb/original=true/92e1fcff-28e6-4241-92f0-a51ec985b9cb.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "12": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.014098174746912195,
+      "energia_data_center": 0.02326198833240512,
+      "water_for_energy_l": 0.03524543686728049,
+      "water_for_data_center_l": 0.03547453220691781,
+      "w_tot_l": 0.07071996907419831
+    },
+    "metadata": {
+      "id": 119841777,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c77f9013-d867-463a-8e8e-e98a2fd25f60/original=true/c77f9013-d867-463a-8e8e-e98a2fd25f60.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "13": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01324021190266641,
+      "energia_data_center": 0.021846349639399576,
+      "water_for_energy_l": 0.033100529756666025,
+      "water_for_data_center_l": 0.03331568320008435,
+      "w_tot_l": 0.06641621295675038
+    },
+    "metadata": {
+      "id": 119841778,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6f128fe5-aaab-4055-9e22-9a8024b653d8/original=true/6f128fe5-aaab-4055-9e22-9a8024b653d8.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "14": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.013222774211962586,
+      "energia_data_center": 0.021817577449738265,
+      "water_for_energy_l": 0.03305693552990646,
+      "water_for_data_center_l": 0.03327180561085086,
+      "w_tot_l": 0.06632874114075732
+    },
+    "metadata": {
+      "id": 119841782,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5feb9b74-6b5c-4f3e-9c4e-38b6b5e17022/original=true/5feb9b74-6b5c-4f3e-9c4e-38b6b5e17022.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "15": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01457960332964815,
+      "energia_data_center": 0.024056345493919447,
+      "water_for_energy_l": 0.036449008324120374,
+      "water_for_data_center_l": 0.03668592687822715,
+      "w_tot_l": 0.07313493520234753
+    },
+    "metadata": {
+      "id": 119841783,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1bd83b10-04a7-4405-a508-6bf02f55dde4/original=true/1bd83b10-04a7-4405-a508-6bf02f55dde4.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "16": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.015473326156740597,
+      "energia_data_center": 0.025530988158621985,
+      "water_for_energy_l": 0.03868331539185149,
+      "water_for_data_center_l": 0.038934756941898525,
+      "w_tot_l": 0.07761807233375001
+    },
+    "metadata": {
+      "id": 119841784,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c4293a74-c46f-40c1-af52-2b0c7be35d18/original=true/c4293a74-c46f-40c1-af52-2b0c7be35d18.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "17": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 640,
+      "height": 640,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02168958252938617,
+      "energia_data_center": 0.03578781117348718,
+      "water_for_energy_l": 0.054223956323465425,
+      "water_for_data_center_l": 0.054576412039567944,
+      "w_tot_l": 0.10880036836303336
+    },
+    "metadata": {
+      "id": 119841786,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/957ede9a-4e78-4b2a-ab6a-e6d17f39338d/original=true/957ede9a-4e78-4b2a-ab6a-e6d17f39338d.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "18": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.015371465769652752,
+      "energia_data_center": 0.02536291851992704,
+      "water_for_energy_l": 0.038428664424131884,
+      "water_for_data_center_l": 0.03867845074288874,
+      "w_tot_l": 0.07710711516702062
+    },
+    "metadata": {
+      "id": 119841787,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/184a5824-f269-4fa8-ad77-55cd38c9a14a/original=true/184a5824-f269-4fa8-ad77-55cd38c9a14a.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "19": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01502704898430892,
+      "energia_data_center": 0.024794630824109716,
+      "water_for_energy_l": 0.037567622460772304,
+      "water_for_data_center_l": 0.037811812006767316,
+      "w_tot_l": 0.07537943446753961
+    },
+    "metadata": {
+      "id": 119841789,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0d4686d7-68fe-46f0-9193-d33f3b05d260/original=true/0d4686d7-68fe-46f0-9193-d33f3b05d260.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "20": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.01437269670316274,
+      "energia_data_center": 0.02371494956021852,
+      "water_for_energy_l": 0.03593174175790685,
+      "water_for_data_center_l": 0.03616529807933324,
+      "w_tot_l": 0.07209703983724008
+    },
+    "metadata": {
+      "id": 119841791,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9ccb05c3-95be-4c58-936c-535125f4f8c5/original=true/9ccb05c3-95be-4c58-936c-535125f4f8c5.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "21": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.015869771637956123,
+      "energia_data_center": 0.026185123202627603,
+      "water_for_energy_l": 0.03967442909489031,
+      "water_for_data_center_l": 0.039932312884007094,
+      "w_tot_l": 0.0796067419788974
+    },
+    "metadata": {
+      "id": 119841803,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/287c618b-43ad-40d0-a9c2-7efd47fc3abc/original=true/287c618b-43ad-40d0-a9c2-7efd47fc3abc.mp4",
+      "created_at": "2026-02-03T19:22:58.203Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "22": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029790493331078284,
+      "energia_data_center": 0.04915431399627917,
+      "water_for_energy_l": 0.0744762333276957,
+      "water_for_data_center_l": 0.07496032884432573,
+      "w_tot_l": 0.14943656217202145
+    },
+    "metadata": {
+      "id": 119841711,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/42501e11-8461-4d82-8720-e4c2374e7ba9/original=true/42501e11-8461-4d82-8720-e4c2374e7ba9.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "23": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031707041083072214,
+      "energia_data_center": 0.05231661778706915,
+      "water_for_energy_l": 0.07926760270768053,
+      "water_for_data_center_l": 0.07978284212528045,
+      "w_tot_l": 0.159050444832961
+    },
+    "metadata": {
+      "id": 119841712,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/00d11eb9-c861-412b-aa02-27721489e0bf/original=true/00d11eb9-c861-412b-aa02-27721489e0bf.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "24": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.026884557898423707,
+      "energia_data_center": 0.04435952053239912,
+      "water_for_energy_l": 0.06721139474605926,
+      "water_for_data_center_l": 0.06764826881190865,
+      "w_tot_l": 0.1348596635579679
+    },
+    "metadata": {
+      "id": 119841715,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2feebded-0444-4b87-8480-94689904eb9a/original=true/2feebded-0444-4b87-8480-94689904eb9a.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "25": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03105164474883556,
+      "energia_data_center": 0.05123521383557867,
+      "water_for_energy_l": 0.0776291118720889,
+      "water_for_data_center_l": 0.07813370109925748,
+      "w_tot_l": 0.15576281297134636
+    },
+    "metadata": {
+      "id": 119841716,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/041deadd-0f9c-407c-917c-6cf771445ebd/original=true/041deadd-0f9c-407c-917c-6cf771445ebd.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "26": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031602073092793385,
+      "energia_data_center": 0.052143420603109086,
+      "water_for_energy_l": 0.07900518273198347,
+      "water_for_data_center_l": 0.07951871641974137,
+      "w_tot_l": 0.15852389915172482
+    },
+    "metadata": {
+      "id": 119841717,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ddf83e7a-4c8f-4ad3-b0fe-278147b3f144/original=true/ddf83e7a-4c8f-4ad3-b0fe-278147b3f144.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "27": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03178959170058593,
+      "energia_data_center": 0.05245282630596678,
+      "water_for_energy_l": 0.07947397925146482,
+      "water_for_data_center_l": 0.07999056011659934,
+      "w_tot_l": 0.15946453936806415
+    },
+    "metadata": {
+      "id": 119841719,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1be0f110-4814-4662-8aa7-8f6f688be9f7/original=true/1be0f110-4814-4662-8aa7-8f6f688be9f7.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "28": {
+    "video_data": {
+      "duration": 20.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05561564211587732,
+      "energia_data_center": 0.09176580949119757,
+      "water_for_energy_l": 0.1390391052896933,
+      "water_for_data_center_l": 0.1399428594740763,
+      "w_tot_l": 0.2789819647637696
+    },
+    "metadata": {
+      "id": 119841720,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/760ebea0-07e3-4e7d-85c9-31a884e0b0a4/original=true/760ebea0-07e3-4e7d-85c9-31a884e0b0a4.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "29": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.028935366194378077,
+      "energia_data_center": 0.04774335422072382,
+      "water_for_energy_l": 0.07233841548594519,
+      "water_for_data_center_l": 0.07280861518660382,
+      "w_tot_l": 0.14514703067254903
+    },
+    "metadata": {
+      "id": 119841721,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c74762bd-adef-473c-b08e-fe9c713a9b60/original=true/c74762bd-adef-473c-b08e-fe9c713a9b60.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "30": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0277065681084819,
+      "energia_data_center": 0.045715837378995136,
+      "water_for_energy_l": 0.06926642027120475,
+      "water_for_data_center_l": 0.06971665200296759,
+      "w_tot_l": 0.13898307227417234
+    },
+    "metadata": {
+      "id": 119841722,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cfd7bee0-a64b-456c-b06f-eb6a1212d82e/original=true/cfd7bee0-a64b-456c-b06f-eb6a1212d82e.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "31": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031660367368634985,
+      "energia_data_center": 0.05223960615824772,
+      "water_for_energy_l": 0.07915091842158746,
+      "water_for_data_center_l": 0.07966539939132777,
+      "w_tot_l": 0.15881631781291522
+    },
+    "metadata": {
+      "id": 119841723,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7bf68b1f-2def-49cd-a027-9aed9da09911/original=true/7bf68b1f-2def-49cd-a027-9aed9da09911.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "32": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02978913607242868,
+      "energia_data_center": 0.049152074519507316,
+      "water_for_energy_l": 0.0744728401810717,
+      "water_for_data_center_l": 0.07495691364224866,
+      "w_tot_l": 0.14942975382332035
+    },
+    "metadata": {
+      "id": 119841729,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2e626124-161c-4947-95da-09c7018f1e9d/original=true/2e626124-161c-4947-95da-09c7018f1e9d.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "33": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02993614989819142,
+      "energia_data_center": 0.04939464733201584,
+      "water_for_energy_l": 0.07484037474547856,
+      "water_for_data_center_l": 0.07532683718132416,
+      "w_tot_l": 0.1501672119268027
+    },
+    "metadata": {
+      "id": 119841730,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2565977b-9982-4f2c-a96a-1a744630fbe2/original=true/2565977b-9982-4f2c-a96a-1a744630fbe2.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "34": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031980423664950845,
+      "energia_data_center": 0.052767699047168895,
+      "water_for_energy_l": 0.07995105916237712,
+      "water_for_data_center_l": 0.08047074104693257,
+      "w_tot_l": 0.16042180020930968
+    },
+    "metadata": {
+      "id": 119841731,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/507196b9-b8cf-47f7-846e-1a9b2858d831/original=true/507196b9-b8cf-47f7-846e-1a9b2858d831.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "35": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02683418061689817,
+      "energia_data_center": 0.04427639801788198,
+      "water_for_energy_l": 0.06708545154224543,
+      "water_for_data_center_l": 0.06752150697727002,
+      "w_tot_l": 0.13460695851951546
+    },
+    "metadata": {
+      "id": 119841732,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/48d9e691-f243-4120-af7a-5db7e3d28f40/original=true/48d9e691-f243-4120-af7a-5db7e3d28f40.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "36": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03196476735960308,
+      "energia_data_center": 0.052741866143345084,
+      "water_for_energy_l": 0.0799119183990077,
+      "water_for_data_center_l": 0.08043134586860125,
+      "w_tot_l": 0.16034326426760895
+    },
+    "metadata": {
+      "id": 119841733,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6320eecd-7564-42d5-8a80-1dccadea89d3/original=true/6320eecd-7564-42d5-8a80-1dccadea89d3.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "37": {
+    "video_data": {
+      "duration": 20.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0563884045935982,
+      "energia_data_center": 0.09304086757943703,
+      "water_for_energy_l": 0.1409710114839955,
+      "water_for_data_center_l": 0.14188732305864146,
+      "w_tot_l": 0.282858334542637
+    },
+    "metadata": {
+      "id": 119841734,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0ee11aa7-91a9-4690-b6f0-7a35cd25ec88/original=true/0ee11aa7-91a9-4690-b6f0-7a35cd25ec88.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "38": {
+    "video_data": {
+      "duration": 10.0625,
+      "width": 368,
+      "height": 800,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.028626730153743393,
+      "energia_data_center": 0.04723410475367659,
+      "water_for_energy_l": 0.07156682538435848,
+      "water_for_data_center_l": 0.07203200974935679,
+      "w_tot_l": 0.14359883513371527
+    },
+    "metadata": {
+      "id": 119841735,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/83568ef3-9146-4a4e-8aaa-0c24e4594c1d/original=true/83568ef3-9146-4a4e-8aaa-0c24e4594c1d.mp4",
+      "created_at": "2026-02-03T19:22:28.652Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "39": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11260258939755843,
+      "energia_data_center": 0.18579427250597141,
+      "water_for_energy_l": 0.28150647349389607,
+      "water_for_data_center_l": 0.2833362655716064,
+      "w_tot_l": 0.5648427390655024
+    },
+    "metadata": {
+      "id": 119841651,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a2b8534f-656a-400a-83cf-e3e977327aa8/original=true/a2b8534f-656a-400a-83cf-e3e977327aa8.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "40": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10167131200031537,
+      "energia_data_center": 0.16775766480052035,
+      "water_for_energy_l": 0.25417828000078846,
+      "water_for_data_center_l": 0.25583043882079354,
+      "w_tot_l": 0.510008718821582
+    },
+    "metadata": {
+      "id": 119841652,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7423e64d-0f63-4877-aacd-e7aea2e8b166/original=true/7423e64d-0f63-4877-aacd-e7aea2e8b166.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "41": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10727610590100034,
+      "energia_data_center": 0.17700557473665054,
+      "water_for_energy_l": 0.26819026475250085,
+      "water_for_data_center_l": 0.26993350147339207,
+      "w_tot_l": 0.5381237662258929
+    },
+    "metadata": {
+      "id": 119841654,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9d15de6e-d616-4843-907a-df3214744c5d/original=true/9d15de6e-d616-4843-907a-df3214744c5d.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "42": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10772588046699433,
+      "energia_data_center": 0.17774770277054064,
+      "water_for_energy_l": 0.2693147011674858,
+      "water_for_data_center_l": 0.2710652467250745,
+      "w_tot_l": 0.5403799478925603
+    },
+    "metadata": {
+      "id": 119841656,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8fb43b8f-6b1c-4c47-a54c-a05b1f248494/original=true/8fb43b8f-6b1c-4c47-a54c-a05b1f248494.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "43": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11085538789742205,
+      "energia_data_center": 0.18291139003074638,
+      "water_for_energy_l": 0.27713846974355516,
+      "water_for_data_center_l": 0.27893986979688823,
+      "w_tot_l": 0.5560783395404434
+    },
+    "metadata": {
+      "id": 119841663,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/38a64504-e59f-4a37-81c3-4212a6951e20/original=true/38a64504-e59f-4a37-81c3-4212a6951e20.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "44": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10729927631045084,
+      "energia_data_center": 0.1770438059122439,
+      "water_for_energy_l": 0.2682481907761271,
+      "water_for_data_center_l": 0.2699918040161719,
+      "w_tot_l": 0.538239994792299
+    },
+    "metadata": {
+      "id": 119841664,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/48917ffd-bba9-4678-8b3b-5653cfee8208/original=true/48917ffd-bba9-4678-8b3b-5653cfee8208.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "45": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10368204901948663,
+      "energia_data_center": 0.17107538088215293,
+      "water_for_energy_l": 0.2592051225487166,
+      "water_for_data_center_l": 0.26088995584528324,
+      "w_tot_l": 0.5200950783939998
+    },
+    "metadata": {
+      "id": 119841667,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bef649e3-5537-4cd1-b8ad-5f7bc64a4689/original=true/bef649e3-5537-4cd1-b8ad-5f7bc64a4689.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "46": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11070524915500078,
+      "energia_data_center": 0.18266366110575127,
+      "water_for_energy_l": 0.27676312288750193,
+      "water_for_data_center_l": 0.2785620831862707,
+      "w_tot_l": 0.5553252060737726
+    },
+    "metadata": {
+      "id": 119841668,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a5a6ea49-47e3-4950-9a20-c84a8401d068/original=true/a5a6ea49-47e3-4950-9a20-c84a8401d068.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "47": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10650314253559148,
+      "energia_data_center": 0.17573018518372593,
+      "water_for_energy_l": 0.2662578563389787,
+      "water_for_data_center_l": 0.26798853240518206,
+      "w_tot_l": 0.5342463887441607
+    },
+    "metadata": {
+      "id": 119841669,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7b1a932a-85e6-4ce1-840c-0e71cb328c72/original=true/7b1a932a-85e6-4ce1-840c-0e71cb328c72.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "48": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10503199594554788,
+      "energia_data_center": 0.173302793310154,
+      "water_for_energy_l": 0.2625799898638697,
+      "water_for_data_center_l": 0.2642867597979848,
+      "w_tot_l": 0.5268667496618545
+    },
+    "metadata": {
+      "id": 119841670,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5b8e04ac-fd88-4d4a-b4b1-51b3d5594b62/original=true/5b8e04ac-fd88-4d4a-b4b1-51b3d5594b62.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "49": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10315459796150687,
+      "energia_data_center": 0.17020508663648634,
+      "water_for_energy_l": 0.2578864949037672,
+      "water_for_data_center_l": 0.25956275712064164,
+      "w_tot_l": 0.5174492520244088
+    },
+    "metadata": {
+      "id": 119841672,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/74ec4ee5-1f75-4180-baf3-b81b94fea304/original=true/74ec4ee5-1f75-4180-baf3-b81b94fea304.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "50": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10824206725234417,
+      "energia_data_center": 0.17859941096636786,
+      "water_for_energy_l": 0.27060516813086044,
+      "water_for_data_center_l": 0.272364101723711,
+      "w_tot_l": 0.5429692698545714
+    },
+    "metadata": {
+      "id": 119841673,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a91be859-603c-4c5c-8c48-25e013dfb59b/original=true/a91be859-603c-4c5c-8c48-25e013dfb59b.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "51": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12139817568802524,
+      "energia_data_center": 0.20030698988524165,
+      "water_for_energy_l": 0.3034954392200631,
+      "water_for_data_center_l": 0.3054681595749935,
+      "w_tot_l": 0.6089635987950566
+    },
+    "metadata": {
+      "id": 119841674,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0120b94d-c381-4840-83d7-69b40aeadaa2/original=true/0120b94d-c381-4840-83d7-69b40aeadaa2.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "52": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10367479552824828,
+      "energia_data_center": 0.17106341262160965,
+      "water_for_energy_l": 0.2591869888206207,
+      "water_for_data_center_l": 0.2608717042479547,
+      "w_tot_l": 0.5200586930685753
+    },
+    "metadata": {
+      "id": 119841675,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0d69849f-0fea-4d23-a7b8-7c59982a6152/original=true/0d69849f-0fea-4d23-a7b8-7c59982a6152.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "53": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12147051225819556,
+      "energia_data_center": 0.20042634522602268,
+      "water_for_energy_l": 0.3036762806454889,
+      "water_for_data_center_l": 0.30565017646968456,
+      "w_tot_l": 0.6093264571151735
+    },
+    "metadata": {
+      "id": 119841676,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8b550ffd-3794-48cd-8257-21dbba0e31c7/original=true/8b550ffd-3794-48cd-8257-21dbba0e31c7.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "54": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10203176119106222,
+      "energia_data_center": 0.16835240596525267,
+      "water_for_energy_l": 0.2550794029776555,
+      "water_for_data_center_l": 0.2567374190970103,
+      "w_tot_l": 0.5118168220746658
+    },
+    "metadata": {
+      "id": 119841677,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/89d93909-694a-4599-ad51-23ff25a1c3d3/original=true/89d93909-694a-4599-ad51-23ff25a1c3d3.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "55": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11267416527429164,
+      "energia_data_center": 0.18591237270258118,
+      "water_for_energy_l": 0.2816854131857291,
+      "water_for_data_center_l": 0.2835163683714363,
+      "w_tot_l": 0.5652017815571654
+    },
+    "metadata": {
+      "id": 119841680,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/54e1d1bd-24f6-41a6-a832-09361968f18a/original=true/54e1d1bd-24f6-41a6-a832-09361968f18a.mp4",
+      "created_at": "2026-02-03T19:21:24.078Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "56": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.22689424740667158,
+      "energia_data_center": 0.37437550822100807,
+      "water_for_energy_l": 0.5672356185166789,
+      "water_for_data_center_l": 0.5709226500370372,
+      "w_tot_l": 1.1381582685537162
+    },
+    "metadata": {
+      "id": 119841643,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/969e8605-724e-4026-a76e-22ff17f97e1d/original=true/969e8605-724e-4026-a76e-22ff17f97e1d.mp4",
+      "created_at": "2026-02-03T19:20:59.130Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "57": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.22484954879802915,
+      "energia_data_center": 0.3710017555167481,
+      "water_for_energy_l": 0.5621238719950729,
+      "water_for_data_center_l": 0.5657776771630408,
+      "w_tot_l": 1.1279015491581137
+    },
+    "metadata": {
+      "id": 119841647,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/531dc703-7944-48c5-bbd7-96fe430ac422/original=true/531dc703-7944-48c5-bbd7-96fe430ac422.mp4",
+      "created_at": "2026-02-03T19:20:41.471Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "58": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2137299377796722,
+      "energia_data_center": 0.3526543973364591,
+      "water_for_energy_l": 0.5343248444491805,
+      "water_for_data_center_l": 0.5377979559381001,
+      "w_tot_l": 1.0721228003872807
+    },
+    "metadata": {
+      "id": 119841642,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/74288fac-bfc5-4d80-bfae-d70d0b2b85bf/original=true/74288fac-bfc5-4d80-bfae-d70d0b2b85bf.mp4",
+      "created_at": "2026-02-03T19:20:40.221Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "59": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.23090076449740535,
+      "energia_data_center": 0.3809862614207188,
+      "water_for_energy_l": 0.5772519112435134,
+      "water_for_data_center_l": 0.5810040486665962,
+      "w_tot_l": 1.1582559599101097
+    },
+    "metadata": {
+      "id": 119841644,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6880f8ba-ef1c-4161-a4bb-4848d9dc3e84/original=true/6880f8ba-ef1c-4161-a4bb-4848d9dc3e84.mp4",
+      "created_at": "2026-02-03T19:20:36.351Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "60": {
+    "video_data": {
+      "duration": 10.28125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2392209059394881,
+      "energia_data_center": 0.39471449480015536,
+      "water_for_energy_l": 0.5980522648487203,
+      "water_for_data_center_l": 0.6019396045702369,
+      "w_tot_l": 1.199991869418957
+    },
+    "metadata": {
+      "id": 119841646,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/863d0a82-50bc-4900-a84d-046a9cef4298/original=true/863d0a82-50bc-4900-a84d-046a9cef4298.mp4",
+      "created_at": "2026-02-03T19:20:31.225Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "61": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.24201736707040727,
+      "energia_data_center": 0.399328655666172,
+      "water_for_energy_l": 0.6050434176760182,
+      "water_for_data_center_l": 0.6089761998909122,
+      "w_tot_l": 1.2140196175669304
+    },
+    "metadata": {
+      "id": 119841641,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a47d36b8-4276-4247-80b7-cee132c6f6c0/original=true/a47d36b8-4276-4247-80b7-cee132c6f6c0.mp4",
+      "created_at": "2026-02-03T19:20:30.638Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "62": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13841261285614986,
+      "energia_data_center": 0.22838081121264725,
+      "water_for_energy_l": 0.34603153214037463,
+      "water_for_data_center_l": 0.3482807370992871,
+      "w_tot_l": 0.6943122692396617
+    },
+    "metadata": {
+      "id": 119841640,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0d0a34b8-7ae4-455e-a08e-04c74ef5678c/original=true/0d0a34b8-7ae4-455e-a08e-04c74ef5678c.mp4",
+      "created_at": "2026-02-03T19:20:20.934Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "63": {
+    "video_data": {
+      "duration": 10.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2255181091975582,
+      "energia_data_center": 0.372104880175971,
+      "water_for_energy_l": 0.5637952729938954,
+      "water_for_data_center_l": 0.5674599422683557,
+      "w_tot_l": 1.131255215262251
+    },
+    "metadata": {
+      "id": 119841635,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/989891d1-c8cb-4d33-bfe6-c7d0119c6db7/original=true/989891d1-c8cb-4d33-bfe6-c7d0119c6db7.mp4",
+      "created_at": "2026-02-03T19:20:18.796Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "64": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13602995954494793,
+      "energia_data_center": 0.22444943324916405,
+      "water_for_energy_l": 0.3400748988623698,
+      "water_for_data_center_l": 0.3422853857049752,
+      "w_tot_l": 0.682360284567345
+    },
+    "metadata": {
+      "id": 119841630,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cb57c48b-9a4e-43ce-8503-b89ff8a6a2b0/original=true/cb57c48b-9a4e-43ce-8503-b89ff8a6a2b0.mp4",
+      "created_at": "2026-02-03T19:20:17.068Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "65": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12149011687730349,
+      "energia_data_center": 0.20045869284755075,
+      "water_for_energy_l": 0.3037252921932587,
+      "water_for_data_center_l": 0.3056995065925149,
+      "w_tot_l": 0.6094247987857736
+    },
+    "metadata": {
+      "id": 119841629,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ecc2973a-81ec-42f6-a781-e4207bbf72f2/original=true/ecc2973a-81ec-42f6-a781-e4207bbf72f2.mp4",
+      "created_at": "2026-02-03T19:20:15.791Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "66": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11688063519766256,
+      "energia_data_center": 0.19285304807614323,
+      "water_for_energy_l": 0.2922015879941564,
+      "water_for_data_center_l": 0.2941008983161184,
+      "w_tot_l": 0.5863024863102748
+    },
+    "metadata": {
+      "id": 119841636,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/38cdac3f-4ea0-4424-8c14-0e598ef74982/original=true/38cdac3f-4ea0-4424-8c14-0e598ef74982.mp4",
+      "created_at": "2026-02-03T19:20:14.921Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "67": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13677767699779184,
+      "energia_data_center": 0.22568316704635652,
+      "water_for_energy_l": 0.3419441924944796,
+      "water_for_data_center_l": 0.3441668297456937,
+      "w_tot_l": 0.6861110222401733
+    },
+    "metadata": {
+      "id": 119841633,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/801545c8-2fc3-4f0c-8716-4bc70155b2ad/original=true/801545c8-2fc3-4f0c-8716-4bc70155b2ad.mp4",
+      "created_at": "2026-02-03T19:20:14.689Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "68": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12995618412551382,
+      "energia_data_center": 0.2144277038070978,
+      "water_for_energy_l": 0.32489046031378455,
+      "water_for_data_center_l": 0.32700224830582414,
+      "w_tot_l": 0.6518927086196087
+    },
+    "metadata": {
+      "id": 119841638,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eff0e078-7e31-41a9-8097-67506e709b54/original=true/eff0e078-7e31-41a9-8097-67506e709b54.mp4",
+      "created_at": "2026-02-03T19:20:12.690Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "69": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1337670921811539,
+      "energia_data_center": 0.22071570209890393,
+      "water_for_energy_l": 0.33441773045288475,
+      "water_for_data_center_l": 0.3365914457008285,
+      "w_tot_l": 0.6710091761537132
+    },
+    "metadata": {
+      "id": 119841628,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/83a05ef2-0056-4e6c-a931-7490377628d4/original=true/83a05ef2-0056-4e6c-a931-7490377628d4.mp4",
+      "created_at": "2026-02-03T19:20:07.029Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "70": {
+    "video_data": {
+      "duration": 9.53125,
+      "width": 480,
+      "height": 720,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.058876949256480744,
+      "energia_data_center": 0.09714696627319322,
+      "water_for_energy_l": 0.14719237314120187,
+      "water_for_data_center_l": 0.14814912356661966,
+      "w_tot_l": 0.2953414967078215
+    },
+    "metadata": {
+      "id": 119841631,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/71cef40b-435f-4410-9a91-0a85fe9b0ad4/original=true/71cef40b-435f-4410-9a91-0a85fe9b0ad4.mp4",
+      "created_at": "2026-02-03T19:20:04.035Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "71": {
+    "video_data": {
+      "duration": 5.78125,
+      "width": 736,
+      "height": 1600,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13151119811284087,
+      "energia_data_center": 0.21699347688618742,
+      "water_for_energy_l": 0.32877799528210216,
+      "water_for_data_center_l": 0.3309150522514358,
+      "w_tot_l": 0.659693047533538
+    },
+    "metadata": {
+      "id": 119841634,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e557d384-489a-420c-b09d-98bb127a3f3e/original=true/e557d384-489a-420c-b09d-98bb127a3f3e.mp4",
+      "created_at": "2026-02-03T19:20:02.500Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "72": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 688,
+      "height": 464,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03478521135354909,
+      "energia_data_center": 0.05739559873335599,
+      "water_for_energy_l": 0.08696302838387272,
+      "water_for_data_center_l": 0.08752828806836789,
+      "w_tot_l": 0.1744913164522406
+    },
+    "metadata": {
+      "id": 119836117,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e16c53ec-5412-4274-a410-50f48bb3e3b0/original=true/e16c53ec-5412-4274-a410-50f48bb3e3b0.mp4",
+      "created_at": "2026-02-03T19:15:00.000Z",
+      "prompt": "The woman leans back and turns her head while water drops down into the foam she is resting in",
+      "steps": 35
+    }
+  },
+  "73": {
+    "video_data": {
+      "duration": 25.882353,
+      "width": 960,
+      "height": 1408,
+      "fps": 17.0
+    },
+    "estimate": {
+      "energia_imagen": 0.3187851054221323,
+      "energia_data_center": 0.5259954239465182,
+      "water_for_energy_l": 0.7969627635553307,
+      "water_for_data_center_l": 0.8021430215184402,
+      "w_tot_l": 1.5991057850737709
+    },
+    "metadata": {
+      "id": 119841049,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0d154065-f7dd-4a90-bc1a-b285caf38d0a/original=true/0d154065-f7dd-4a90-bc1a-b285caf38d0a.mp4",
+      "created_at": "2026-02-03T19:11:58.132Z",
+      "prompt": "random",
+      "steps": 25
+    }
+  },
+  "74": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 928,
+      "height": 1248,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11914356320651388,
+      "energia_data_center": 0.1965868792907479,
+      "water_for_energy_l": 0.29785890801628473,
+      "water_for_data_center_l": 0.2997949909183905,
+      "w_tot_l": 0.5976538989346752
+    },
+    "metadata": {
+      "id": 119840808,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/799c8fc1-e4e9-480c-9893-61e3433d0dfb/original=true/799c8fc1-e4e9-480c-9893-61e3433d0dfb.mp4",
+      "created_at": "2026-02-03T19:08:37.841Z",
+      "prompt": "PBRSty1e. A woman. She is looking around from left to right. The background is dark.",
+      "steps": 25
+    }
+  },
+  "75": {
+    "video_data": {
+      "duration": 6.03125,
+      "width": 928,
+      "height": 1248,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12162263511824531,
+      "energia_data_center": 0.20067734794510475,
+      "water_for_energy_l": 0.3040565877956133,
+      "water_for_data_center_l": 0.30603295561628474,
+      "w_tot_l": 0.610089543411898
+    },
+    "metadata": {
+      "id": 119840848,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ab4df98a-f2fa-4876-ac8e-5585fb8e8442/original=true/ab4df98a-f2fa-4876-ac8e-5585fb8e8442.mp4",
+      "created_at": "2026-02-03T19:08:37.841Z",
+      "prompt": "PBRSty1e. An eye, looking away, looking around. The eye blinks once. The background is dark.",
+      "steps": 25
+    }
+  },
+  "76": {
+    "video_data": {
+      "duration": 19.967667,
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.31258001223720916,
+      "energia_data_center": 0.5157570201913951,
+      "water_for_energy_l": 0.7814500305930229,
+      "water_for_data_center_l": 0.7865294557918776,
+      "w_tot_l": 1.5679794863849006
+    },
+    "metadata": {
+      "id": 119840608,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d6c2b30-c70c-4a9b-9a7b-c90122c9dd18/original=true/1d6c2b30-c70c-4a9b-9a7b-c90122c9dd18.mp4",
+      "created_at": "2026-02-03T19:03:35.910Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "77": {
+    "video_data": {
+      "duration": 5.0625,
+      "width": 784,
+      "height": 1176,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.045887126966428306,
+      "energia_data_center": 0.0757137594946067,
+      "water_for_energy_l": 0.11471781741607076,
+      "water_for_data_center_l": 0.11546348322927522,
+      "w_tot_l": 0.23018130064534598
+    },
+    "metadata": {
+      "id": 113926599,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ce9d2b75-a6df-4f01-b385-fdd51e79837c/original=true/ce9d2b75-a6df-4f01-b385-fdd51e79837c.mp4",
+      "created_at": "2026-02-03T19:00:00.000Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "78": {
+    "video_data": {
+      "duration": 25.882353,
+      "width": 960,
+      "height": 1408,
+      "fps": 17.0
+    },
+    "estimate": {
+      "energia_imagen": 0.3367585326441122,
+      "energia_data_center": 0.5556515788627852,
+      "water_for_energy_l": 0.8418963316102805,
+      "water_for_data_center_l": 0.8473686577657473,
+      "w_tot_l": 1.6892649893760279
+    },
+    "metadata": {
+      "id": 119839723,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/82f9d881-37e1-4a43-8db7-e716000e2361/original=true/82f9d881-37e1-4a43-8db7-e716000e2361.mp4",
+      "created_at": "2026-02-03T18:51:39.638Z",
+      "prompt": "random",
+      "steps": 25
+    }
+  },
+  "79": {
+    "video_data": {
+      "duration": 25.882353,
+      "width": 960,
+      "height": 1408,
+      "fps": 17.0
+    },
+    "estimate": {
+      "energia_imagen": 0.359789810064143,
+      "energia_data_center": 0.593653186605836,
+      "water_for_energy_l": 0.8994745251603575,
+      "water_for_data_center_l": 0.9053211095738999,
+      "w_tot_l": 1.8047956347342575
+    },
+    "metadata": {
+      "id": 119839726,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eff10904-f425-40e5-99c0-65ce618b6cd5/original=true/eff10904-f425-40e5-99c0-65ce618b6cd5.mp4",
+      "created_at": "2026-02-03T18:51:38.717Z",
+      "prompt": "random",
+      "steps": 25
+    }
+  },
+  "80": {
+    "video_data": {
+      "duration": 4.84,
+      "width": 1280,
+      "height": 704,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.06107309830758502,
+      "energia_data_center": 0.10077061220751528,
+      "water_for_energy_l": 0.15268274576896254,
+      "water_for_data_center_l": 0.1536751836164608,
+      "w_tot_l": 0.30635792938542333
+    },
+    "metadata": {
+      "id": 119839611,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4c0c7a95-ea1d-4d8c-9551-fca6a9e8170e/original=true/4c0c7a95-ea1d-4d8c-9551-fca6a9e8170e.mp4",
+      "created_at": "2026-02-03T18:47:52.660Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "81": {
+    "video_data": {
+      "duration": 3.5625,
+      "width": 560,
+      "height": 832,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.017610207579149488,
+      "energia_data_center": 0.029056842505596654,
+      "water_for_energy_l": 0.044025518947873724,
+      "water_for_data_center_l": 0.0443116848210349,
+      "w_tot_l": 0.08833720376890862
+    },
+    "metadata": {
+      "id": 119839226,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bce714cf-0573-47b5-8ef5-a159444fc166/original=true/bce714cf-0573-47b5-8ef5-a159444fc166.mp4",
+      "created_at": "2026-02-03T18:46:22.762Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "82": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03323588785870474,
+      "energia_data_center": 0.054839214966862816,
+      "water_for_energy_l": 0.08308971964676184,
+      "water_for_data_center_l": 0.08362980282446579,
+      "w_tot_l": 0.16671952247122762
+    },
+    "metadata": {
+      "id": 119837860,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0bba2d01-a01e-4af2-b1dc-12ba4e7083de/original=true/0bba2d01-a01e-4af2-b1dc-12ba4e7083de.mp4",
+      "created_at": "2026-02-03T18:26:40.292Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "83": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03703989924430541,
+      "energia_data_center": 0.06111583375310392,
+      "water_for_energy_l": 0.09259974811076352,
+      "water_for_data_center_l": 0.09320164647348347,
+      "w_tot_l": 0.185801394584247
+    },
+    "metadata": {
+      "id": 119837861,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a9cbe2e6-0fa4-4300-8761-f87ac1b53dc2/original=true/a9cbe2e6-0fa4-4300-8761-f87ac1b53dc2.mp4",
+      "created_at": "2026-02-03T18:26:40.177Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "84": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.036150767886961956,
+      "energia_data_center": 0.059648767013487224,
+      "water_for_energy_l": 0.09037691971740489,
+      "water_for_data_center_l": 0.09096436969556801,
+      "w_tot_l": 0.1813412894129729
+    },
+    "metadata": {
+      "id": 119837849,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fc41c93e-675d-4d02-9692-133e2b1ff2ed/original=true/fc41c93e-675d-4d02-9692-133e2b1ff2ed.mp4",
+      "created_at": "2026-02-03T18:26:36.714Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "85": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.036695093124811624,
+      "energia_data_center": 0.06054690365593918,
+      "water_for_energy_l": 0.09173773281202906,
+      "water_for_data_center_l": 0.09233402807530725,
+      "w_tot_l": 0.1840717608873363
+    },
+    "metadata": {
+      "id": 119837846,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4bc95d2d-09b3-4ecb-9085-2359ef0961c4/original=true/4bc95d2d-09b3-4ecb-9085-2359ef0961c4.mp4",
+      "created_at": "2026-02-03T18:26:33.589Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "86": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.037281997829066923,
+      "energia_data_center": 0.06151529641796042,
+      "water_for_energy_l": 0.09320499457266732,
+      "water_for_data_center_l": 0.09381082703738963,
+      "w_tot_l": 0.18701582161005695
+    },
+    "metadata": {
+      "id": 119837847,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0af07a44-3500-4e9b-aeda-53721b9ca0ac/original=true/0af07a44-3500-4e9b-aeda-53721b9ca0ac.mp4",
+      "created_at": "2026-02-03T18:26:33.441Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "87": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03189994521672291,
+      "energia_data_center": 0.052634909607592796,
+      "water_for_energy_l": 0.07974986304180727,
+      "water_for_data_center_l": 0.080268237151579,
+      "w_tot_l": 0.16001810019338628
+    },
+    "metadata": {
+      "id": 119837845,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/483d2143-5a47-49ca-ba1d-c0198dd17836/original=true/483d2143-5a47-49ca-ba1d-c0198dd17836.mp4",
+      "created_at": "2026-02-03T18:26:33.122Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "88": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03715940864537316,
+      "energia_data_center": 0.06131302426486571,
+      "water_for_energy_l": 0.0928985216134329,
+      "water_for_data_center_l": 0.0935023620039202,
+      "w_tot_l": 0.1864008836173531
+    },
+    "metadata": {
+      "id": 119837774,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/059159b4-003f-4560-8e27-82eb09a7b304/original=true/059159b4-003f-4560-8e27-82eb09a7b304.mp4",
+      "created_at": "2026-02-03T18:26:26.853Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "89": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03209435838538829,
+      "energia_data_center": 0.05295569133589067,
+      "water_for_energy_l": 0.08023589596347072,
+      "water_for_data_center_l": 0.08075742928723326,
+      "w_tot_l": 0.16099332525070398
+    },
+    "metadata": {
+      "id": 119837786,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/973183bb-3875-4d34-82c2-f1a714a793cd/original=true/973183bb-3875-4d34-82c2-f1a714a793cd.mp4",
+      "created_at": "2026-02-03T18:26:24.545Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "90": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03747954937956319,
+      "energia_data_center": 0.061841256476279256,
+      "water_for_energy_l": 0.09369887344890797,
+      "water_for_data_center_l": 0.09430791612632586,
+      "w_tot_l": 0.1880067895752338
+    },
+    "metadata": {
+      "id": 119837781,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2db749cc-68bd-44f4-b2ff-25efba4013f5/original=true/2db749cc-68bd-44f4-b2ff-25efba4013f5.mp4",
+      "created_at": "2026-02-03T18:26:24.540Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "91": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03428321437663066,
+      "energia_data_center": 0.05656730372144058,
+      "water_for_energy_l": 0.08570803594157664,
+      "water_for_data_center_l": 0.08626513817519688,
+      "w_tot_l": 0.17197317411677351
+    },
+    "metadata": {
+      "id": 119837778,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2c2e42ad-3565-4dd7-bdc5-e95a72b3c72d/original=true/2c2e42ad-3565-4dd7-bdc5-e95a72b3c72d.mp4",
+      "created_at": "2026-02-03T18:26:16.066Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "92": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.035885990630336484,
+      "energia_data_center": 0.059211884540055194,
+      "water_for_energy_l": 0.08971497657584121,
+      "water_for_data_center_l": 0.09029812392358416,
+      "w_tot_l": 0.18001310049942537
+    },
+    "metadata": {
+      "id": 119837777,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f02a6d1c-68fb-4fae-b552-f86eae23dd60/original=true/f02a6d1c-68fb-4fae-b552-f86eae23dd60.mp4",
+      "created_at": "2026-02-03T18:26:15.977Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "93": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03171954344257789,
+      "energia_data_center": 0.05233724668025351,
+      "water_for_energy_l": 0.07929885860644471,
+      "water_for_data_center_l": 0.07981430118738661,
+      "w_tot_l": 0.15911315979383134
+    },
+    "metadata": {
+      "id": 119837772,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4af70365-82cf-4900-9ad1-2368dea84bea/original=true/4af70365-82cf-4900-9ad1-2368dea84bea.mp4",
+      "created_at": "2026-02-03T18:26:14.387Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "94": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.031097951720067882,
+      "energia_data_center": 0.051311620338112006,
+      "water_for_energy_l": 0.07774487930016971,
+      "water_for_data_center_l": 0.0782502210156208,
+      "w_tot_l": 0.1559951003157905
+    },
+    "metadata": {
+      "id": 119837780,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a6bea70a-33f2-4bd0-a43a-1f6cbe57c521/original=true/a6bea70a-33f2-4bd0-a43a-1f6cbe57c521.mp4",
+      "created_at": "2026-02-03T18:26:13.366Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "95": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03597187243959665,
+      "energia_data_center": 0.059353589525334476,
+      "water_for_energy_l": 0.08992968109899163,
+      "water_for_data_center_l": 0.09051422402613507,
+      "w_tot_l": 0.1804439051251267
+    },
+    "metadata": {
+      "id": 119837475,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/71aa242a-bc1f-459c-b5a0-57eba9a0be7a/original=true/71aa242a-bc1f-459c-b5a0-57eba9a0be7a.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "96": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03253343887252982,
+      "energia_data_center": 0.05368017413967419,
+      "water_for_energy_l": 0.08133359718132455,
+      "water_for_data_center_l": 0.08186226556300315,
+      "w_tot_l": 0.16319586274432768
+    },
+    "metadata": {
+      "id": 119837481,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d9e5820e-8afb-4869-af90-96593bc88149/original=true/d9e5820e-8afb-4869-af90-96593bc88149.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "97": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03477789184532387,
+      "energia_data_center": 0.057383521544784384,
+      "water_for_energy_l": 0.08694472961330968,
+      "water_for_data_center_l": 0.08750987035579619,
+      "w_tot_l": 0.17445459996910587
+    },
+    "metadata": {
+      "id": 119837483,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c7b2b838-ce5f-4c55-8022-71fc66e7ff42/original=true/c7b2b838-ce5f-4c55-8022-71fc66e7ff42.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "98": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03572512264786273,
+      "energia_data_center": 0.058946452368973494,
+      "water_for_energy_l": 0.08931280661965682,
+      "water_for_data_center_l": 0.08989333986268458,
+      "w_tot_l": 0.1792061464823414
+    },
+    "metadata": {
+      "id": 119837485,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6f20a84c-5ec7-4bab-abcd-1708dee9c232/original=true/6f20a84c-5ec7-4bab-abcd-1708dee9c232.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "99": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03425244954395519,
+      "energia_data_center": 0.05651654174752606,
+      "water_for_energy_l": 0.08563112385988797,
+      "water_for_data_center_l": 0.08618772616497723,
+      "w_tot_l": 0.1718188500248652
+    },
+    "metadata": {
+      "id": 119837486,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aa8a93d9-c08d-4623-8d60-74498a6f49a0/original=true/aa8a93d9-c08d-4623-8d60-74498a6f49a0.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "100": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.037128053334705986,
+      "energia_data_center": 0.06126128800226487,
+      "water_for_energy_l": 0.09282013333676496,
+      "water_for_data_center_l": 0.09342346420345393,
+      "w_tot_l": 0.1862435975402189
+    },
+    "metadata": {
+      "id": 119837487,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bd025c20-05eb-42eb-9fa0-81da528eebc5/original=true/bd025c20-05eb-42eb-9fa0-81da528eebc5.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "101": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.035118568713024455,
+      "energia_data_center": 0.05794563837649035,
+      "water_for_energy_l": 0.08779642178256114,
+      "water_for_data_center_l": 0.08836709852414777,
+      "w_tot_l": 0.1761635203067089
+    },
+    "metadata": {
+      "id": 119837488,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fa1ea4ff-52a6-4a87-8d71-52a8c803f774/original=true/fa1ea4ff-52a6-4a87-8d71-52a8c803f774.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "102": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03187778632798601,
+      "energia_data_center": 0.05259834744117692,
+      "water_for_energy_l": 0.07969446581996503,
+      "water_for_data_center_l": 0.08021247984779481,
+      "w_tot_l": 0.15990694566775984
+    },
+    "metadata": {
+      "id": 119837492,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d3b4ff2c-4bcc-4a02-a128-818a2ba47bd1/original=true/d3b4ff2c-4bcc-4a02-a128-818a2ba47bd1.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "103": {
+    "video_data": {
+      "duration": 5,
+      "width": 512,
+      "height": 912,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.03867730318811151,
+      "energia_data_center": 0.06381755026038399,
+      "water_for_energy_l": 0.09669325797027878,
+      "water_for_data_center_l": 0.0973217641470856,
+      "w_tot_l": 0.19401502211736438
+    },
+    "metadata": {
+      "id": 119837494,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/00628456-0f81-4ad7-83be-968e0a8c3055/original=true/00628456-0f81-4ad7-83be-968e0a8c3055.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "Colette, beautiful model.",
+      "steps": 25
+    }
+  },
+  "104": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03596245444652825,
+      "energia_data_center": 0.05933804983677161,
+      "water_for_energy_l": 0.08990613611632062,
+      "water_for_data_center_l": 0.09049052600107671,
+      "w_tot_l": 0.18039666211739733
+    },
+    "metadata": {
+      "id": 119837496,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/241129b0-6757-414e-9cf1-05d7bf35eaef/original=true/241129b0-6757-414e-9cf1-05d7bf35eaef.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "105": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03459456163358507,
+      "energia_data_center": 0.057081026695415364,
+      "water_for_energy_l": 0.08648640408396267,
+      "water_for_data_center_l": 0.08704856571050842,
+      "w_tot_l": 0.17353496979447108
+    },
+    "metadata": {
+      "id": 119837497,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1aeea411-7193-4671-9e18-6121bf6631ae/original=true/1aeea411-7193-4671-9e18-6121bf6631ae.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "106": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03158879552711439,
+      "energia_data_center": 0.05212151261973874,
+      "water_for_energy_l": 0.07897198881778597,
+      "water_for_data_center_l": 0.07948530674510158,
+      "w_tot_l": 0.15845729556288757
+    },
+    "metadata": {
+      "id": 119837499,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/31f27f21-0f8f-4a55-831c-057bae7cc318/original=true/31f27f21-0f8f-4a55-831c-057bae7cc318.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "107": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03530565968635447,
+      "energia_data_center": 0.058254338482484874,
+      "water_for_energy_l": 0.08826414921588617,
+      "water_for_data_center_l": 0.08883786618578943,
+      "w_tot_l": 0.17710201540167558
+    },
+    "metadata": {
+      "id": 119837502,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aeaab3d4-da63-4d76-8519-79dad240694e/original=true/aeaab3d4-da63-4d76-8519-79dad240694e.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "108": {
+    "video_data": {
+      "duration": 7.5625,
+      "width": 512,
+      "height": 912,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03750606212610197,
+      "energia_data_center": 0.06188500250806825,
+      "water_for_energy_l": 0.09376515531525492,
+      "water_for_data_center_l": 0.09437462882480407,
+      "w_tot_l": 0.188139784140059
+    },
+    "metadata": {
+      "id": 119837503,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d85e9659-dca9-4ee0-9654-fc94f5d5f571/original=true/d85e9659-dca9-4ee0-9654-fc94f5d5f571.mp4",
+      "created_at": "2026-02-03T18:24:41.479Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "109": {
+    "video_data": {
+      "duration": 5.0,
+      "width": 720,
+      "height": 480,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029138765483405354,
+      "energia_data_center": 0.048078963047618835,
+      "water_for_energy_l": 0.07284691370851339,
+      "water_for_data_center_l": 0.07332041864761872,
+      "w_tot_l": 0.1461673323561321
+    },
+    "metadata": {
+      "id": 119837363,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/55525c7b-b1b5-4fbf-8a20-03426eff96f8/original=true/55525c7b-b1b5-4fbf-8a20-03426eff96f8.mp4",
+      "created_at": "2026-02-03T18:22:30.570Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "110": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 464,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02956823218741743,
+      "energia_data_center": 0.04878758310923875,
+      "water_for_energy_l": 0.07392058046854358,
+      "water_for_data_center_l": 0.0744010642415891,
+      "w_tot_l": 0.14832164471013268
+    },
+    "metadata": {
+      "id": 119836997,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/27357945-44e5-443c-b8bc-91e3a0bbce4f/original=true/27357945-44e5-443c-b8bc-91e3a0bbce4f.mp4",
+      "created_at": "2026-02-03T18:19:53.511Z",
+      "prompt": "wiking woman waits for her husband",
+      "steps": 25
+    }
+  },
+  "111": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10936801972279678,
+      "energia_data_center": 0.18045723254261467,
+      "water_for_energy_l": 0.27342004930699193,
+      "water_for_data_center_l": 0.27519727962748736,
+      "w_tot_l": 0.5486173289344793
+    },
+    "metadata": {
+      "id": 119836182,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6b86f34f-bd68-4d6e-b0b4-7b92ade85952/original=true/6b86f34f-bd68-4d6e-b0b4-7b92ade85952.mp4",
+      "created_at": "2026-02-03T18:17:35.577Z",
+      "prompt": "masterpiece, best quality, amazing quality, very aesthetic, absurdres, dynamic angle, ultra-detailed, highly detailed, cinematic lighting, realistic shading,\nBREAK\noutdoors, school, tree, bush, day, full body, walking, :D, pink backpack, \nBREAK\nBNHAOchaco, 1girl, brown hair, medium hair, bob cut, short bangs, choppy bangs, long sidelocks, short eyebrows, brown eyes, blush stickers, grey jacket, white dress shirt, red necktie, dark green miniskirt, pleated skirt, black pantyhose, brown penny loafers, ",
+      "steps": 25
+    }
+  },
+  "112": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11680329220535336,
+      "energia_data_center": 0.19272543213883303,
+      "water_for_energy_l": 0.2920082305133834,
+      "water_for_data_center_l": 0.29390628401172036,
+      "w_tot_l": 0.5859145145251038
+    },
+    "metadata": {
+      "id": 119835083,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2859defb-489f-467a-b9fd-415ccf431a5c/original=true/2859defb-489f-467a-b9fd-415ccf431a5c.mp4",
+      "created_at": "2026-02-03T18:07:48.838Z",
+      "prompt": "Consistent style, 1boy, evil hero, standing in wheat field, static camera, delicate wind, slow motion",
+      "steps": 25
+    }
+  },
+  "113": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.10206423173776023,
+      "energia_data_center": 0.16840598236730436,
+      "water_for_energy_l": 0.25516057934440056,
+      "water_for_data_center_l": 0.25681912311013916,
+      "w_tot_l": 0.5119797024545397
+    },
+    "metadata": {
+      "id": 119835274,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0ea6d11e-25a3-4eac-ad71-274746b00b6e/original=true/0ea6d11e-25a3-4eac-ad71-274746b00b6e.mp4",
+      "created_at": "2026-02-03T18:07:48.838Z",
+      "prompt": "Consistent style, demon girl, scars on face, red eyes, rain, magical sword, glowing sword, point sword at viewer, wind, wheat field",
+      "steps": 25
+    }
+  },
+  "114": {
+    "video_data": {
+      "duration": 3.708333,
+      "width": 720,
+      "height": 1280,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05275736565994088,
+      "energia_data_center": 0.08704965333890245,
+      "water_for_energy_l": 0.1318934141498522,
+      "water_for_data_center_l": 0.13275072134182625,
+      "w_tot_l": 0.2646441354916784
+    },
+    "metadata": {
+      "id": 119835688,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/36f5891c-9051-44a6-98f0-cb7a9a707b29/original=true/36f5891c-9051-44a6-98f0-cb7a9a707b29.mp4",
+      "created_at": "2026-02-03T18:03:01.048Z",
+      "prompt": "ultra high quality, masterpiece, cinematic animation of a realistic young tiefling woman, perfect anatomy, consistent proportions, she drinks the wine, then stands up and walks toward the viewer while beckoning with a gesture of her finger, smooth facial expression transition from swallowing the mouthful of wine to a suggestive knowing expression, realistic fabric movement, realistic hair movement, realistic background activity, flame movement, subtle almovement from bystanders, smooth camera motion, realistic physics, smooth interpolation sharp focus, no artifacts, no noise\n",
+      "steps": 25
+    }
+  },
+  "115": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 416,
+      "height": 752,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.026367292656658683,
+      "energia_data_center": 0.043506032883486825,
+      "water_for_energy_l": 0.0659182316416467,
+      "water_for_data_center_l": 0.0663467001473174,
+      "w_tot_l": 0.1322649317889641
+    },
+    "metadata": {
+      "id": 119835345,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/95bce9fc-1151-47eb-91c4-76550465f990/original=true/95bce9fc-1151-47eb-91c4-76550465f990.mp4",
+      "created_at": "2026-02-03T18:02:31.612Z",
+      "prompt": "kiss. The figure in the background pulls out a yellow flip phone and smirks as she takes a picture.",
+      "steps": 25
+    }
+  },
+  "116": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 416,
+      "height": 752,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.028569260336940298,
+      "energia_data_center": 0.047139279555951485,
+      "water_for_energy_l": 0.07142315084235075,
+      "water_for_data_center_l": 0.07188740132282602,
+      "w_tot_l": 0.14331055216517677
+    },
+    "metadata": {
+      "id": 119835396,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b2bcb619-ac30-4be9-a181-0bfa787e5dbd/original=true/b2bcb619-ac30-4be9-a181-0bfa787e5dbd.mp4",
+      "created_at": "2026-02-03T18:02:31.612Z",
+      "prompt": "\"ehmm.. ladys? what are you doing?!\"",
+      "steps": 25
+    }
+  },
+  "117": {
+    "video_data": {
+      "duration": 8.0625,
+      "width": 480,
+      "height": 848,
+      "fps": 16.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03497245253332425,
+      "energia_data_center": 0.057704546679985,
+      "water_for_energy_l": 0.08743113133331062,
+      "water_for_data_center_l": 0.08799943368697713,
+      "w_tot_l": 0.17543056502028775
+    },
+    "metadata": {
+      "id": 117432253,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d9c4410d-1801-4ec5-91f1-96f5eb5fa350/original=true/d9c4410d-1801-4ec5-91f1-96f5eb5fa350.mp4",
+      "created_at": "2026-02-03T17:33:00.000Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "118": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 704,
+      "height": 1248,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.06380964142768505,
+      "energia_data_center": 0.10528590835568033,
+      "water_for_energy_l": 0.15952410356921265,
+      "water_for_data_center_l": 0.1605610102424125,
+      "w_tot_l": 0.3200851138116252
+    },
+    "metadata": {
+      "id": 119833525,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/27d4ebba-758a-4f40-ad03-dd4e63ff110a/original=true/27d4ebba-758a-4f40-ad03-dd4e63ff110a.mp4",
+      "created_at": "2026-02-03T17:31:32.708Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "119": {
+    "video_data": {
+      "duration": 10.099002,
+      "width": 704,
+      "height": 1280,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17144519612544987,
+      "energia_data_center": 0.28288457360699226,
+      "water_for_energy_l": 0.42861299031362465,
+      "water_for_data_center_l": 0.43139897475066313,
+      "w_tot_l": 0.8600119650642878
+    },
+    "metadata": {
+      "id": 119833296,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c9fe8240-63c7-4b80-b0b2-be34e0078afb/original=true/c9fe8240-63c7-4b80-b0b2-be34e0078afb.mp4",
+      "created_at": "2026-02-03T17:28:41.205Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "120": {
+    "video_data": {
+      "duration": 4.03125,
+      "width": 1800,
+      "height": 1200,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1613528175353745,
+      "energia_data_center": 0.26623214893336794,
+      "water_for_energy_l": 0.40338204383843623,
+      "water_for_data_center_l": 0.4060040271233861,
+      "w_tot_l": 0.8093860709618224
+    },
+    "metadata": {
+      "id": 119832649,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/56a5db42-712d-44b1-bad8-f7336b45b5ae/original=true/56a5db42-712d-44b1-bad8-f7336b45b5ae.mp4",
+      "created_at": "2026-02-03T17:27:20.608Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "121": {
+    "video_data": {
+      "duration": 20.042,
+      "width": 704,
+      "height": 576,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05298207539693745,
+      "energia_data_center": 0.0874204244049468,
+      "water_for_energy_l": 0.13245518849234364,
+      "water_for_data_center_l": 0.13331614721754387,
+      "w_tot_l": 0.26577133570988754
+    },
+    "metadata": {
+      "id": 119831552,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4196f5b2-36a8-4582-9296-3b8208b7be4e/original=true/4196f5b2-36a8-4582-9296-3b8208b7be4e.mp4",
+      "created_at": "2026-02-03T17:15:46.251Z",
+      "prompt": "Yoshi , Poops out multiple eggs you can hear a plop sound every time one pops out, you can hear him forcing it out. it ends with a mountain of eggs behind yoshi , the eggs come out yoshis butt only, it ends with youshi saying \"holy sh*t my ass is going to hurt tomorow\" in a cute voice ",
+      "steps": 12
+    }
+  },
+  "122": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0331001555997768,
+      "energia_data_center": 0.05461525673963171,
+      "water_for_energy_l": 0.082750388999442,
+      "water_for_data_center_l": 0.08328826652793836,
+      "w_tot_l": 0.16603865552738034
+    },
+    "metadata": {
+      "id": 119831831,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a1208142-a677-42d2-91e4-6e3d48454c6a/original=true/a1208142-a677-42d2-91e4-6e3d48454c6a.mp4",
+      "created_at": "2026-02-03T17:13:17.330Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "123": {
+    "video_data": {
+      "duration": 21.455011,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60.0
+    },
+    "estimate": {
+      "energia_imagen": 1.0626698725932797,
+      "energia_data_center": 1.7534052897789114,
+      "water_for_energy_l": 2.6566746814831994,
+      "water_for_data_center_l": 2.67394306691284,
+      "w_tot_l": 5.3306177483960395
+    },
+    "metadata": {
+      "id": 119831387,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e8f19d80-f15d-44af-9177-65ef70ac10a2/original=true/e8f19d80-f15d-44af-9177-65ef70ac10a2.mp4",
+      "created_at": "2026-02-03T17:11:45.172Z",
+      "prompt": "car flying in skyes",
+      "steps": 16
+    }
+  },
+  "124": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 464,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.026145013146698294,
+      "energia_data_center": 0.043139271692052186,
+      "water_for_energy_l": 0.06536253286674573,
+      "water_for_data_center_l": 0.06578738933037959,
+      "w_tot_l": 0.13114992219712532
+    },
+    "metadata": {
+      "id": 119831488,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/32536542-ab54-41ca-9d29-e53ea8f7b37f/original=true/32536542-ab54-41ca-9d29-e53ea8f7b37f.mp4",
+      "created_at": "2026-02-03T17:10:01.398Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "125": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 960,
+      "height": 1280,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1064875745608452,
+      "energia_data_center": 0.1757044980253946,
+      "water_for_energy_l": 0.266218936402113,
+      "water_for_data_center_l": 0.2679493594887267,
+      "w_tot_l": 0.5341682958908398
+    },
+    "metadata": {
+      "id": 119830897,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/da2e6f63-fa1e-4104-a3f2-6d3c13e25c65/original=true/da2e6f63-fa1e-4104-a3f2-6d3c13e25c65.mp4",
+      "created_at": "2026-02-03T17:09:09.421Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "126": {
+    "video_data": {
+      "duration": 7.021,
+      "width": 1088,
+      "height": 1408,
+      "fps": 48.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1170360336393353,
+      "energia_data_center": 0.19310945550490324,
+      "water_for_energy_l": 0.29259008409833825,
+      "water_for_data_center_l": 0.29449191964497745,
+      "w_tot_l": 0.5870820037433158
+    },
+    "metadata": {
+      "id": 119830754,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/58c4295e-c093-46f8-b75f-5fd0d6197714/original=true/58c4295e-c093-46f8-b75f-5fd0d6197714.mp4",
+      "created_at": "2026-02-03T17:03:24.428Z",
+      "prompt": "semi-realistic cgi digimon video, the scene is the busy Tokyo city. The red dinosaur Digimon, Guilmon, is kneeling over his Tamer, who is a businessman trapped underneath him.\n\nThe Digimon, with a gruff voice, rumbles out, \"Found you, Takato-mon! I've been training lots!\"\n\nHe bends down and rumbles threateningly while possessively moving his hand onto the man's back and staring down at him. \"You're not getting away from me now.\"",
+      "steps": 10
+    }
+  },
+  "127": {
+    "video_data": {
+      "duration": 6.031006,
+      "width": 1080,
+      "height": 1644,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.19763589032014783,
+      "energia_data_center": 0.3260992190282439,
+      "water_for_energy_l": 0.4940897258003696,
+      "water_for_data_center_l": 0.49730130901807196,
+      "w_tot_l": 0.9913910348184416
+    },
+    "metadata": {
+      "id": 119830720,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/947e8ef8-45b1-49dc-a860-261e8d2a3f9b/original=true/947e8ef8-45b1-49dc-a860-261e8d2a3f9b.mp4",
+      "created_at": "2026-02-03T17:02:14.486Z",
+      "prompt": "(at 0 seconds: Low angle medium shot of one single blonde girl in a blue Victorian dress with white apron standing on a forest path surrounded by ferns, orange-spotted mushrooms, and twisted tree trunks, her right hand raised upward in a reaching gesture, head tilted back looking up with wonder, dappled golden sunlight filters through tree canopy, magical sparkles float in the air, static camera at eye level, painterly storybook illustration style, soft brush textures, rich green and blue color palette with warm highlights)\n\n(at 1.5 seconds: Camera begins tilting up slowly while dollying in, revealing more of the twisted tree branches overhead, one single large purple and black striped cat with distinctive fur patterns and enormous yellow-green eyes becomes partially visible floating above in the upper frame, cat's long striped tail curves gracefully, more golden light beams pierce through leaves, firefly-like sparkles intensify around the cat, camera tilts up 20 degrees, painterly storybook illustration style, luminous atmospheric effects, detailed fur textures)\n\n(at 3 seconds: Camera continues tilt up to 45 degrees while dolly in proceeds, now showing equal framing of girl below and cat above, cat's mischievous grin becomes visible with white whiskers prominent, purple stripes on fur show depth and dimension, cat appears to be materializing with slight transparency effect at edges, tree branches create natural framing, clockwork gears barely visible embedded in tree bark on left, mushrooms at ground level glow softly, camera movement smooth and steady, painterly storybook illustration style, magical shimmer effects, dreamy soft focus on background)\n\n(at 4 seconds: Camera tilts up to 60 degrees focusing more on the cat while continuing dolly in, close-up on cat's face showing hypnotic yellow-green eyes with slit pupils staring down at Alice, purple and black stripes ripple with magical energy, cat's grin widens showing teeth, paws dangle playfully, Alice's reaching hand visible in lower frame, golden particle effects swirl between them creating a connection, tree canopy glows with increased light, camera movement accelerates slightly, painterly storybook illustration style, enhanced glow on cat's eyes, rich color saturation)\n\n(at 5 seconds: Final camera position tilted up 70 degrees, tight shot on cat's face dominating the frame with his iconic wide grin and mesmerizing eyes, fur details showing individual painted brush strokes in purple, black and gray tones, maximum magical atmosphere with cascading golden sparkles, slight motion blur on swishing tail, Alice's upward-reaching hand just visible at bottom edge of frame maintaining connection, freeze on the cat's most enigmatic expression, painterly storybook illustration style, dramatic lighting with rim light on cat's silhouette, warm amber color grading)",
+      "steps": 25
+    }
+  },
+  "128": {
+    "video_data": {
+      "duration": 6.041992,
+      "width": 1376,
+      "height": 928,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1126486803607731,
+      "energia_data_center": 0.1858703225952756,
+      "water_for_energy_l": 0.2816217009019328,
+      "water_for_data_center_l": 0.2834522419577953,
+      "w_tot_l": 0.565073942859728
+    },
+    "metadata": {
+      "id": 119829656,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c6752a10-425d-4de8-ba9b-233061acea29/original=true/c6752a10-425d-4de8-ba9b-233061acea29.mp4",
+      "created_at": "2026-02-03T16:50:40.380Z",
+      "prompt": "chatGPT:\n\u0441\u0434\u0435\u043b\u0430\u0439 \u043b\u0438\u0441\u0430 \u0442\u0430\u043a\u0438\u043c \u0436\u0435 \u043e\u0433\u043d\u0435\u043d\u043d\u044b\u043c \u043a\u0430\u043a \u0434\u0435\u0432\u0443\u0448\u043a\u0430 \u0438\u0437 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0441 \u0442\u0430\u043a\u0438\u043c\u0438 \u0436\u0435 \u044f\u0437\u044b\u043a\u0430\u043c\u0438 \u043f\u043b\u0430\u043c\u0435\u043d\u0438. \u041e\u0434\u0435\u0436\u0434\u0443 \u043e\u0441\u0442\u0430\u0432\u044c \u0442\u0430\u043a\u043e\u0439 \u0436\u0435 \u043a\u0430\u043a \u0435\u0441\u0442\u044c. \u0410 \u043a\u0440\u043e\u043b\u044c\u0447\u0438\u0445\u0443 \u0441\u0434\u0435\u043b\u0430\u0439 \u0442\u0430\u043a\u043e\u0439 \u0436\u0435 \u0432\u043e\u0434\u044f\u043d\u043e\u0439 \u043a\u0430\u043a \u043f\u0430\u0440\u0435\u043d\u044c \u0438\u0437 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0441 \u043c\u0435\u043b\u043a\u0438\u043c\u0438 \u043f\u0443\u0437\u044b\u0440\u044c\u043a\u0430\u043c\u0438 \u0432\u043d\u0443\u0442\u0440\u0438 \u0442\u0435\u043b\u0430 \u0438 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u043c\u0438 \u0432\u043e\u043b\u043d\u0430\u043c\u0438 \u0438\u043c\u0438\u0442\u0438\u0440\u0443\u044e\u0449\u0438\u043c\u0438 \u0432\u043e\u0434\u0443 \u043d\u0430 \u0442\u0435\u043b\u0435. \u0427\u0435\u0440\u0442\u044b \u043b\u0438\u0446\u0430, \u0446\u0432\u0435\u0442 \u0433\u043b\u0430\u0437 \u0438 \u043e\u0434\u0435\u0436\u0434\u0430 \u043b\u0438\u0441\u0430 \u0438 \u043a\u0440\u043e\u043b\u044c\u0447\u0438\u0445\u0438 \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0441\u0442\u0430\u0432\u0430\u0442\u044c\u0441\u044f \u0442\u0430\u043a\u0438\u043c\u0438 \u0436\u0435 \u043a\u0430\u043a \u0435\u0441\u0442\u044c. \u0443 \u043d\u0438\u0445 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c \u0448\u0435\u0440\u0441\u0442\u0438. \u0422\u0435\u043b\u043e \u043b\u0438\u0441\u0430 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0441\u0434\u0435\u043b\u0430\u043d\u043e \u0438\u0437 \u043e\u0433\u043d\u044f, \u0430 \u0442\u0435\u043b\u043e \u043a\u0440\u043e\u043b\u044c\u0447\u0438\u0445\u0438 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0441\u0434\u0435\u043b\u0430\u043d\u043e \u0438\u0437 \u0432\u043e\u0434\u044b.\n\nGROK:\n\u0422\u0435\u043b\u043e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436\u0430 \u0441\u043b\u0435\u0432\u0430 \u0441\u0434\u0435\u043b\u0430\u043d\u043e \u0438\u0437 \u0432\u043e\u0434\u044b. \u041e\u043d\u0430 \u0447\u0438\u0441\u0442\u0438\u0442 \u0437\u0443\u0431\u044b \u0437\u0443\u0431\u043d\u043e\u0439 \u043d\u0438\u0442\u044c\u044e \u0441 \u0443\u043b\u044b\u0431\u043a\u043e\u0439. \u0422\u0435\u043b\u043e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436\u0430 \u0441\u043f\u0440\u0430\u0432\u0430 \u0441\u0434\u0435\u043b\u0430\u043d\u043e \u0438\u0437 \u043e\u0433\u043d\u044f. \u041e\u043d \u0434\u0435\u0440\u0436\u0438\u0442 \u0432 \u0440\u0443\u043a\u0435 \u0440\u0430\u0441\u0447\u0451\u0441\u043a\u0443 \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u0432\u043d\u0435\u0437\u0430\u043f\u043d\u043e \u0437\u0430\u0433\u043e\u0440\u0430\u0435\u0442\u0441\u044f. \u041e\u043d \u043a\u043e\u043c\u0438\u0447\u043d\u043e \u0432 \u043f\u0430\u043d\u0438\u043a\u0435 \u043f\u044b\u0442\u0430\u0435\u0442\u0441\u044f \u043f\u043e\u0442\u0443\u0448\u0438\u0442\u044c \u0435\u0451 \u043e \u0432\u043e\u0434\u044f\u043d\u043e\u0435 \u0442\u0435\u043b\u043e \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436\u0430 \u0441\u043b\u0435\u0432\u0430.",
+      "steps": 25
+    }
+  },
+  "129": {
+    "video_data": {
+      "duration": 9.96,
+      "width": 1920,
+      "height": 1024,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.26892282844514204,
+      "energia_data_center": 0.4437226669344843,
+      "water_for_energy_l": 0.6723070711128551,
+      "water_for_data_center_l": 0.6766770670750886,
+      "w_tot_l": 1.3489841381879437
+    },
+    "metadata": {
+      "id": 119829540,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aa4e2643-3f7a-4b23-bd91-062f842055de/original=true/aa4e2643-3f7a-4b23-bd91-062f842055de.mp4",
+      "created_at": "2026-02-03T16:47:50.597Z",
+      "prompt": "The woman gives the huge spaghetti god a baguette and she says \"here's the bread you asked for your grace.\" The spaghetti god says \"thanks for the bread. By any chance did you remember the French onion dip?\" The woman says \"no I forgot it\". The spaghetti god then says \"you have angered me!\" and he blasts her away with magic and spaghetti noodles in a rage.",
+      "steps": 25
+    }
+  },
+  "130": {
+    "video_data": {
+      "duration": 4.016667,
+      "width": 736,
+      "height": 1280,
+      "fps": 60.0
+    },
+    "estimate": {
+      "energia_imagen": 0.14268685657548746,
+      "energia_data_center": 0.2354333133495543,
+      "water_for_energy_l": 0.3567171414387187,
+      "water_for_data_center_l": 0.3590358028580703,
+      "w_tot_l": 0.7157529442967889
+    },
+    "metadata": {
+      "id": 119829158,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d88667b8-6109-49fe-a38a-94f298d56009/original=true/d88667b8-6109-49fe-a38a-94f298d56009.mp4",
+      "created_at": "2026-02-03T16:46:38.768Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "131": {
+    "video_data": {
+      "duration": 5.708333,
+      "width": 1536,
+      "height": 2244,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2516074735985958,
+      "energia_data_center": 0.41515233143768304,
+      "water_for_energy_l": 0.6290186839964895,
+      "water_for_data_center_l": 0.6331073054424665,
+      "w_tot_l": 1.262125989438956
+    },
+    "metadata": {
+      "id": 119828367,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9531b96e-d9bc-435a-817a-bbd857482231/original=true/9531b96e-d9bc-435a-817a-bbd857482231.mp4",
+      "created_at": "2026-02-03T16:40:48.028Z",
+      "prompt": "((Masterpiece, Best Quality, Amazing Quality, Very Aesthetic, Absurd, Newest, Clean Lines, Fine Contours, Smooth Quality, Smooth Style, Soft Look)),\n\n((Cartoon Design Character)),\n\nAnthropomorphic, Furry, Honeybee, Wasp, Bee Girl, Bunny Ears, Rabbit Ears, Rabbit Nose, Blonde Hair, Odango, Hair Buns,\n\nBlue Eyes, Big Expressive Eyes, Stinger, Striped Tail, Insect Wings, Transparent Wings,\n\nChristmas Tree Dress, Pine Tree Costume, Decorated With Ornaments, Baubles, Christmas Lights, Fairy Lights,\n\nStar Topper, Santa Cape, Red Bolero, Green Ribbons, Bow Tie,\n\n((2D Character, Original Design, True To Reference, Consistent Appearance)),\n\n((No Head Turn, Face Remains Fixed, Static Head Angle, No Rotation, Soft Blink Animation)),\n\nMaintain Original Character Proportions And Features, Subtle Idle Animation, Slight Breathing Motion, Whole Body Very Slightly Smooth Movements,\n\nBREAK\n\nIndoor Setting, Cozy Room, Wooden Floor, Christmas Presents, Gift Boxes, Bokeh, Glittering Particles, Warm Lighting, Golden Hour Glow, Festive Mood",
+      "steps": 24
+    }
+  },
+  "132": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 480,
+      "height": 640,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.027528877207949755,
+      "energia_data_center": 0.04542264739311709,
+      "water_for_energy_l": 0.06882219301987438,
+      "water_for_data_center_l": 0.06926953727450356,
+      "w_tot_l": 0.13809173029437793
+    },
+    "metadata": {
+      "id": 119828542,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5ebfbf25-ff45-4117-9c45-98febb0461a6/original=true/5ebfbf25-ff45-4117-9c45-98febb0461a6.mp4",
+      "created_at": "2026-02-03T16:40:08.574Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "133": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 480,
+      "height": 640,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029241117088546847,
+      "energia_data_center": 0.04824784319610229,
+      "water_for_energy_l": 0.07310279272136712,
+      "water_for_data_center_l": 0.07357796087405599,
+      "w_tot_l": 0.1466807535954231
+    },
+    "metadata": {
+      "id": 119828611,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e81cc915-3e39-4a51-9533-774b220676ed/original=true/e81cc915-3e39-4a51-9533-774b220676ed.mp4",
+      "created_at": "2026-02-03T16:40:08.574Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "134": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 480,
+      "height": 640,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.025694410568871066,
+      "energia_data_center": 0.042395777438637254,
+      "water_for_energy_l": 0.06423602642217767,
+      "water_for_data_center_l": 0.06465356059392181,
+      "w_tot_l": 0.12888958701609948
+    },
+    "metadata": {
+      "id": 119828727,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/40a81e12-f22c-4cd8-b8f5-a923ebb1efaa/original=true/40a81e12-f22c-4cd8-b8f5-a923ebb1efaa.mp4",
+      "created_at": "2026-02-03T16:40:08.574Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "135": {
+    "video_data": {
+      "duration": 12.708333,
+      "width": 704,
+      "height": 1280,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.16753602498966907,
+      "energia_data_center": 0.27643444123295396,
+      "water_for_energy_l": 0.4188400624741727,
+      "water_for_data_center_l": 0.42156252288025475,
+      "w_tot_l": 0.8404025853544275
+    },
+    "metadata": {
+      "id": 119828194,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/77615f65-30cd-4623-a8c5-0d35dfa56cad/original=true/77615f65-30cd-4623-a8c5-0d35dfa56cad.mp4",
+      "created_at": "2026-02-03T16:35:03.254Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "136": {
+    "video_data": {
+      "duration": 3.708333,
+      "width": 480,
+      "height": 832,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.020396803982337883,
+      "energia_data_center": 0.0336547265708575,
+      "water_for_energy_l": 0.05099200995584471,
+      "water_for_data_center_l": 0.05132345802055769,
+      "w_tot_l": 0.1023154679764024
+    },
+    "metadata": {
+      "id": 119826979,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/93eeda25-5488-4024-9061-e87bd83a2c59/original=true/93eeda25-5488-4024-9061-e87bd83a2c59.mp4",
+      "created_at": "2026-02-03T16:27:01.578Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "137": {
+    "video_data": {
+      "duration": 10.708333,
+      "width": 1280,
+      "height": 704,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13103083899461718,
+      "energia_data_center": 0.21620088434111834,
+      "water_for_energy_l": 0.32757709748654296,
+      "water_for_data_center_l": 0.3297063486202054,
+      "w_tot_l": 0.6572834461067484
+    },
+    "metadata": {
+      "id": 119823962,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/32490c05-12a7-4b25-979b-1c6d7143c82e/original=true/32490c05-12a7-4b25-979b-1c6d7143c82e.mp4",
+      "created_at": "2026-02-03T16:20:34.421Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "138": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 416,
+      "height": 752,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02967863994057687,
+      "energia_data_center": 0.04896975590195183,
+      "water_for_energy_l": 0.07419659985144217,
+      "water_for_data_center_l": 0.07467887775047655,
+      "w_tot_l": 0.14887547760191872
+    },
+    "metadata": {
+      "id": 119826717,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/faa20184-398d-4240-906c-b8a1a238bc53/original=true/faa20184-398d-4240-906c-b8a1a238bc53.mp4",
+      "created_at": "2026-02-03T16:20:11.553Z",
+      "prompt": "A realistic 8k cinematic shot for a social media Reel. Three different cats are standing on their hind legs in a triangular formation on a glossy shopping mall floor. The center cat (Grey British Shorthair) wears a blue Baby Shark plush costume. The left cat (Ginger Tabby) wears a yellow-and-black striped Bee onesie with tiny wings. The right cat (Tuxedo cat) wears a round, fluffy Panda costume. They are all performing the \"Baby Shark\" dance, with the center cat clapping its paws together like a shark's mouth. They have earnest, focused expressions and joyful smiles. Background: A modern bright mall with festive bokeh lights. Hyper-detailed fur, plush fabric textures, vibrant colors, masterpiece. A realistic 8k cinematic shot for a social media Reel. Three different cats are standing on their hind legs in a triangular formation on a glossy shopping mall floor. The center cat (Grey British Shorthair) wears a blue Baby Shark plush costume. The left cat (Ginger Tabby) wears a yellow-and-black striped Bee onesie with tiny wings. The right cat (Tuxedo cat) wears a round, fluffy Panda costume. They are all performing the \"Baby Shark\" dance, with the center cat clapping its paws together like a shark's mouth. They have earnest, focused expressions and joyful smiles. Background: A modern bright mall with festive bokeh lights. Hyper-detailed fur, plush fabric textures, vibrant colors, masterpiece.",
+      "steps": 25
+    }
+  },
+  "139": {
+    "video_data": {
+      "duration": 5.0,
+      "width": 528,
+      "height": 768,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02843930868287936,
+      "energia_data_center": 0.046924859326750945,
+      "water_for_energy_l": 0.0710982717071984,
+      "water_for_data_center_l": 0.07156041047329519,
+      "w_tot_l": 0.1426586821804936
+    },
+    "metadata": {
+      "id": 119825723,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6d5e7871-8c13-4a53-a8fb-0c73e01dd7ac/original=true/6d5e7871-8c13-4a53-a8fb-0c73e01dd7ac.mp4",
+      "created_at": "2026-02-03T16:05:58.003Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "140": {
+    "video_data": {
+      "duration": 5.0,
+      "width": 528,
+      "height": 768,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.027882859584692787,
+      "energia_data_center": 0.046006718314743095,
+      "water_for_energy_l": 0.06970714896173197,
+      "water_for_data_center_l": 0.07016024542998321,
+      "w_tot_l": 0.1398673943917152
+    },
+    "metadata": {
+      "id": 119825697,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d87febe1-38dc-4969-a4f7-f0114672c1b9/original=true/d87febe1-38dc-4969-a4f7-f0114672c1b9.mp4",
+      "created_at": "2026-02-03T16:05:44.571Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "141": {
+    "video_data": {
+      "duration": 5.0,
+      "width": 528,
+      "height": 768,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.030663487129035938,
+      "energia_data_center": 0.0505947537629093,
+      "water_for_energy_l": 0.07665871782258984,
+      "water_for_data_center_l": 0.07715699948843668,
+      "w_tot_l": 0.15381571731102653
+    },
+    "metadata": {
+      "id": 119825694,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c592c32b-06e0-4f22-a989-42f45f6fbbac/original=true/c592c32b-06e0-4f22-a989-42f45f6fbbac.mp4",
+      "created_at": "2026-02-03T16:05:35.080Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "142": {
+    "video_data": {
+      "duration": 4.0,
+      "width": 720,
+      "height": 1280,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.04795944558065236,
+      "energia_data_center": 0.0791330852080764,
+      "water_for_energy_l": 0.1198986139516309,
+      "water_for_data_center_l": 0.12067795494231649,
+      "w_tot_l": 0.2405765688939474
+    },
+    "metadata": {
+      "id": 119825041,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7769a7b3-ad67-43ee-add7-0772340e836f/original=true/7769a7b3-ad67-43ee-add7-0772340e836f.mp4",
+      "created_at": "2026-02-03T15:54:48.250Z",
+      "prompt": "A beautiful human enchantress with long black hair and green eyes is standing in front of a stained glass window.  She turns to the viewer, a faint smile plays across her lips green magic light emanating from her fingertips",
+      "steps": 25
+    }
+  },
+  "143": {
+    "video_data": {
+      "duration": 5,
+      "width": 928,
+      "height": 1376,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.11918772558034485,
+      "energia_data_center": 0.19665974720756899,
+      "water_for_energy_l": 0.2979693139508621,
+      "water_for_data_center_l": 0.2999061144915427,
+      "w_tot_l": 0.5978754284424048
+    },
+    "metadata": {
+      "id": 119823738,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bbf7b3c0-45b3-48be-bdc6-20658fdb68fc/original=true/bbf7b3c0-45b3-48be-bdc6-20658fdb68fc.mp4",
+      "created_at": "2026-02-03T15:38:39.355Z",
+      "prompt": "-",
+      "steps": 25
+    }
+  },
+  "144": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.030233415742285098,
+      "energia_data_center": 0.04988513597477041,
+      "water_for_energy_l": 0.07558353935571274,
+      "water_for_data_center_l": 0.07607483236152487,
+      "w_tot_l": 0.15165837171723762
+    },
+    "metadata": {
+      "id": 119822708,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ea3db584-9ef2-4535-9612-5cf6d0469154/original=true/ea3db584-9ef2-4535-9612-5cf6d0469154.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "145": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.026579339479923886,
+      "energia_data_center": 0.043855910141874406,
+      "water_for_energy_l": 0.06644834869980971,
+      "water_for_data_center_l": 0.06688026296635846,
+      "w_tot_l": 0.13332861166616816
+    },
+    "metadata": {
+      "id": 119822709,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5d074dbc-34bb-4cc4-9abc-583f457387be/original=true/5d074dbc-34bb-4cc4-9abc-583f457387be.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "146": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02695479216503952,
+      "energia_data_center": 0.044475407072315204,
+      "water_for_energy_l": 0.0673869804125988,
+      "water_for_data_center_l": 0.06782499578528069,
+      "w_tot_l": 0.1352119761978795
+    },
+    "metadata": {
+      "id": 119822710,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d2c5e349-5030-46a3-890b-ec44f6129aac/original=true/d2c5e349-5030-46a3-890b-ec44f6129aac.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "147": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02716601964214782,
+      "energia_data_center": 0.0448239324095439,
+      "water_for_energy_l": 0.06791504910536955,
+      "water_for_data_center_l": 0.06835649692455445,
+      "w_tot_l": 0.136271546029924
+    },
+    "metadata": {
+      "id": 119822711,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d9fc2628-05b9-40dc-be27-15637a455e9c/original=true/d9fc2628-05b9-40dc-be27-15637a455e9c.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "148": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029706831238129162,
+      "energia_data_center": 0.04901627154291312,
+      "water_for_energy_l": 0.0742670780953229,
+      "water_for_data_center_l": 0.0747498141029425,
+      "w_tot_l": 0.14901689219826542
+    },
+    "metadata": {
+      "id": 119822713,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4780e8b7-dcba-444f-9d0d-dbfb120a850a/original=true/4780e8b7-dcba-444f-9d0d-dbfb120a850a.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "149": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.027778472850595363,
+      "energia_data_center": 0.045834480203482346,
+      "water_for_energy_l": 0.06944618212648841,
+      "water_for_data_center_l": 0.06989758231031057,
+      "w_tot_l": 0.13934376443679897
+    },
+    "metadata": {
+      "id": 119822714,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/740ae514-e8ad-4c83-9818-5b661802f780/original=true/740ae514-e8ad-4c83-9818-5b661802f780.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "150": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.028620976006026484,
+      "energia_data_center": 0.0472246104099437,
+      "water_for_energy_l": 0.07155244001506621,
+      "water_for_data_center_l": 0.07201753087516413,
+      "w_tot_l": 0.14356997089023033
+    },
+    "metadata": {
+      "id": 119822715,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/72a5d508-9620-4639-bd33-cfd0ef0628e0/original=true/72a5d508-9620-4639-bd33-cfd0ef0628e0.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "151": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02588521240573937,
+      "energia_data_center": 0.04271060046946996,
+      "water_for_energy_l": 0.06471303101434843,
+      "water_for_data_center_l": 0.06513366571594169,
+      "w_tot_l": 0.12984669673029012
+    },
+    "metadata": {
+      "id": 119822716,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/79d36092-d9e7-4fee-b76e-b8270e9a822a/original=true/79d36092-d9e7-4fee-b76e-b8270e9a822a.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "152": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02708944460099203,
+      "energia_data_center": 0.04469758359163685,
+      "water_for_energy_l": 0.06772361150248007,
+      "water_for_data_center_l": 0.06816381497724619,
+      "w_tot_l": 0.13588742647972626
+    },
+    "metadata": {
+      "id": 119822719,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4a94f80a-5b8d-47a0-8c27-09d45a33ec8f/original=true/4a94f80a-5b8d-47a0-8c27-09d45a33ec8f.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "153": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.025511325005293396,
+      "energia_data_center": 0.0420936862587341,
+      "water_for_energy_l": 0.06377831251323349,
+      "water_for_data_center_l": 0.06419287154456951,
+      "w_tot_l": 0.127971184057803
+    },
+    "metadata": {
+      "id": 119822720,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5380c0b2-34bb-4dd2-9eb3-9bb9dd0909fb/original=true/5380c0b2-34bb-4dd2-9eb3-9bb9dd0909fb.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "154": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.028571085136671382,
+      "energia_data_center": 0.047142290475507775,
+      "water_for_energy_l": 0.07142771284167845,
+      "water_for_data_center_l": 0.07189199297514935,
+      "w_tot_l": 0.1433197058168278
+    },
+    "metadata": {
+      "id": 119822721,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eb9d009d-9898-4be2-b7cd-c9126729cf07/original=true/eb9d009d-9898-4be2-b7cd-c9126729cf07.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "155": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.025588795580068466,
+      "energia_data_center": 0.04222151270711297,
+      "water_for_energy_l": 0.06397198895017117,
+      "water_for_data_center_l": 0.06438780687834728,
+      "w_tot_l": 0.12835979582851845
+    },
+    "metadata": {
+      "id": 119822722,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/4167d426-a576-47d5-a518-d3f1711d3dae/original=true/4167d426-a576-47d5-a518-d3f1711d3dae.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "156": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03000110719710863,
+      "energia_data_center": 0.049501826875229235,
+      "water_for_energy_l": 0.07500276799277157,
+      "water_for_data_center_l": 0.07549028598472458,
+      "w_tot_l": 0.15049305397749616
+    },
+    "metadata": {
+      "id": 119822723,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/24a575ad-3b08-4064-90b0-ae825a9008b5/original=true/24a575ad-3b08-4064-90b0-ae825a9008b5.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "157": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.025259419601404185,
+      "energia_data_center": 0.0416780423423169,
+      "water_for_energy_l": 0.06314854900351047,
+      "water_for_data_center_l": 0.06355901457203328,
+      "w_tot_l": 0.12670756357554375
+    },
+    "metadata": {
+      "id": 119822724,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8b8a6700-1b81-4402-bc0e-41273bedafc9/original=true/8b8a6700-1b81-4402-bc0e-41273bedafc9.mp4",
+      "created_at": "2026-02-03T15:25:36.422Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "158": {
+    "video_data": {
+      "duration": 6.416667,
+      "width": 560,
+      "height": 864,
+      "fps": 60.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11042291789019457,
+      "energia_data_center": 0.18219781451882103,
+      "water_for_energy_l": 0.2760572947254864,
+      "water_for_data_center_l": 0.2778516671412021,
+      "w_tot_l": 0.5539089618666885
+    },
+    "metadata": {
+      "id": 119822980,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/74eff9f2-8568-41bb-90aa-6020767a9f4b/original=true/74eff9f2-8568-41bb-90aa-6020767a9f4b.mp4",
+      "created_at": "2026-02-03T15:24:57.948Z",
+      "prompt": "WOMEN",
+      "steps": 25
+    }
+  },
+  "159": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 1104,
+      "height": 832,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1406792888025093,
+      "energia_data_center": 0.23212082652414032,
+      "water_for_energy_l": 0.3516982220062732,
+      "water_for_data_center_l": 0.35398426044931397,
+      "w_tot_l": 0.7056824824555872
+    },
+    "metadata": {
+      "id": 119822790,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b29dd8ce-b04d-43c2-ba13-ba09de2cec00/original=true/b29dd8ce-b04d-43c2-ba13-ba09de2cec00.mp4",
+      "created_at": "2026-02-03T15:22:14.162Z",
+      "prompt": "kitty living a great adventure, Kawaii, anime style, masterpiece, high quality",
+      "steps": 25
+    }
+  },
+  "160": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 560,
+      "height": 560,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02818072431946257,
+      "energia_data_center": 0.04649819512711324,
+      "water_for_energy_l": 0.07045181079865642,
+      "water_for_data_center_l": 0.07090974756884769,
+      "w_tot_l": 0.1413615583675041
+    },
+    "metadata": {
+      "id": 119822863,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/07fce82e-72f3-4a10-8e96-f682214832fc/original=true/07fce82e-72f3-4a10-8e96-f682214832fc.mp4",
+      "created_at": "2026-02-03T15:22:10.904Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "161": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17088510256350373,
+      "energia_data_center": 0.28196041922978116,
+      "water_for_energy_l": 0.42721275640875933,
+      "water_for_data_center_l": 0.4299896393254163,
+      "w_tot_l": 0.8572023957341757
+    },
+    "metadata": {
+      "id": 119822599,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/007e7dfe-4e34-4a85-a25d-156d1b4109e9/original=true/007e7dfe-4e34-4a85-a25d-156d1b4109e9.mp4",
+      "created_at": "2026-02-03T15:19:04.525Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "162": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.16545979936138133,
+      "energia_data_center": 0.2730086689462792,
+      "water_for_energy_l": 0.41364949840345333,
+      "water_for_data_center_l": 0.41633822014307575,
+      "w_tot_l": 0.8299877185465291
+    },
+    "metadata": {
+      "id": 119822594,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1c02ba63-f107-4519-946f-30a990ff5b6d/original=true/1c02ba63-f107-4519-946f-30a990ff5b6d.mp4",
+      "created_at": "2026-02-03T15:19:04.228Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "163": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17448718753662773,
+      "energia_data_center": 0.2879038594354357,
+      "water_for_energy_l": 0.4362179688415693,
+      "water_for_data_center_l": 0.43905338563903945,
+      "w_tot_l": 0.8752713544806088
+    },
+    "metadata": {
+      "id": 119822587,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5c300c64-0f39-4986-948f-2a92cd743ec4/original=true/5c300c64-0f39-4986-948f-2a92cd743ec4.mp4",
+      "created_at": "2026-02-03T15:19:02.311Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "164": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.15388394018301121,
+      "energia_data_center": 0.2539085013019685,
+      "water_for_energy_l": 0.38470985045752804,
+      "water_for_data_center_l": 0.387210464485502,
+      "w_tot_l": 0.77192031494303
+    },
+    "metadata": {
+      "id": 119822590,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bd2ac5b2-a436-4895-8eab-8d3cda5bcc1e/original=true/bd2ac5b2-a436-4895-8eab-8d3cda5bcc1e.mp4",
+      "created_at": "2026-02-03T15:19:01.040Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "165": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17182743556286753,
+      "energia_data_center": 0.2835152686787314,
+      "water_for_energy_l": 0.4295685889071688,
+      "water_for_data_center_l": 0.43236078473506534,
+      "w_tot_l": 0.8619293736422342
+    },
+    "metadata": {
+      "id": 119822597,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7a32696d-5d1b-4dc2-9806-8442dc9d4ae6/original=true/7a32696d-5d1b-4dc2-9806-8442dc9d4ae6.mp4",
+      "created_at": "2026-02-03T15:18:58.892Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "166": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.027542197955012643,
+      "energia_data_center": 0.04544462662577086,
+      "water_for_energy_l": 0.06885549488753161,
+      "water_for_data_center_l": 0.06930305560430056,
+      "w_tot_l": 0.13815855049183218
+    },
+    "metadata": {
+      "id": 119822580,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5d1a9c4f-913c-4cfb-a1cb-94be9e98fe09/original=true/5d1a9c4f-913c-4cfb-a1cb-94be9e98fe09.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "167": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.027833251490947827,
+      "energia_data_center": 0.04592486496006391,
+      "water_for_energy_l": 0.06958312872736958,
+      "water_for_data_center_l": 0.07003541906409746,
+      "w_tot_l": 0.13961854779146704
+    },
+    "metadata": {
+      "id": 119822584,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9734b2e9-d7b2-4f66-9055-95c3fae14f64/original=true/9734b2e9-d7b2-4f66-9055-95c3fae14f64.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "168": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.030439785796072167,
+      "energia_data_center": 0.05022564656351907,
+      "water_for_energy_l": 0.07609946449018042,
+      "water_for_data_center_l": 0.07659411100936658,
+      "w_tot_l": 0.15269357549954699
+    },
+    "metadata": {
+      "id": 119822585,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f26a75e0-28e1-463d-bedb-4739ddddae97/original=true/f26a75e0-28e1-463d-bedb-4739ddddae97.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "169": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.16792022191414424,
+      "energia_data_center": 0.27706836615833796,
+      "water_for_energy_l": 0.4198005547853606,
+      "water_for_data_center_l": 0.4225292583914654,
+      "w_tot_l": 0.842329813176826
+    },
+    "metadata": {
+      "id": 119822588,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fcbc21ae-c2fd-4891-a099-016b933de2ff/original=true/fcbc21ae-c2fd-4891-a099-016b933de2ff.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "170": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.14930905576192938,
+      "energia_data_center": 0.24635994200718345,
+      "water_for_energy_l": 0.37327263940482347,
+      "water_for_data_center_l": 0.3756989115609548,
+      "w_tot_l": 0.7489715509657783
+    },
+    "metadata": {
+      "id": 119822592,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b64ff610-f694-4c49-b1a9-79a25b536464/original=true/b64ff610-f694-4c49-b1a9-79a25b536464.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "171": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 752,
+      "height": 416,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.029804130768712783,
+      "energia_data_center": 0.04917681576837609,
+      "water_for_energy_l": 0.07451032692178196,
+      "water_for_data_center_l": 0.07499464404677354,
+      "w_tot_l": 0.1495049709685555
+    },
+    "metadata": {
+      "id": 119822593,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6e0193e8-fa14-4977-be37-51371a21cb00/original=true/6e0193e8-fa14-4977-be37-51371a21cb00.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "172": {
+    "video_data": {
+      "duration": 10.1,
+      "width": 1280,
+      "height": 704,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.1513569181494462,
+      "energia_data_center": 0.24973891494658623,
+      "water_for_energy_l": 0.3783922953736155,
+      "water_for_data_center_l": 0.380851845293544,
+      "w_tot_l": 0.7592441406671595
+    },
+    "metadata": {
+      "id": 119822595,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5a54719d-8dc3-48c3-89df-e741810ce7db/original=true/5a54719d-8dc3-48c3-89df-e741810ce7db.mp4",
+      "created_at": "2026-02-03T15:18:56.584Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "173": {
+    "video_data": {
+      "duration": 5.416667,
+      "width": 576,
+      "height": 864,
+      "fps": 12.0
+    },
+    "estimate": {
+      "energia_imagen": 0.018583318538095955,
+      "energia_data_center": 0.030662475587858323,
+      "water_for_energy_l": 0.04645829634523989,
+      "water_for_data_center_l": 0.04676027527148394,
+      "w_tot_l": 0.09321857161672384
+    },
+    "metadata": {
+      "id": 119821908,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e4c9dc7d-8c31-4514-b4c1-3266bab7104c/original=true/e4c9dc7d-8c31-4514-b4c1-3266bab7104c.mp4",
+      "created_at": "2026-02-03T15:10:29.735Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "174": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 464,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03105701920265687,
+      "energia_data_center": 0.05124408168438383,
+      "water_for_energy_l": 0.07764254800664216,
+      "water_for_data_center_l": 0.07814722456868534,
+      "w_tot_l": 0.1557897725753275
+    },
+    "metadata": {
+      "id": 119821476,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/801e34eb-5287-44e3-907a-e2027dbadd4b/original=true/801e34eb-5287-44e3-907a-e2027dbadd4b.mp4",
+      "created_at": "2026-02-03T15:03:31.290Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "175": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 560,
+      "height": 560,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.026867631291004942,
+      "energia_data_center": 0.04433159163015815,
+      "water_for_energy_l": 0.06716907822751235,
+      "water_for_data_center_l": 0.06760567723599117,
+      "w_tot_l": 0.13477475546350354
+    },
+    "metadata": {
+      "id": 119821325,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ee9a3cc5-fcaf-4b65-a5ee-3cc7b256b819/original=true/ee9a3cc5-fcaf-4b65-a5ee-3cc7b256b819.mp4",
+      "created_at": "2026-02-03T15:01:14.972Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "176": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 640,
+      "height": 432,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.021523543336050478,
+      "energia_data_center": 0.03551384650448329,
+      "water_for_energy_l": 0.05380885834012619,
+      "water_for_data_center_l": 0.054158615919337016,
+      "w_tot_l": 0.10796747425946321
+    },
+    "metadata": {
+      "id": 119821203,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/efa2d0e8-d938-45ad-8af0-09aa7a0aa6b6/original=true/efa2d0e8-d938-45ad-8af0-09aa7a0aa6b6.mp4",
+      "created_at": "2026-02-03T15:01:07.942Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "177": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 1024,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.053987410831611335,
+      "energia_data_center": 0.0890792278721587,
+      "water_for_energy_l": 0.13496852707902834,
+      "water_for_data_center_l": 0.135845822505042,
+      "w_tot_l": 0.27081434958407036
+    },
+    "metadata": {
+      "id": 119821206,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/585ac890-a87c-4a70-bc73-b9f3e91b9814/original=true/585ac890-a87c-4a70-bc73-b9f3e91b9814.mp4",
+      "created_at": "2026-02-03T15:01:07.942Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "178": {
+    "video_data": {
+      "duration": 15.08,
+      "width": 768,
+      "height": 1152,
+      "fps": 25.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2013661046992944,
+      "energia_data_center": 0.3322540727538357,
+      "water_for_energy_l": 0.5034152617482359,
+      "water_for_data_center_l": 0.5066874609495995,
+      "w_tot_l": 1.0101027226978354
+    },
+    "metadata": {
+      "id": 119821008,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/991fc2ef-669e-43d7-b307-916e3178eb0c/original=true/991fc2ef-669e-43d7-b307-916e3178eb0c.mp4",
+      "created_at": "2026-02-03T14:58:49.574Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "179": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.039084571203843,
+      "energia_data_center": 0.06448954248634094,
+      "water_for_energy_l": 0.0977114280096075,
+      "water_for_data_center_l": 0.09834655229166991,
+      "w_tot_l": 0.1960579803012774
+    },
+    "metadata": {
+      "id": 119820675,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/83175311-710d-492b-80d1-072b27e4937a/original=true/83175311-710d-492b-80d1-072b27e4937a.mp4",
+      "created_at": "2026-02-03T14:52:14.718Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "180": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03377022749841832,
+      "energia_data_center": 0.055720875372390226,
+      "water_for_energy_l": 0.0844255687460458,
+      "water_for_data_center_l": 0.0849743349428951,
+      "w_tot_l": 0.1693999036889409
+    },
+    "metadata": {
+      "id": 119820661,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e36d3bab-814c-4a17-bbd9-58cf53643413/original=true/e36d3bab-814c-4a17-bbd9-58cf53643413.mp4",
+      "created_at": "2026-02-03T14:51:30.171Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "181": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03249564337086842,
+      "energia_data_center": 0.053617811561932884,
+      "water_for_energy_l": 0.08123910842717104,
+      "water_for_data_center_l": 0.08176716263194765,
+      "w_tot_l": 0.1630062710591187
+    },
+    "metadata": {
+      "id": 119820637,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5996f6e3-39da-4171-a09a-17b92ee0a402/original=true/5996f6e3-39da-4171-a09a-17b92ee0a402.mp4",
+      "created_at": "2026-02-03T14:50:57.467Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "182": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03597606074197883,
+      "energia_data_center": 0.05936050022426507,
+      "water_for_energy_l": 0.08994015185494708,
+      "water_for_data_center_l": 0.09052476284200422,
+      "w_tot_l": 0.1804649146969513
+    },
+    "metadata": {
+      "id": 119820599,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/6b68a0b0-0c3e-4b8a-a7e1-a2e61f5b0e0c/original=true/6b68a0b0-0c3e-4b8a-a7e1-a2e61f5b0e0c.mp4",
+      "created_at": "2026-02-03T14:50:09.235Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "183": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03763050315061758,
+      "energia_data_center": 0.062090330198519,
+      "water_for_energy_l": 0.09407625787654395,
+      "water_for_data_center_l": 0.09468775355274148,
+      "w_tot_l": 0.18876401142928542
+    },
+    "metadata": {
+      "id": 119820567,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/533f567d-778e-4f0b-8ea6-6a9e63ef637e/original=true/533f567d-778e-4f0b-8ea6-6a9e63ef637e.mp4",
+      "created_at": "2026-02-03T14:49:41.263Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "184": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03504117885056947,
+      "energia_data_center": 0.05781794510343962,
+      "water_for_energy_l": 0.08760294712642366,
+      "water_for_data_center_l": 0.08817236628274543,
+      "w_tot_l": 0.17577531340916908
+    },
+    "metadata": {
+      "id": 119820533,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e6561de8-998a-45fc-9a8b-ce9d424585fe/original=true/e6561de8-998a-45fc-9a8b-ce9d424585fe.mp4",
+      "created_at": "2026-02-03T14:49:13.982Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "185": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03326126587242259,
+      "energia_data_center": 0.05488108868949727,
+      "water_for_energy_l": 0.08315316468105648,
+      "water_for_data_center_l": 0.08369366025148334,
+      "w_tot_l": 0.16684682493253983
+    },
+    "metadata": {
+      "id": 119820476,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5fa79498-c2cd-4b18-98db-5040e44debc7/original=true/5fa79498-c2cd-4b18-98db-5040e44debc7.mp4",
+      "created_at": "2026-02-03T14:48:14.922Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "186": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.036505244344023066,
+      "energia_data_center": 0.060233653167638054,
+      "water_for_energy_l": 0.09126311086005767,
+      "water_for_data_center_l": 0.09185632108064803,
+      "w_tot_l": 0.1831194319407057
+    },
+    "metadata": {
+      "id": 119820436,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/cd488f18-47b9-4a44-97d6-1f2ac5152925/original=true/cd488f18-47b9-4a44-97d6-1f2ac5152925.mp4",
+      "created_at": "2026-02-03T14:47:15.700Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "187": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03575404791648765,
+      "energia_data_center": 0.05899417906220462,
+      "water_for_energy_l": 0.08938511979121912,
+      "water_for_data_center_l": 0.08996612306986203,
+      "w_tot_l": 0.17935124286108114
+    },
+    "metadata": {
+      "id": 119820411,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/99a59e60-c99a-4982-b1a5-876ee85c3187/original=true/99a59e60-c99a-4982-b1a5-876ee85c3187.mp4",
+      "created_at": "2026-02-03T14:46:47.054Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "188": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0359869985849661,
+      "energia_data_center": 0.05937854766519406,
+      "water_for_energy_l": 0.08996749646241525,
+      "water_for_data_center_l": 0.09055228518942095,
+      "w_tot_l": 0.1805197816518362
+    },
+    "metadata": {
+      "id": 119820382,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/8bd96b40-6eef-4690-a528-fa13a6786662/original=true/8bd96b40-6eef-4690-a528-fa13a6786662.mp4",
+      "created_at": "2026-02-03T14:46:19.795Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "189": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0328174789819215,
+      "energia_data_center": 0.05414884032017047,
+      "water_for_energy_l": 0.08204369745480375,
+      "water_for_data_center_l": 0.08257698148825995,
+      "w_tot_l": 0.1646206789430637
+    },
+    "metadata": {
+      "id": 119820359,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/70459289-6880-4fbb-8785-acd4c1b2223a/original=true/70459289-6880-4fbb-8785-acd4c1b2223a.mp4",
+      "created_at": "2026-02-03T14:45:51.981Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "190": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03394307361849298,
+      "energia_data_center": 0.05600607147051342,
+      "water_for_energy_l": 0.08485768404623245,
+      "water_for_data_center_l": 0.08540925899253296,
+      "w_tot_l": 0.1702669430387654
+    },
+    "metadata": {
+      "id": 119820346,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/55caca2b-8360-4896-a85a-5b874d952816/original=true/55caca2b-8360-4896-a85a-5b874d952816.mp4",
+      "created_at": "2026-02-03T14:45:19.288Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "191": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03270611495831217,
+      "energia_data_center": 0.05396508968121507,
+      "water_for_energy_l": 0.08176528739578041,
+      "water_for_data_center_l": 0.08229676176385299,
+      "w_tot_l": 0.1640620491596334
+    },
+    "metadata": {
+      "id": 119820321,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9de9a81d-596f-41cd-8afd-b8b4534d90ca/original=true/9de9a81d-596f-41cd-8afd-b8b4534d90ca.mp4",
+      "created_at": "2026-02-03T14:44:33.966Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "192": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.038063523755916165,
+      "energia_data_center": 0.06280481419726167,
+      "water_for_energy_l": 0.0951588093897904,
+      "water_for_data_center_l": 0.09577734165082404,
+      "w_tot_l": 0.19093615104061445
+    },
+    "metadata": {
+      "id": 119820301,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/237abac3-2303-4ec2-a6c4-5dc640f483b9/original=true/237abac3-2303-4ec2-a6c4-5dc640f483b9.mp4",
+      "created_at": "2026-02-03T14:44:05.233Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "193": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.032732371973191475,
+      "energia_data_center": 0.054008413755765934,
+      "water_for_energy_l": 0.08183092993297869,
+      "water_for_data_center_l": 0.08236283097754304,
+      "w_tot_l": 0.16419376091052174
+    },
+    "metadata": {
+      "id": 119820289,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a20d3800-d954-482c-b222-258519bfb9c3/original=true/a20d3800-d954-482c-b222-258519bfb9c3.mp4",
+      "created_at": "2026-02-03T14:43:38.355Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "194": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0364825641522764,
+      "energia_data_center": 0.06019623085125606,
+      "water_for_energy_l": 0.09120641038069101,
+      "water_for_data_center_l": 0.0917992520481655,
+      "w_tot_l": 0.18300566242885652
+    },
+    "metadata": {
+      "id": 119820244,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/ecccd424-6721-44b3-940c-bc9916fac7fb/original=true/ecccd424-6721-44b3-940c-bc9916fac7fb.mp4",
+      "created_at": "2026-02-03T14:43:09.991Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "195": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03768117916557011,
+      "energia_data_center": 0.062173945623190674,
+      "water_for_energy_l": 0.09420294791392528,
+      "water_for_data_center_l": 0.09481526707536576,
+      "w_tot_l": 0.18901821498929106
+    },
+    "metadata": {
+      "id": 119820162,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33e58bfa-0e70-4264-ad49-40e4e3dc464c/original=true/33e58bfa-0e70-4264-ad49-40e4e3dc464c.mp4",
+      "created_at": "2026-02-03T14:42:21.340Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "196": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.03710549759025796,
+      "energia_data_center": 0.06122407102392563,
+      "water_for_energy_l": 0.09276374397564491,
+      "water_for_data_center_l": 0.09336670831148658,
+      "w_tot_l": 0.1861304522871315
+    },
+    "metadata": {
+      "id": 119820112,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/716c4469-9918-47f1-9c97-9b2a09212b6a/original=true/716c4469-9918-47f1-9c97-9b2a09212b6a.mp4",
+      "created_at": "2026-02-03T14:41:45.410Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "197": {
+    "video_data": {
+      "duration": 4.842,
+      "width": 640,
+      "height": 640,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.0357393562333714,
+      "energia_data_center": 0.058969937785062806,
+      "water_for_energy_l": 0.0893483905834285,
+      "water_for_data_center_l": 0.08992915512222077,
+      "w_tot_l": 0.17927754570564927
+    },
+    "metadata": {
+      "id": 119820050,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f1e42acb-c62a-438b-a5eb-152d9c323bbe/original=true/f1e42acb-c62a-438b-a5eb-152d9c323bbe.mp4",
+      "created_at": "2026-02-03T14:41:16.236Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "198": {
+    "video_data": {
+      "duration": 5.208333,
+      "width": 1080,
+      "height": 1430,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11953880900436543,
+      "energia_data_center": 0.19723903485720296,
+      "water_for_energy_l": 0.2988470225109136,
+      "water_for_data_center_l": 0.3007895281572345,
+      "w_tot_l": 0.599636550668148
+    },
+    "metadata": {
+      "id": 119819592,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0cd363f8-79b5-44a6-9997-9ff53ed9e911/original=true/0cd363f8-79b5-44a6-9997-9ff53ed9e911.mp4",
+      "created_at": "2026-02-03T14:36:13.027Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  },
+  "199": {
+    "video_data": {
+      "duration": 7.041667,
+      "width": 1408,
+      "height": 2560,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.3830124293007032,
+      "energia_data_center": 0.6319705083461603,
+      "water_for_energy_l": 0.9575310732517581,
+      "water_for_data_center_l": 0.9637550252278944,
+      "w_tot_l": 1.9212860984796525
+    },
+    "metadata": {
+      "id": 119819554,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5193a1bb-42fc-4af1-a0ea-d217c4703595/original=true/5193a1bb-42fc-4af1-a0ea-d217c4703595.mp4",
+      "created_at": "2026-02-03T14:35:33.183Z",
+      "prompt": "There was no prompt provided.",
+      "steps": 25
+    }
+  }
+}
