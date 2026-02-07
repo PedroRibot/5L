@@ -1,114 +1,285 @@
-from flask import Flask, render_template, jsonify, session
-from flask_socketio import SocketIO, emit
-from pathlib import Path
-from flask import request
-import json
+"""
+Flask + SocketIO web application for 5 Litros.
+
+Routes
+──────
+/                         → Home page with navigation
+/video/play/<index>       → Full‑screen video player
+/data/play/<index>        → Data / estimation overlay
+/global                   → Global AI water consumption counter
+/info                     → PDF info viewer (home-only link)
+/api/reload               → JSON endpoint (used by loading page polling)
+
+Expo mode
+─────────
+Append ?expo=1 to any route to hide the bottom navigation bar.
+The home page provides direct expo-mode links.
+"""
+
 from datetime import datetime
+from pathlib import Path
+import random
 
+from flask import (Flask, jsonify, render_template, request,
+                   redirect, send_from_directory, url_for)
+from flask_socketio import SocketIO, emit
+import json
+
+# ── App setup ───────────────────────────────────────────────────────────────
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key'
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
+app.config["SECRET_KEY"] = "5litros-secret-key"
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
 
-DOWNLOADS_DIR = Path("./data")
-TODAY = datetime.now().strftime('%Y-%m-%d')
-ESTIMATES_FILE = DOWNLOADS_DIR / f"estimates_{TODAY}.json"
-DAY_DATA_FILE = DOWNLOADS_DIR / "day_data.json"
-GLOBAL_DATA_FILE = DOWNLOADS_DIR / "global.json"
+DATA_DIR = Path("./data")
 
-def load_data(file_path):
-    if file_path.exists():
-        with open(file_path, 'r') as f:
-            return json.load(f)
+
+def _today():
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def _load_json(path):
+    """Safely load a JSON file; returns {} on any error."""
+    try:
+        if path.exists():
+            with open(path, "r") as f:
+                return json.load(f)
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"  ⚠ Could not load {path}: {e}")
     return {}
 
-# Initial load
-estimates = load_data(ESTIMATES_FILE)
-day_data = load_data(DAY_DATA_FILE)
-global_data = load_data(GLOBAL_DATA_FILE)
 
-@app.route('/')
-@app.route('/video/play/')
-@app.route('/video/play/<int:index>')
-@app.route('/data/play/')
-@app.route('/data/play/<int:index>')
-@app.route('/data/video/play/')
-@app.route('/data/video/play/<int:index>')
-def play_video(index=0):
-    # Reload estimates to get latest data
-    current_estimates = load_data(ESTIMATES_FILE)
-    
-    if not current_estimates:
-        session['return_url'] = request.path
-        return render_template('loading.html', message="Waiting for today's data to be generated. Please wait...")
-    
-    session.pop('return_url', None)
-    
-    if index >= len(current_estimates):
+def _estimates_path():
+    return DATA_DIR / f"estimates_{_today()}.json"
+
+
+def _is_expo():
+    """Return True when ?expo=1 is present in the query string."""
+    return request.args.get("expo") == "1"
+
+
+def _expo_qs():
+    """Return the query-string suffix to propagate expo mode in links."""
+    return "?expo=1" if _is_expo() else ""
+
+
+def _random_index():
+    estimates = _load_json(_estimates_path())
+    keys = list(estimates.keys())
+    if not keys:
+        return 0
+    return random.randint(0, len(keys) - 1)
+
+
+# ── Routes ──────────────────────────────────────────────────────────────────
+
+@app.route("/")
+def home():
+    """Landing page with navigation buttons."""
+    return render_template("home.html")
+
+
+@app.route("/play/")
+@app.route("/play/<int:index>")
+def play_combo(index=0):
+    expo = _is_expo()
+    estimates = _load_json(_estimates_path())
+    if not estimates:
+        return_url = request.path + ("?expo=1" if expo else "")
+        return render_template(
+            "loading.html",
+            message="Waiting for today's data to be generated. Please wait...",
+            return_url=return_url,
+        )
+
+    day_data = _load_json(DATA_DIR / "day_data.json")
+    global_data = _load_json(DATA_DIR / "global.json")
+
+    keys = list(estimates.keys())
+    if index >= len(keys):
         index = 0
-    
-    video_name = list(current_estimates.keys())[index]
-    video_data = current_estimates.get(video_name, {}).get('video_data', {})
-    estimate = current_estimates.get(video_name, {}).get('estimate', {})
-    metadata = current_estimates.get(video_name, {}).get('metadata', {})
-    
-    return render_template('index.html',
-                         current_index=index,
-                         total_videos=len(current_estimates),
-                         video_data=video_data,
-                         estimate=estimate,
-                         metadata=metadata,
-                         today_data=day_data.get(TODAY, {}))
+    entry = estimates.get(keys[index], {})
 
-@app.route('/api/reload')
+    avg = day_data.get(_today(), {}).get("average_liters", 0.5)
+
+    return render_template(
+        "combined.html",
+        current_index=index,
+        total_videos=len(keys),
+        video_data=entry.get("video_data", {}),
+        estimate=entry.get("estimate", {}),
+        metadata=entry.get("metadata", {}),
+        today_data=day_data.get(_today(), {}),
+        global_data=global_data,
+        average_today=avg,
+        expo=expo,
+        expo_qs=_expo_qs(),
+    )
+
+
+@app.route("/play/random")
+def play_random():
+    index = _random_index()
+    url = url_for("play_combo", index=index)
+    if _is_expo():
+        url += "?expo=1"
+    return redirect(url)
+
+
+@app.route("/video/play/")
+@app.route("/video/play/<int:index>")
+def play_video(index=0):
+    expo = _is_expo()
+    if not expo:
+        return redirect(url_for("play_combo", index=index))
+    estimates = _load_json(_estimates_path())
+    if not estimates:
+        return_url = request.path + ("?expo=1" if expo else "")
+        return render_template(
+            "loading.html",
+            message="Waiting for today's data to be generated. Please wait...",
+            return_url=return_url,
+        )
+
+    keys = list(estimates.keys())
+    if index >= len(keys):
+        index = 0
+    entry = estimates.get(keys[index], {})
+
+    return render_template(
+        "video.html",
+        current_index=index,
+        total_videos=len(keys),
+        metadata=entry.get("metadata", {}),
+        expo=expo,
+        expo_qs=_expo_qs(),
+    )
+
+
+@app.route("/video/play/random")
+def play_video_random():
+    index = _random_index()
+    url = url_for("play_video", index=index)
+    if _is_expo():
+        url += "?expo=1"
+    return redirect(url)
+
+
+@app.route("/data/play/")
+@app.route("/data/play/<int:index>")
+def play_data(index=0):
+    expo = _is_expo()
+    if not expo:
+        return redirect(url_for("play_combo", index=index))
+    estimates = _load_json(_estimates_path())
+    if not estimates:
+        return_url = request.path + ("?expo=1" if expo else "")
+        return render_template(
+            "loading.html",
+            message="Waiting for today's data to be generated. Please wait...",
+            return_url=return_url,
+        )
+
+    day_data = _load_json(DATA_DIR / "day_data.json")
+    global_data = _load_json(DATA_DIR / "global.json")
+    keys = list(estimates.keys())
+    if index >= len(keys):
+        index = 0
+    entry = estimates.get(keys[index], {})
+
+    avg = day_data.get(_today(), {}).get("average_liters", 0.5)
+
+    return render_template(
+        "data.html",
+        current_index=index,
+        total_videos=len(keys),
+        video_data=entry.get("video_data", {}),
+        estimate=entry.get("estimate", {}),
+        metadata=entry.get("metadata", {}),
+        today_data=day_data.get(_today(), {}),
+        global_data=global_data,
+        average_today=avg,
+        expo=expo,
+        expo_qs=_expo_qs(),
+    )
+
+
+@app.route("/data/play/random")
+def play_data_random():
+    index = _random_index()
+    url = url_for("play_data", index=index)
+    if _is_expo():
+        url += "?expo=1"
+    return redirect(url)
+
+
+@app.route("/global")
+def global_view():
+    expo = _is_expo()
+    if not expo:
+        return redirect(url_for("play_combo", index=0))
+    global_data = _load_json(DATA_DIR / "global.json")
+    day_data = _load_json(DATA_DIR / "day_data.json")
+    avg = day_data.get(_today(), {}).get("average_liters", 0.5)
+    return render_template(
+        "global.html",
+        global_data=global_data,
+        average_today=avg,
+        expo=expo,
+        expo_qs=_expo_qs(),
+    )
+
+
+@app.route("/info")
+def info_view():
+    """Display the info PDF (only linked from the home page)."""
+    return render_template("info.html")
+
+
+@app.route("/data/info.pdf")
+def serve_info_pdf():
+    """Serve the PDF file from the data directory."""
+    return send_from_directory(DATA_DIR, "info.pdf")
+
+
+# ── API ─────────────────────────────────────────────────────────────────────
+
+@app.route("/api/reload")
 def reload_data():
-    """API endpoint to reload data"""
-    global estimates, day_data, global_data
-    estimates = load_data(ESTIMATES_FILE)
-    day_data = load_data(DAY_DATA_FILE)
-    global_data = load_data(GLOBAL_DATA_FILE)
-    
-    # Get the return URL from session, default to '/'
-    return_url = session.get('return_url', '/')
-    
+    """Polled by loading.html to detect when data becomes available."""
+    estimates = _load_json(_estimates_path())
+    return_url = request.args.get("return_url", "/")
     return jsonify({
-        'success': True,
-        'total_videos': len(estimates),
-        'has_data': len(estimates) > 0,
-        'return_url': return_url
+        "success": True,
+        "total_videos": len(estimates),
+        "has_data": len(estimates) > 0,
+        "return_url": return_url,
     })
 
 
-@app.route('/global')
-def global_view():
-    return render_template('global.html',
-                         global_data=global_data,
-                         average_today=day_data.get(TODAY, {}).get('average_liters', 0.5))
+# ── Template filters ────────────────────────────────────────────────────────
 
-@app.template_filter('format_number')
+@app.template_filter("format_number")
 def format_number(value):
     try:
         return "{:,}".format(int(value))
     except (ValueError, TypeError):
         return "0"
 
-# Socket event handlers
-@socketio.on('video_control')
+
+# ── SocketIO events ─────────────────────────────────────────────────────────
+
+@socketio.on("video_control")
 def handle_video_control(data):
-    """Broadcast video control events to all clients"""
-    emit('sync_video', data, broadcast=True, include_self=False)
+    emit("sync_video", data, broadcast=True, include_self=False)
 
-@socketio.on('change_video')
+
+@socketio.on("change_video")
 def handle_change_video(data):
-    """Broadcast video index changes to all clients"""
-    print("New video coming: ", data)
-    emit('sync_index', data, broadcast=True, include_self=True)
+    emit("sync_index", data, broadcast=True, include_self=True)
 
-@socketio.on('check_more_videos')
-def handle_more_videos_request():
-    """Handle request for more videos when current list is exhausted"""
-    print("Client requested more videos - list exhausted")
-    emit('more_videos_response', {'message': 'Feature coming soon', 'action': 'reload'}, broadcast=False, include_self=False)
 
-if __name__ == '__main__':
-    socketio.run(app, debug=True, host='0.0.0.0', port=8081,
-                use_reloader=True, allow_unsafe_werkzeug=True)
+# ── Standalone ──────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    socketio.run(app, debug=True, host="0.0.0.0", port=8081,
+                 use_reloader=True, allow_unsafe_werkzeug=True)

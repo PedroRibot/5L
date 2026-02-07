@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>5L – Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="video-container">
+        <video id="videoPlayer" autoplay playsinline>
+            <source src="{{ metadata.get('url', '') }}" type="video/mp4">
+        </video>
+    </div>
+
+    {% if not expo %}
+    <div class="page-nav bottom-nav">
+        <a href="/play/random" class="nav-link">5L</a>
+    </div>
+    {% endif %}
+
+    <script>
+        const socket = io();
+        let currentIndex = {{ current_index }};
+        const totalVideos = {{ total_videos }};
+        const expoQs = {{ expo_qs | default('') | tojson }};
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        socket.on('data_updated', () => window.location.reload());
+
+        socket.on('sync_index', function(data) {
+            currentIndex = data.index;
+            loadVideo();
+        });
+
+        socket.on('sync_video', function(data) {
+            if (!videoPlayer) return;
+            if (data.action === 'play') { videoPlayer.currentTime = data.time; videoPlayer.play(); }
+            else if (data.action === 'pause') { videoPlayer.currentTime = data.time; videoPlayer.pause(); }
+        });
+
+        videoPlayer.addEventListener('ended', nextVideo);
+
+        videoPlayer.addEventListener('error', function() {
+            console.warn('Video failed, skipping to next');
+            nextVideo();
+        }, true);
+
+        const source = videoPlayer.querySelector('source');
+        if (source) {
+            source.addEventListener('error', function() {
+                console.warn('Source failed, skipping to next');
+                nextVideo();
+            }, true);
+        }
+
+        function nextVideo() {
+            currentIndex = (currentIndex + 1) % totalVideos;
+            socket.emit('change_video', { index: currentIndex });
+            loadVideo();
+        }
+
+        function loadVideo() {
+            window.location.href = '/video/play/' + currentIndex + expoQs;
+        }
+    </script>
+</body>
+</html>

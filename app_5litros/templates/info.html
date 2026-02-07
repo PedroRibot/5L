@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5L – Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="info-container">
+        <iframe class="pdf-viewer" src="/data/info.pdf" type="application/pdf">
+            <p>Your browser does not support embedded PDFs.
+               <a href="/data/info.pdf">Download the PDF</a>.</p>
+        </iframe>
+    </div>
+
+    <div class="page-nav bottom-nav">
+        <a href="/play/random" class="nav-link">5L</a>
+    </div>
+</body>
+</html>

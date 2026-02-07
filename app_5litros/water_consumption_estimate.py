@@ -1,84 +1,111 @@
 import random
-import requests
-import json
-import os
 import subprocess
 import re
-from datetime import datetime
 from pathlib import Path
 
 ## Water Consumption Estimate for AI Model Inference
-## Estimates using as if they were using SDXL 1.0 model parameters
+## Estimates using SDXL 1.0 model parameters as baseline
 Potencia_Efectiva = 0.5
 I_grid = 2.5
 WUE = 0.61
 PUE = 1.65
-Token_Latency = 0.01 
+Token_Latency = 0.01
+
 
 def get_video_properties(video_path):
-    """Extract duration, resolution, and fps from mp4 file."""
-    video_path = Path(video_path)
-    
-    result = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", 
-         "format=duration:stream=width,height,r_frame_rate",
-         "-of", "default=noprint_wrappers=1", str(video_path)],
-        capture_output=True,
-        text=True
-    )
-    
+    """
+    Extract duration, resolution, and fps from a video file or URL.
+
+    ffprobe supports HTTP(S) URLs directly, but we add a timeout so it
+    does not hang on slow / unreachable URLs.
+    """
+    video_path = str(video_path)
+
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe", "-v", "error",
+                "-show_entries", "format=duration:stream=width,height,r_frame_rate",
+                "-of", "default=noprint_wrappers=1",
+                video_path,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,  # seconds – prevents hanging on slow URLs
+        )
+    except subprocess.TimeoutExpired:
+        print(f"  ✗ ffprobe timed out for {video_path}")
+        return None
+    except FileNotFoundError:
+        print("  ✗ ffprobe not found – is ffmpeg installed?")
+        return None
+
     if result.returncode != 0:
         return None
-    
+
     data = result.stdout
     duration_match = re.search(r'duration=([\d.]+)', data)
     width_match = re.search(r'width=(\d+)', data)
     height_match = re.search(r'height=(\d+)', data)
     fps_match = re.search(r'r_frame_rate=(\d+)/(\d+)', data)
-    
+
     if not all([duration_match, width_match, height_match, fps_match]):
         return None
-    
-    duration = float(duration_match.group(1))
-    width = int(width_match.group(1))
-    height = int(height_match.group(1))
-    fps = int(fps_match.group(1)) / int(fps_match.group(2)) if int(fps_match.group(2)) != 0 else 0
-    
+
+    fps_num = int(fps_match.group(1))
+    fps_den = int(fps_match.group(2))
+
     return {
-        "duration": duration,
-        "width": width,
-        "height": height,
-        "fps": fps
+        "duration": float(duration_match.group(1)),
+        "width": int(width_match.group(1)),
+        "height": int(height_match.group(1)),
+        "fps": fps_num / fps_den if fps_den != 0 else 0,
     }
+
 
 def calculate_water_average(estimates):
     """Calculate average water consumption from estimates."""
     total_water = 0.0
     count = 0
-    
     for key in estimates:
-        if 'estimate' in estimates[key] and 'w_tot_l' in estimates[key]['estimate']:
-            total_water += estimates[key]['estimate']['w_tot_l']
+        entry = estimates[key]
+        if isinstance(entry, dict) and "estimate" in entry:
+            w = entry["estimate"].get("w_tot_l", 0)
+            total_water += w
             count += 1
-    
+    if count == 0:
+        return 0.0
     average = total_water / count
     print(f"Average water consumption from {count} estimates: {average:.6f} liters")
     return average
 
-def calculate_water_consumption_estimate(Video = True, video_duration=5.0, frames_per_second=30.0, n_palabras_por_prompt=70.0, n_steps=25.0, T_step = 0.4):
 
-    N_tokens = n_palabras_por_prompt / 4 
-    Latencia = (Token_Latency * N_tokens) + (n_steps * T_step)  
-    Keyframes_generados = video_duration * frames_per_second * 0.15 if Video else 4.0
+def calculate_water_consumption_estimate(
+    Video=True,
+    video_duration=5.0,
+    frames_per_second=30.0,
+    n_palabras_por_prompt=70.0,
+    n_steps=25.0,
+    T_step=0.4,
+):
+    N_tokens = n_palabras_por_prompt / 4
+    Latencia = (Token_Latency * N_tokens) + (n_steps * T_step)
+    Keyframes_generados = (
+        video_duration * frames_per_second * 0.15 if Video else 4.0
+    )
 
     Factor_de_entrenamiento = random.uniform(1.8, 2.2)
 
-    energia_imagen = (Latencia * Potencia_Efectiva / 3600) * Keyframes_generados * Factor_de_entrenamiento 
+    energia_imagen = (
+        (Latencia * Potencia_Efectiva / 3600)
+        * Keyframes_generados
+        * Factor_de_entrenamiento
+    )
     energia_data_center = energia_imagen * PUE
     water_for_energy_l = energia_imagen * I_grid
     water_for_data_center_l = energia_data_center * WUE * I_grid
     w_tot_l = water_for_energy_l + water_for_data_center_l
-    
+
     return {
         "energia_imagen": energia_imagen,
         "energia_data_center": energia_data_center,

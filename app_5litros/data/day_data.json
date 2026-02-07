@@ -2,5 +2,49 @@
   "2026-01-23": {
     "n_images": 200,
     "average_liters": 0.8205036527499178
+  },
+  "2026-01-24": {
+    "n_images_videos": 200,
+    "average_liters": 0.5415759512632587
+  },
+  "2026-01-28": {
+    "n_images_videos": 200,
+    "average_liters": 0.5104822674610283
+  },
+  "2026-01-29": {
+    "n_images_videos": 261,
+    "total_duration_seconds": 1835.110189,
+    "total_liters": 96.13435472574619,
+    "average_liters": 0.36833086101818463
+  },
+  "2026-01-30": {
+    "n_images_videos": 372,
+    "total_duration_seconds": 2923.751731,
+    "total_liters": 287.7424595372377,
+    "average_liters": 0.7735012353151551
+  },
+  "2026-02-03": {
+    "n_images_videos": 200,
+    "total_duration_seconds": 1453.060978,
+    "total_liters": 80.2035459359376,
+    "average_liters": 0.40101772967968796
+  },
+  "2026-02-05": {
+    "n_images_videos": 405,
+    "total_duration_seconds": 2982.352832,
+    "total_liters": 288.08863715102564,
+    "average_liters": 0.7113299682741374
+  },
+  "2026-02-06": {
+    "n_images_videos": 233,
+    "total_duration_seconds": 1845.859668,
+    "total_liters": 150.3395692330029,
+    "average_liters": 0.6452342027167506
+  },
+  "2026-02-07": {
+    "n_images_videos": 246,
+    "total_duration_seconds": 1873.384542999997,
+    "total_liters": 164.8183857899597,
+    "average_liters": 0.6699934381705679
   }
 }

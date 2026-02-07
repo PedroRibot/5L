@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Water Consumption Visualizer</title>
+    <meta charset="utf-8">
+    <title>5L – Global</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 </head>
 <body>
-    
     <div class="container-table">
         <table class="data-table">
             <thead>
-                <tr><th colspan="4" class="title-header"><h1>GLOBAL AI IMAGING | TOTAL VOLUME ESTIMATION</h1></th></tr>
+                <tr><th colspan="4" class="title-header">
+                    <h1>GLOBAL AI IMAGING · TOTAL VOLUME ESTIMATION</h1>
+                </th></tr>
             </thead>
             <thead>
                 <tr>
@@ -23,64 +25,46 @@
             <tbody>
                 <tr class="total-row">
                     <td class="platform">ESTIMATED TOTAL DAILY</td>
-                    <td><em>Grok AI, NanoBanana Pro, Meta Imagine...</em></td>
+                    <td><em>Grok AI, NanoBanana Pro, Meta Imagine…</em></td>
                     <td id="total-counter">0</td>
                     <td id="total-liters">0</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    {% if not expo %}
+    <div class="page-nav bottom-nav">
+        <a href="/play/random" class="nav-link">5L</a>
+    </div>
+    {% endif %}
+
     <script>
-        function animateCounter(elementId, totalImagesPerDay) {
-            const element = document.getElementById(elementId);
+        function animateCounter(elementId, totalPerDay) {
+            const el = document.getElementById(elementId);
             const now = new Date();
-            const currentSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
-            const totalSecondsInDay = 86400;
-            
-            let currentCount = Math.floor((currentSeconds / totalSecondsInDay) * totalImagesPerDay);
-            const imagesPerSecond = totalImagesPerDay / totalSecondsInDay;
-            
-            function formatNumber(num) {
-                return Math.floor(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-            
-            element.textContent = formatNumber(currentCount);
-            
-            // Update every 100ms with smooth increments
-            setInterval(() => {
-                currentCount += imagesPerSecond * 0.1; // 0.1 seconds = 100ms
-                if (currentCount <= totalImagesPerDay) {
-                    element.textContent = formatNumber(currentCount);
-                }
+            const secNow = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+            let count = Math.floor((secNow / 86400) * totalPerDay);
+            const perSec = totalPerDay / 86400;
+            function fmt(n) { return Math.floor(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+            el.textContent = fmt(count);
+            setInterval(function() {
+                count += perSec * 0.1;
+                if (count <= totalPerDay) el.textContent = fmt(count);
             }, 100);
         }
 
-    // Initialize all counters on page load
-    window.onload = function() {
-         sd_img_day = {{global_data.get('StableDiffusion', {}).get('images_per_day', 0)}};
-         google_gemini_img_day = {{global_data.get('GoogleGemini', {}).get('images_per_day', 0)}};
-         midjourney_img_day = {{global_data.get('Midjourney', {}).get('images_per_day', 0)}};
-         dalle_img_day = {{global_data.get('DALLE', {}).get('images_per_day', 0)}};
-         meta_imagine_img_day = {{global_data.get('MetaImagine', {}).get('images_per_day', 0)}};
-
-         average_today = {{ average_today }};
-        // Example for all platforms
-        // animateCounter('stable-diffusion-counter', sd_img_day);
-        // animateCounter('google-gemini-counter', google_gemini_img_day);
-        // animateCounter('midjourney-counter', midjourney_img_day);
-        // animateCounter('dalle-counter', dalle_img_day);
-        // animateCounter('meta-imagine-counter', meta_imagine_img_day);
-
-        // animateCounter('stable-diffusion-liters', sd_img_day * average_today);
-        // animateCounter('google-gemini-liters', google_gemini_img_day * average_today);
-        // animateCounter('midjourney-liters', midjourney_img_day * average_today);
-        // animateCounter('dalle-liters', dalle_img_day * average_today);
-        // animateCounter('meta-imagine-liters', meta_imagine_img_day * average_today);
-        // For total counter
-        const totalImages = sd_img_day + google_gemini_img_day + midjourney_img_day + dalle_img_day + meta_imagine_img_day;
-        animateCounter('total-counter', totalImages);
-        animateCounter('total-liters', totalImages * average_today);
-    };
+        window.onload = function() {
+            const sd  = {{ global_data.get('StableDiffusion', {}).get('images_per_day', 0) }};
+            const gg  = {{ global_data.get('GoogleGemini',    {}).get('images_per_day', 0) }};
+            const mj  = {{ global_data.get('Midjourney',      {}).get('images_per_day', 0) }};
+            const dal = {{ global_data.get('DALLE',           {}).get('images_per_day', 0) }};
+            const mi  = {{ global_data.get('MetaImagine',     {}).get('images_per_day', 0) }};
+            const avg = {{ average_today }};
+            const total = sd + gg + mj + dal + mi;
+            animateCounter('total-counter', total);
+            animateCounter('total-liters',  total * avg);
+        };
     </script>
 </body>
 </html>

@@ -1,5 +1,4 @@
-flask
-flask-socketio
-requests
-python-socketio
-eventlet
+flask>=3.0,<4
+flask-socketio>=5.3,<6
+requests>=2.31,<3
+python-socketio>=5.10,<6

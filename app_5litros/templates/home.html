@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5 Litros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <canvas id="dotGrid" class="home-grid"></canvas>
+        <div class="home-logo">
+            <img src="{{ url_for('static', filename='images/POLARI-logo_w.png') }}" alt="POLARI Logo" class="logo-image">
+        </div> 
+
+        <div class="page-nav bottom-nav">
+            <a href="/play/random" class="nav-link">Project 5L</a>
+        </div>
+
+
+        
+    </div>
+    <script>
+        const canvas = document.getElementById('dotGrid');
+        const ctx = canvas.getContext('2d');
+        let mouse = { x: -9999, y: -9999 };
+
+        function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function draw() {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            const spacing = 15;
+            const radius = 1;
+            ctx.clearRect(0, 0, w, h);
+
+            for (let y = spacing / 2; y < h; y += spacing) {
+                for (let x = spacing / 2; x < w; x += spacing) {
+                    const dx = x - mouse.x;
+                    const dy = y - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const glow = Math.max(0, 1 - dist / 50);
+                    const r = radius + glow * 1.2;
+                    ctx.beginPath();
+                    ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
+                    ctx.arc(x, y, r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        window.addEventListener('mouseleave', () => {
+            mouse.x = -9999;
+            mouse.y = -9999;
+        });
+
+        window.addEventListener('resize', resize);
+        resize();
+        draw();
+    </script>
+</body>
+</html>

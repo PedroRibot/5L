@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>5L</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="combo-layout">
+        <div class="combo-video">
+            <video id="videoPlayer" autoplay muted playsinline>
+                <source src="{{ metadata.get('url', '') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="combo-right">
+            <div class="combo-global">
+                <div class="combo-global-item">
+                    <div class="combo-global-label">Images / Day</div>
+                    <div class="combo-global-value" id="total-counter">0</div>
+                </div>
+                <div class="combo-global-item">
+                    <div class="combo-global-label">Liters / Day</div>
+                    <div class="combo-global-value" id="total-liters">0</div>
+                </div>
+            </div>
+            <div class="combo-data">
+                <div class="data">
+                    <div class="prompt-section">
+                        <p class="prompt" id="promptText">{{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
+                    </div>
+                    <div class="energia-water">
+                        <h2>Energy Consumption Estimation</h2>
+                        <p>{{ "%.6f"|format(estimate.get('energia_imagen', 0)) }} kWh (Image Creation)</p>
+                        <p>{{ "%.6f"|format(estimate.get('energia_data_center', 0)) }} kWh (Data Center)</p>
+
+                        <h2>Water Consumption Estimation</h2>
+                        <p>{{ "%.6f"|format(estimate.get('water_for_energy_l', 0)) }} Liters (Image Creation)</p>
+                        <p>{{ "%.6f"|format(estimate.get('water_for_data_center_l', 0)) }} Liters (Data Center)</p>
+
+                        <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
+                        <p>Total Water consumed</p>
+                    </div>
+                </div>
+
+                <div class="today_data">
+                    <p>Videos analyzed today</p>
+                    <p>{{ today_data.get('n_images_videos', 0) }} videos</p>
+                    <p>{{ "%.6f"|format(today_data.get('total_liters', 0)) }} Liters</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="expo-section">
+        <div class="expo-links">
+                <a href="/video/play/random?expo=1" class="expo-link">Video</a>
+                <a href="/data/play/random?expo=1" class="expo-link">Data</a>
+        </div>
+    </div>
+
+    {% if not expo %}
+    <div class="page-nav bottom-nav-half">
+        <a href="/" class="nav-link">home</a>
+        <a href="/info" class="nav-link">info</a> 
+    </div>
+    {% endif %}
+
+    <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+        let currentIndex = {{ current_index }};
+        const totalVideos = {{ total_videos }};
+        const expoQs = {{ expo_qs | default('') | tojson }};
+        const AUTO_ADVANCE_MS = 8000;
+        let autoTimer = null;
+
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % totalVideos;
+            window.location.href = '/play/' + currentIndex + expoQs;
+        }
+
+        function scheduleAdvance() {
+            clearTimeout(autoTimer);
+            autoTimer = setTimeout(nextItem, AUTO_ADVANCE_MS);
+        }
+
+        if (videoPlayer) {
+            videoPlayer.addEventListener('ended', nextItem);
+            videoPlayer.addEventListener('error', nextItem, true);
+            const source = videoPlayer.querySelector('source');
+            if (source) {
+                source.addEventListener('error', nextItem, true);
+            }
+            scheduleAdvance();
+            videoPlayer.addEventListener('play', scheduleAdvance);
+        }
+
+        function fitTextToHeight() {
+            const prompt = document.getElementById('promptText');
+            if (!prompt) return;
+            const container = prompt.parentElement;
+            let fontSize = 24;
+            prompt.style.fontSize = fontSize + 'px';
+
+            while (prompt.scrollHeight > container.clientHeight && fontSize > 7) {
+                fontSize -= 1;
+                prompt.style.fontSize = fontSize + 'px';
+            }
+            while (prompt.scrollHeight < container.clientHeight && fontSize < 40) {
+                fontSize += 1;
+                prompt.style.fontSize = fontSize + 'px';
+                if (prompt.scrollHeight > container.clientHeight) {
+                    fontSize -= 1;
+                    prompt.style.fontSize = fontSize + 'px';
+                    break;
+                }
+            }
+        }
+
+        function animateCounter(elementId, totalPerDay) {
+            const el = document.getElementById(elementId);
+            const now = new Date();
+            const secNow = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+            let count = Math.floor((secNow / 86400) * totalPerDay);
+            const perSec = totalPerDay / 86400;
+            function fmt(n) { return Math.floor(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+            if (!el) return;
+            el.textContent = fmt(count);
+            setInterval(function() {
+                count += perSec * 0.1;
+                if (count <= totalPerDay) el.textContent = fmt(count);
+            }, 100);
+        }
+
+        window.addEventListener('load', function() {
+            fitTextToHeight();
+            const sd  = {{ global_data.get('StableDiffusion', {}).get('images_per_day', 0) }};
+            const gg  = {{ global_data.get('GoogleGemini',    {}).get('images_per_day', 0) }};
+            const mj  = {{ global_data.get('Midjourney',      {}).get('images_per_day', 0) }};
+            const dal = {{ global_data.get('DALLE',           {}).get('images_per_day', 0) }};
+            const mi  = {{ global_data.get('MetaImagine',     {}).get('images_per_day', 0) }};
+            const avg = {{ average_today }};
+            const total = sd + gg + mj + dal + mi;
+            animateCounter('total-counter', total);
+            animateCounter('total-liters',  total * avg);
+        });
+
+        window.addEventListener('resize', fitTextToHeight);
+    </script>
+</body>
+</html>

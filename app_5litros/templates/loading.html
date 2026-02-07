@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Loading...</title>
+    <meta charset="utf-8">
+    <title>Loading – 5 Litros</title>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <style>
         body {
@@ -14,22 +15,16 @@
             color: white;
             font-family: Arial, sans-serif;
         }
-        .loading-container {
-            text-align: center;
-        }
+        .loading-container { text-align: center; }
         .spinner {
             border: 4px solid #333;
-            border-top: 4px solid #fff;
+            border-top: 4px solid #4fc3f7;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             animation: spin 1s linear infinite;
             margin: 20px auto;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -38,31 +33,28 @@
         <h2>{{ message }}</h2>
         <p>The page will automatically reload when data is ready.</p>
     </div>
-    
+
     <script>
         const socket = io();
-        
-        // Listen for data update notification
-        socket.on('data_updated', function(data) {
-            console.log('Data is now available:', data);
-            // Redirect to return URL or default to '/'
-            window.location.href = data.return_url || '/';
+        // The URL the user originally requested – passed from the server.
+        const returnUrl = {{ return_url | tojson }};
+
+        // If the server pushes a data_updated event, redirect immediately.
+        socket.on('data_updated', function() {
+            window.location.href = returnUrl;
         });
-        
-        // Poll every 5 seconds to check if data is available
-        setInterval(() => {
-            fetch('/api/reload')
-                .then(response => response.json())
+
+        // Poll every 5 s as a fallback.
+        setInterval(function() {
+            fetch('/api/reload?return_url=' + encodeURIComponent(returnUrl))
+                .then(r => r.json())
                 .then(data => {
                     if (data.has_data) {
-                        // Use the return URL from the API response
-                        window.location.href = data.return_url || '/';
+                        window.location.href = data.return_url || returnUrl;
                     }
                 })
-                .catch(err => console.log('Checking for data...'));
+                .catch(() => {});
         }, 5000);
     </script>
-
-
 </body>
 </html>
