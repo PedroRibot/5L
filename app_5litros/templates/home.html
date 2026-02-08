@@ -3,73 +3,343 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>5 Litros</title>
+    <title>POLARI</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <div class="home-container">
-        <canvas id="dotGrid" class="home-grid"></canvas>
-        <div class="home-logo">
-            <img src="{{ url_for('static', filename='images/POLARI-logo_w.png') }}" alt="POLARI Logo" class="logo-image">
-        </div> 
+    <!-- Background dot grid (preserved from original) -->
+    <canvas id="dotGrid" class="home-grid"></canvas>
 
-        <div class="page-nav bottom-nav">
-            <a href="/play/random" class="nav-link">Project 5L</a>
-        </div>
+    <!-- Force-directed graph container -->
+    <svg id="forceGraph"></svg>
 
-
-        
-    </div>
     <script>
-        const canvas = document.getElementById('dotGrid');
-        const ctx = canvas.getContext('2d');
-        let mouse = { x: -9999, y: -9999 };
+    /* ═══════════════════════════════════════════════════════════════
+       POLARI – Force-directed navigation graph
+       ═══════════════════════════════════════════════════════════════
+
+       DATA MODEL
+       ──────────
+       Each node has:
+         id        – unique identifier
+         label     – display text
+         href      – (optional) URL for "go to" action / leaf navigation
+         parent    – id of parent node (null for root)
+         depth     – 0 = root, 1 = projects, 2 = sub-pages
+
+       To add a new project or sub-page, simply add an entry to the
+       GRAPH_NODES array below. The rest is automatic.
+       ═══════════════════════════════════════════════════════════════ */
+
+    // ── Graph data (edit here to add projects / pages) ──────────
+    const GRAPH_NODES = [
+        // Root ────────────────────────────────────────────────────
+        { id: "root",       label: "POLARI",       href: null,            parent: null,   depth: 0 },
+
+        // Projects (depth 1) ──────────────────────────────────────
+        { id: "5l",         label: "5L",   href: "/play/random",  parent: "root", depth: 1 },
+        { id: "about",      label: "About Us",     href: "/about",        parent: "root", depth: 1 },
+        // { id: "research",   label: "Research",     href: "/research",     parent: "root", depth: 1 },
+        { id: "contact",    label: "Contact",      href: "/contact",      parent: "root", depth: 1 },
+
+        // 5L sub-pages (depth 2) ──────────────────────────────────
+        { id: "5l_live",    label: "Digital Twin",    href: "/play/random",  parent: "5l",   depth: 2 },
+        { id: "5l_info",    label: "Research",         href: "/info",         parent: "5l",   depth: 2 },
+    ];
+
+    /* ── Build internal structures ───────────────────────────────
+       We derive children[], expanded, visible from the flat list
+       so you only ever need to edit GRAPH_NODES above.            */
+    const nodeMap = {};
+    GRAPH_NODES.forEach(n => {
+        n.children = [];
+        n.expanded = false;
+        n.visible  = n.depth === 0;
+        nodeMap[n.id] = n;
+    });
+    GRAPH_NODES.forEach(n => {
+        if (n.parent && nodeMap[n.parent]) {
+            nodeMap[n.parent].children.push(n.id);
+        }
+    });
+
+    // ── SVG setup ───────────────────────────────────────────────
+    const svg = d3.select("#forceGraph");
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    svg.attr("width", W).attr("height", H);
+
+    const linkGroup = svg.append("g").attr("class", "graph-links");
+    const nodeGroup = svg.append("g").attr("class", "graph-nodes");
+
+    // ── Force simulation ────────────────────────────────────────
+    const simulation = d3.forceSimulation()
+        .force("charge",  d3.forceManyBody().strength(-600))
+        .force("center",  d3.forceCenter(W / 2, H / 2).strength(0.04))
+        .force("collide", d3.forceCollide().radius(80))
+        .force("link",    d3.forceLink().id(d => d.id).distance(180).strength(0.35))
+        .alphaDecay(0.025)
+        .on("tick", ticked);
+
+    // ── Helpers ─────────────────────────────────────────────────
+    function visibleNodes() {
+        return GRAPH_NODES.filter(n => n.visible);
+    }
+
+    function visibleLinks() {
+        const vis = new Set(visibleNodes().map(n => n.id));
+        const out = [];
+        GRAPH_NODES.forEach(n => {
+            if (vis.has(n.id) && n.parent && vis.has(n.parent)) {
+                out.push({ source: n.parent, target: n.id });
+            }
+        });
+        return out;
+    }
+
+    // ── Render ──────────────────────────────────────────────────
+    function render() {
+        const nodes = visibleNodes();
+        const links = visibleLinks();
+
+        // Initialise new nodes near their parent
+        nodes.forEach(n => {
+            if (n.x === undefined) {
+                const p = nodeMap[n.parent];
+                n.x = p ? p.x + (Math.random() - 0.5) * 100 : W / 2;
+                n.y = p ? p.y + (Math.random() - 0.5) * 100 : H / 2;
+            }
+        });
+
+        /* ── Links ───────────────────────────────────────────── */
+        const linkSel = linkGroup.selectAll("line")
+            .data(links, d => `${sid(d.source)}-${sid(d.target)}`);
+
+        linkSel.exit().transition().duration(300).attr("opacity", 0).remove();
+
+        linkSel.enter()
+            .append("line")
+            .attr("class", "graph-link")
+            .attr("opacity", 0)
+          .transition().duration(500)
+            .attr("opacity", 1);
+
+        /* ── Node groups ─────────────────────────────────────── */
+        const nodeSel = nodeGroup.selectAll("g.graph-node")
+            .data(nodes, d => d.id);
+
+        // Exit
+        nodeSel.exit()
+            .transition().duration(300)
+            .attr("opacity", 0)
+            .remove();
+
+        // Enter
+        const enter = nodeSel.enter()
+            .append("g")
+            .attr("class", d => `graph-node depth-${d.depth}`)
+            .attr("opacity", 0)
+            .call(drag(simulation));
+
+        enter.transition().duration(500).attr("opacity", 1);
+
+        // ── Root node: logo image ───────────────────────────────
+        const LOGO_W = 315, LOGO_H = 80; // aspect ratio of the logo
+        enter.filter(d => d.id === "root")
+            .append("image")
+            .attr("href", "{{ url_for('static', filename='images/POLARI-logo-w.svg') }}")
+            .attr("width",  LOGO_W)
+            .attr("height", LOGO_H)
+            .attr("x", -LOGO_W / 2)
+            .attr("y", -LOGO_H / 2)
+            .attr("class", "node-logo");
+
+        // ── Non-root nodes: bordered panel ──────────────────────
+        const nonRoot = enter.filter(d => d.id !== "root");
+
+        // We measure text to size the rect, using a temporary text
+        nonRoot.each(function (d) {
+            const g = d3.select(this);
+            const hasGoto = d.children.length > 0 && d.href;
+            const padX = 18, padY = 10;
+
+            // Main label (hidden initially to measure)
+            const label = g.append("text")
+                .attr("class", "node-label")
+                .attr("text-anchor", "middle")
+                .attr("dy", hasGoto ? "-0.15em" : "0.35em")
+                .text(d.label);
+
+            // "go to →" sub-label
+            let gotoEl = null;
+            if (hasGoto) {
+                gotoEl = g.append("text")
+                    .attr("class", "node-goto")
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "1.3em")
+                    .text("go to →");
+            }
+
+            // Measure widths
+            const labelBox = label.node().getBBox();
+            let totalW = labelBox.width;
+            let totalH = labelBox.height;
+            if (gotoEl) {
+                const gotoBox = gotoEl.node().getBBox();
+                totalW = Math.max(totalW, gotoBox.width);
+                totalH = gotoBox.y + gotoBox.height - labelBox.y;
+            }
+            const rw = totalW + padX * 2;
+            const rh = totalH + padY * 2;
+
+            // Insert rect BEHIND text (prepend)
+            g.insert("rect", ":first-child")
+                .attr("class", "node-panel")
+                .attr("x", -rw / 2)
+                .attr("y", -rh / 2)
+                .attr("width",  rw)
+                .attr("height", rh)
+                .attr("rx", 4)
+                .attr("ry", 4);
+        });
+
+        // ── Click behaviour ─────────────────────────────────────
+        enter.on("click", function (event, d) {
+            event.stopPropagation();
+
+            // "go to →" label clicked → navigate
+            if (event.target.classList.contains("node-goto")) {
+                window.location.href = d.href;
+                return;
+            }
+
+            // Has children → expand / collapse
+            if (d.children.length > 0) {
+                toggleExpand(d);
+                return;
+            }
+
+            // Leaf node → navigate directly
+            if (d.href) {
+                window.location.href = d.href;
+            }
+        });
+
+        // Update simulation
+        simulation.nodes(nodes);
+        simulation.force("link").links(links);
+        simulation.alpha(0.6).restart();
+    }
+
+    function sid(d) { return typeof d === "object" ? d.id : d; }
+
+    // ── Expand / collapse ───────────────────────────────────────
+    function toggleExpand(d) {
+        if (d.expanded) {
+            collapseDescendants(d);
+        } else {
+            d.expanded = true;
+            d.children.forEach(cid => { nodeMap[cid].visible = true; });
+        }
+        render();
+    }
+
+    function collapseDescendants(d) {
+        d.expanded = false;
+        d.children.forEach(cid => {
+            const child = nodeMap[cid];
+            child.visible  = false;
+            child.x = undefined;
+            child.y = undefined;
+            if (child.children.length) collapseDescendants(child);
+        });
+    }
+
+    // ── Tick ─────────────────────────────────────────────────────
+    function ticked() {
+        linkGroup.selectAll("line")
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        nodeGroup.selectAll("g.graph-node")
+            .attr("transform", d => `translate(${d.x},${d.y})`);
+    }
+
+    // ── Drag ────────────────────────────────────────────────────
+    function drag(sim) {
+        return d3.drag()
+            .on("start", (event, d) => {
+                if (!event.active) sim.alphaTarget(0.3).restart();
+                d.fx = d.x;  d.fy = d.y;
+            })
+            .on("drag", (event, d) => {
+                d.fx = event.x;  d.fy = event.y;
+            })
+            .on("end", (event, d) => {
+                if (!event.active) sim.alphaTarget(0);
+                d.fx = null;  d.fy = null;
+            });
+    }
+
+    // ── Resize ──────────────────────────────────────────────────
+    window.addEventListener("resize", () => {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        svg.attr("width", W).attr("height", H);
+        simulation.force("center", d3.forceCenter(W / 2, H / 2).strength(0.04));
+        simulation.alpha(0.25).restart();
+    });
+
+    // ── Boot ────────────────────────────────────────────────────
+    const rootNode = nodeMap["root"];
+    rootNode.visible = true;
+    rootNode.x = W / 2;
+    rootNode.y = H / 2;
+    render();
+
+    /* ── Background dot grid (unchanged from original) ───────── */
+    (function initDotGrid() {
+        const canvas = document.getElementById("dotGrid");
+        const ctx    = canvas.getContext("2d");
+        let mouse    = { x: -9999, y: -9999 };
 
         function resize() {
             const dpr = window.devicePixelRatio || 1;
-            canvas.width = window.innerWidth * dpr;
+            canvas.width  = window.innerWidth  * dpr;
             canvas.height = window.innerHeight * dpr;
-            canvas.style.width = window.innerWidth + 'px';
-            canvas.style.height = window.innerHeight + 'px';
+            canvas.style.width  = window.innerWidth  + "px";
+            canvas.style.height = window.innerHeight + "px";
             ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         }
 
         function draw() {
-            const w = window.innerWidth;
-            const h = window.innerHeight;
-            const spacing = 15;
-            const radius = 1;
+            const w = window.innerWidth, h = window.innerHeight;
+            const spacing = 15, radius = 1;
             ctx.clearRect(0, 0, w, h);
-
             for (let y = spacing / 2; y < h; y += spacing) {
                 for (let x = spacing / 2; x < w; x += spacing) {
-                    const dx = x - mouse.x;
-                    const dy = y - mouse.y;
+                    const dx   = x - mouse.x;
+                    const dy   = y - mouse.y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     const glow = Math.max(0, 1 - dist / 50);
-                    const r = radius + glow * 1.2;
                     ctx.beginPath();
                     ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
-                    ctx.arc(x, y, r, 0, Math.PI * 2);
+                    ctx.arc(x, y, radius + glow * 1.2, 0, Math.PI * 2);
                     ctx.fill();
                 }
             }
             requestAnimationFrame(draw);
         }
 
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        window.addEventListener('mouseleave', () => {
-            mouse.x = -9999;
-            mouse.y = -9999;
-        });
-
-        window.addEventListener('resize', resize);
+        window.addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener("mouseleave", ()  => { mouse.x = -9999; mouse.y = -9999; });
+        window.addEventListener("resize", resize);
         resize();
         draw();
+    })();
     </script>
 </body>
 </html>

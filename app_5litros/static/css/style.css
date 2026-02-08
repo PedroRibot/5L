@@ -468,3 +468,158 @@ html, body {
         flex: 1 1 100%;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Force-directed graph (home page)
+   ═══════════════════════════════════════════════════════════════ */
+
+#forceGraph {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    cursor: default;
+}
+
+/* ── Links ───────────────────────────────────────────────────── */
+.graph-link {
+    stroke: rgba(255, 255, 255, 0.25);
+    stroke-width: 1;
+}
+
+/* ── Node panel (bordered box for non-root nodes) ────────────── */
+.node-panel {
+    fill: rgba(0, 0, 0, 0.6);
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 1.5;
+    transition: stroke 0.2s, fill 0.2s;
+}
+
+.graph-node:hover .node-panel {
+    stroke: #fff;
+    fill: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Root logo image ─────────────────────────────────────────── */
+.node-logo {
+    pointer-events: all;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.depth-0:hover .node-logo {
+    opacity: 1;
+}
+
+/* ── Labels ──────────────────────────────────────────────────── */
+.node-label {
+    fill: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    pointer-events: none;
+    user-select: none;
+}
+
+.depth-1 .node-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+.depth-2 .node-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* ── "go to →" sub-label ─────────────────────────────────────── */
+.node-goto {
+    fill: rgba(255, 255, 255, 0.4);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.node-goto:hover {
+    fill: #fff;
+}
+
+/* ── Drag cursor ─────────────────────────────────────────────── */
+.graph-node {
+    cursor: grab;
+}
+
+.graph-node:active {
+    cursor: grabbing;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Content pages (about, research, contact, etc.)
+   ═══════════════════════════════════════════════════════════════ */
+
+.page-container {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 4rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.page-content {
+    max-width: 640px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.page-content h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin: 0 0 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    opacity: 0.6;
+    margin: 0 0 2.5rem;
+    line-height: 1.6;
+}
+
+.page-section {
+    margin-bottom: 2rem;
+}
+
+.page-section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    opacity: 0.5;
+    margin: 0 0 0.4rem;
+}
+
+.page-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.85;
+}
+
+.page-link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s;
+}
+
+.page-link:hover {
+    border-color: #fff;
+}

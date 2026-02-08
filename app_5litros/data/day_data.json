@@ -42,9 +42,15 @@
     "average_liters": 0.6452342027167506
   },
   "2026-02-07": {
-    "n_images_videos": 246,
-    "total_duration_seconds": 1873.384542999997,
-    "total_liters": 164.8183857899597,
-    "average_liters": 0.6699934381705679
+    "n_images_videos": 271,
+    "total_duration_seconds": 2032.3824839999968,
+    "total_liters": 178.2072588768645,
+    "average_liters": 0.6575913611692417
+  },
+  "2026-02-08": {
+    "n_images_videos": 220,
+    "total_duration_seconds": 1855.5290189999957,
+    "total_liters": 151.18373769587618,
+    "average_liters": 0.687198807708528
   }
 }

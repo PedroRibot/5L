@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  water-estimator:
+  5l-polari:
     build: .
-    container_name: water-estimator-app
+    container_name: 5l-polari
     restart: unless-stopped
     ports:
       - "8081:8081"

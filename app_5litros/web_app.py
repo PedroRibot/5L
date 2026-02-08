@@ -235,6 +235,24 @@ def info_view():
     return render_template("info.html")
 
 
+@app.route("/about")
+def about_view():
+    """About us page."""
+    return render_template("about.html")
+
+
+@app.route("/research")
+def research_view():
+    """Research page."""
+    return render_template("research.html")
+
+
+@app.route("/contact")
+def contact_view():
+    """Contact page."""
+    return render_template("contact.html")
+
+
 @app.route("/data/info.pdf")
 def serve_info_pdf():
     """Serve the PDF file from the data directory."""
