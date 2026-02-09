@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5L – Installation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="install-body">
+    <canvas id="dotGrid" class="home-grid"></canvas>
+
+    <div class="install-page">
+        <div class="install-row">
+            <div class="install-col">
+                <img class="install-img" src="{{ url_for('static', filename='images/5L/totem_1.JPG') }}" alt="5L totem ">
+            </div>
+            <div class="install-col">
+                <img class="install-img" src="{{ url_for('static', filename='images/5L/totem_2.JPG') }}" alt="5L totem - outside">
+            </div>
+        </div>
+
+        <div class="install-row">
+            <div class="install-col">
+                <video class="install-video" autoplay playsinline muted loop controls>
+                    <source src="{{ url_for('static', filename='images/5L/5L_video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="install-col install-text">
+                <h1>Instalación</h1>
+                <p>5L tiene como objetivo visibilizar el vínculo entre la inteligencia artificial de generación de imágenes y su impacto en los recursos hídricos. Mediante la elaboración de un método propio de cálculo estimativo, desarrollado específicamente para esta investigación, se aproxima el consumo de agua asociado a los procesos de generación de imágenes y vídeos mediante IA. </p>
+                <p>El proyecto parte de la necesidad de hacer visible un fenómeno habitualmente invisible para los usuarios. En este contexto, se entiende la estructura elaborada para su instalación física como una prótesis sensorial, objeto de mediación; capaz de traducir, amplificar o escalar datos abstractos a través de elementos materiales, visuales y sonoros que interpelan directamente al cuerpo del espectador. La instalación actúa como un dispositivo que aproxima información técnica y cuantitativa a una experiencia sensible.</p>
+                <p>Si bien la inteligencia artificial se ha incorporado rápidamente a la vida cotidiana como una herramienta potente y versátil, su crecimiento acelerado tiene un impacto significativo en los recursos a escala global.  Un ejemplo reciente ilustra esta problemática: en marzo de 2025 se generaron más de 216 millones de imágenes que simulaban el estilo de las animaciones del estudio japonés Ghibli , un volumen de producción que implicó un consumo de agua comparable al gasto diario de una capital de provincia española. </p>       
+                <p>A través de esta investigación se abre un diálogo crítico en torno a las implicaciones locales y planetarias de este consumo de agua, no con la intención de criminalizar el uso de estas tecnologías —cuyos beneficios en múltiples campos del conocimiento son innegables—, sino con el propósito de hacer sensible al usuario del coste hídrico que conllevan, fomentando una reflexión informada sobre su uso. </p>
+                <p>5L nace bajo la convicción de que la manera de democratizar el destino de los recursos es hacer partícipes a los ciudadanos del gasto que se hace de éstos.</p>
+                <div class="EN">
+                    <h1>Installation</h1>
+                    <p>5L aims to highlight the link between artificial intelligence image generation and its impact on water resources. Using a proprietary estimation method developed specifically for this research, it approximates the water consumption associated with AI image and video generation processes.</p>
+                    <p>The project stems from the need to make visible a phenomenon that is usually invisible to users. In this context, the structure designed for its physical installation is understood as a sensory prosthesis, an object of mediation, capable of translating, amplifying or scaling abstract data through material, visual and sound elements that directly engage the viewer's body.</p>
+                    <p>Although artificial intelligence has quickly become part of everyday life as a powerful and versatile tool, its rapid growth has a significant impact on resources on a global scale. This research opens up a critical dialogue on the local and global implications of this water consumption, not with the intention of criminalising the use of these technologies—whose benefits in multiple fields of knowledge are undeniable—but with the aim of making users aware of the water costs involved, encouraging informed reflection on their use.</p>
+                    <p>5L was created with the conviction that the way to democratise the allocation of resources is to involve citizens in how they are spent.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="page-nav bottom-nav">
+        <a href="/play/random" class="nav-link">Digital Twin</a>
+        <a href="/" class="nav-link">home</a>
+        <a href="/info" class="nav-link active">research</a>
+    </div>
+
+    <script>
+    window.addEventListener("load", function() {
+        const canvas = document.getElementById("dotGrid");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        let mouse = { x: -9999, y: -9999 };
+
+        function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
+            canvas.style.width = window.innerWidth + "px";
+            canvas.style.height = window.innerHeight + "px";
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function draw() {
+            const w = window.innerWidth, h = window.innerHeight;
+            ctx.clearRect(0, 0, w, h);
+            for (let y = 7.5; y < h; y += 15) {
+                for (let x = 7.5; x < w; x += 15) {
+                    const dx = x - mouse.x, dy = y - mouse.y;
+                    const glow = Math.max(0, 1 - Math.sqrt(dx*dx+dy*dy) / 50);
+                    ctx.beginPath();
+                    ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
+                    ctx.arc(x, y, 1 + glow * 1.2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener("mouseleave", () => { mouse.x = -9999; mouse.y = -9999; });
+        window.addEventListener("resize", resize);
+        resize();
+        draw();
+    });
+    </script>
+</body>
+</html>

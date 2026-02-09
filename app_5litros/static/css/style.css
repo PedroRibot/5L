@@ -140,7 +140,6 @@ html, body {
     background: #000;
     flex: 1 1 50%;
 }
-
 .combo-video video {
     width: 100%;
     height: 100%;
@@ -456,9 +455,28 @@ html, body {
     flex: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .combo-layout {
         flex-direction: column;
+    }
+
+    .combo-right {
+        order: 1;
+        background-color: none;
+    }
+
+    .combo-video {
+        order: 2;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        display: block;
+        background-color: none;
+    }
+
+    .bottom-nav-half {
+        width: 100%;
+        left: 0;
     }
 
     .combo-video,
@@ -623,3 +641,86 @@ html, body {
 .page-link:hover {
     border-color: #fff;
 }
+
+/* ── Installation page ──────────────────────────────────────── */
+.install-page {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 2rem 4rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.install-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.install-col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.install-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.install-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin: 0;
+}
+
+.install-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.85;
+}
+
+.install-text .EN {
+    margin-top: 2rem;
+    color: #999;
+}
+
+.install-video,
+.install-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    background: #050505;
+}
+
+.install-video {
+    max-height: 90vh;
+}
+
+body.install-body {
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .install-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .install-col .install-video {
+        order: 2;
+    }
+
+    .install-col .install-text {
+        order: 1;
+    }
+
+}
+
+

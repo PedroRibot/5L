@@ -253,6 +253,12 @@ def contact_view():
     return render_template("contact.html")
 
 
+@app.route("/installation")
+def installation_view():
+    """5L installation page."""
+    return render_template("installation.html")
+
+
 @app.route("/data/info.pdf")
 def serve_info_pdf():
     """Serve the PDF file from the data directory."""
