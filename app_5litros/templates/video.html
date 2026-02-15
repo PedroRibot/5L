@@ -7,7 +7,12 @@
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 </head>
 <body>
+     <div class="video-overlay-info">
+        <span>Today at {{ metadata.get('created_at', '')[11:19] or '00:00:00' }} </span>
+        <span>By: {{ metadata.get('created_by', 'Unknown') or 'Unknown' }}</span>
+    </div>
     <div class="video-container">
+        
         <video id="videoPlayer" autoplay playsinline>
             <source src="{{ metadata.get('url', '') }}" type="video/mp4">
         </video>

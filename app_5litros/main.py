@@ -181,6 +181,7 @@ class WaterEstimatorApp:
                 "id": item.get("id", ""),
                 "url": url,
                 "created_at": item.get("createdAt", ""),
+                "created_by": item.get("username", ""),
                 "prompt": prompt,
                 "steps": n_steps,
             },

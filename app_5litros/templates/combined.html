@@ -8,6 +8,10 @@
 <body>
     <div class="combo-layout">
         <div class="combo-video">
+            <div class="video-overlay-info">
+                <span>Today at {{ metadata.get('created_at', '')[11:19] or '00:00:00' }} </span>
+                <span>By: {{ metadata.get('created_by', 'Unknown') or 'Unknown' }}</span>
+            </div>
             <video id="videoPlayer" autoplay muted playsinline>
                 <source src="{{ metadata.get('url', '') }}" type="video/mp4">
             </video>

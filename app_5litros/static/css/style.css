@@ -104,6 +104,27 @@ html, body {
     text-align: center;
 }
 
+/* ── Video overlay info (At / By) ────────────────────────────── */
+.video-overlay-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.video-overlay-info span {
+    color: #fff;
+    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.4;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
 /* ── Video player ────────────────────────────────────────────── */
 .video-container {
     position: fixed;
@@ -131,6 +152,7 @@ html, body {
 }
 
 .combo-video {
+    position: relative;
     width: 50%;
     height: 100%;
     overflow: hidden;
