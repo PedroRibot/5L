@@ -3,3 +3,5 @@
 *.pycxw
 
 *.gz
+
+*.DS_Store
