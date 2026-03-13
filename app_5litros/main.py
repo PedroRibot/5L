@@ -19,7 +19,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from fetch import fetch_top_civitai_images
+from fetch import fetch_top_civitai_images, load_backup_data
 from water_consumption_estimate import (
     calculate_water_consumption_estimate,
     get_video_properties,
@@ -66,9 +66,20 @@ class WaterEstimatorApp:
             type=self.type,
             nsfw=self.nsfw,
         )
-        if not images_data or not images_data.get("items"):
-            print("No data returned from API – skipping this cycle.")
-            return
+
+        video_count = len(images_data["items"]) if images_data and images_data.get("items") else 0
+
+        if video_count < 60:
+            if video_count > 0:
+                print(f"Only {video_count} videos returned (< 60) – activating backup fallback.")
+            else:
+                print("API returned no data – activating backup fallback.")
+            backup_data = load_backup_data()
+            if backup_data:
+                images_data = backup_data
+            elif video_count == 0:
+                print("No data from API or backup – skipping this cycle.")
+                return
 
         today = datetime.now().strftime("%Y-%m-%d")
 

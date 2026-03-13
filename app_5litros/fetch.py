@@ -79,6 +79,33 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
     return {"items": all_items[:limit]}
 
 
+def load_backup_data(backup_dir="../downloads/backup"):
+    """
+    Read local metadata JSON files from the backup directory and return them
+    in the same {"items": [...]} format as the Civitai API.
+    """
+    backup_path = Path(backup_dir)
+    if not backup_path.is_dir():
+        print(f"  ✗ Backup directory not found: {backup_path.resolve()}")
+        return None
+
+    items = []
+    for meta_file in sorted(backup_path.glob("*_metadata.json")):
+        try:
+            with open(meta_file, "r", encoding="utf-8") as f:
+                item = json.load(f)
+            items.append(item)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"  ⚠ Skipping {meta_file.name}: {e}")
+
+    if not items:
+        print("  ✗ No valid metadata files found in backup.")
+        return None
+
+    print(f"✓ Loaded {len(items)} items from backup\n")
+    return {"items": items}
+
+
 def download_media(url, save_path, item_id, media_type="image"):
     """Download an image or video from URL with progress tracking."""
     try:
