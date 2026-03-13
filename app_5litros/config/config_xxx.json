@@ -1,0 +1,11 @@
+{
+    "mode": "xxx",
+    "type": "video",
+    "nsfw": true,
+    "sort": "Most Reactions",
+    "period": "Day",
+    "target_videos": 400,
+    "min_prompt_words": 20,
+    "download_videos": true,
+    "downloads_dir": "../downloads"
+}

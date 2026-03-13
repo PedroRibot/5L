@@ -5,7 +5,7 @@
     <title>5L</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body class="{{ 'xxx-mode' if mode|default('default') == 'xxx' else '' }}">
     <div class="combo-layout">
         <div class="combo-video">
             <div class="video-overlay-info">
@@ -13,7 +13,7 @@
                 <span>By: {{ metadata.get('created_by', 'Unknown') or 'Unknown' }}</span>
             </div>
             <video id="videoPlayer" autoplay muted playsinline>
-                <source src="{{ metadata.get('url', '') }}" type="video/mp4">
+                <source src="{{ video_url|default(metadata.get('url', '')) }}" type="video/mp4">
             </video>
         </div>
         <div class="combo-right">
@@ -32,6 +32,15 @@
                     <div class="prompt-section">
                         <p class="prompt" id="promptText">{{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
                     </div>
+
+                    {% if mode|default('default') == 'xxx' %}
+                    {# ── XXX mode: only total liters, no energy breakdown ── #}
+                    <div class="energia-water">
+                        <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
+                        <p>Total Water consumed</p>
+                    </div>
+                    {% else %}
+                    {# ── Default mode: full energy + water breakdown ── #}
                     <div class="energia-water">
                         <h2>Energy Consumption Estimation</h2>
                         <p>{{ "%.6f"|format(estimate.get('energia_imagen', 0)) }} kWh (Image Creation)</p>
@@ -44,6 +53,7 @@
                         <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
                         <p>Total Water consumed</p>
                     </div>
+                    {% endif %}
                 </div>
 
                 <div class="today_data">

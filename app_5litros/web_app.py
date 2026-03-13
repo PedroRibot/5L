@@ -31,6 +31,18 @@ app.config["SECRET_KEY"] = "5litros-secret-key"
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
 
 DATA_DIR = Path("./data")
+DOWNLOADS_DIR = Path("../downloads")
+
+
+def _get_mode():
+    """Read the active mode from the marker file written by main.py."""
+    marker = DATA_DIR / ".mode"
+    try:
+        if marker.exists():
+            return marker.read_text().strip()
+    except IOError:
+        pass
+    return "default"
 
 
 def _today():
@@ -82,6 +94,7 @@ def home():
 @app.route("/play/<int:index>")
 def play_combo(index=0):
     expo = _is_expo()
+    mode = _get_mode()
     estimates = _load_json(_estimates_path())
     if not estimates:
         return_url = request.path + ("?expo=1" if expo else "")
@@ -101,6 +114,12 @@ def play_combo(index=0):
 
     avg = day_data.get(_today(), {}).get("average_liters", 0.5)
 
+    # In xxx mode, prefer local video file over remote URL
+    video_url = entry.get("metadata", {}).get("url", "")
+    local_video = entry.get("local_video", "")
+    if mode == "xxx" and local_video:
+        video_url = url_for("serve_download", filepath=local_video)
+
     return render_template(
         "combined.html",
         current_index=index,
@@ -113,6 +132,8 @@ def play_combo(index=0):
         average_today=avg,
         expo=expo,
         expo_qs=_expo_qs(),
+        mode=mode,
+        video_url=video_url,
     )
 
 
@@ -168,6 +189,7 @@ def play_video_random():
 @app.route("/data/play/<int:index>")
 def play_data(index=0):
     expo = _is_expo()
+    mode = _get_mode()
     if not expo:
         return redirect(url_for("play_combo", index=index))
     estimates = _load_json(_estimates_path())
@@ -200,6 +222,7 @@ def play_data(index=0):
         average_today=avg,
         expo=expo,
         expo_qs=_expo_qs(),
+        mode=mode,
     )
 
 
@@ -263,6 +286,12 @@ def installation_view():
 def serve_info_pdf():
     """Serve the PDF file from the data directory."""
     return send_from_directory(DATA_DIR, "info.pdf")
+
+
+@app.route("/downloads/<path:filepath>")
+def serve_download(filepath):
+    """Serve locally-downloaded video files (xxx mode offline support)."""
+    return send_from_directory(DOWNLOADS_DIR, filepath)
 
 
 # ── API ─────────────────────────────────────────────────────────────────────
