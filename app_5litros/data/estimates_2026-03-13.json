@@ -1,0 +1,232 @@
+{
+  "0": {
+    "video_data": {
+      "duration": 5.020833,
+      "width": 1080,
+      "height": 1920,
+      "fps": 48.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09869953131226443,
+      "energia_data_center": 0.1628542266652363,
+      "water_for_energy_l": 0.24674882828066108,
+      "water_for_data_center_l": 0.24835269566448534,
+      "w_tot_l": 0.4951015239451464
+    },
+    "metadata": {
+      "id": 123451382,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5c3ed4c6-3605-4419-a4bb-863ded62e258/original=true/5c3ed4c6-3605-4419-a4bb-863ded62e258.mp4",
+      "created_at": "2026-03-13T01:05:01.000Z",
+      "created_by": "carefull_time",
+      "prompt": "An anime video from a low angle about a woman in a black strapless dress with ruffled layers and orange thigh-high stockings. on the middle of the video, a 18-year-old woman with bright orange eyes and black hair styled in two pigtails with orange highlights, wearing a strapless black dress with a lace-up front and an orange belt. she has a cheerful expression and soft smile. her eyes are looking directly at the viewer. wind gust blows and moves woman hair. woman squints her eyes and puts a hand on a forehead. camera rotates around woman. ",
+      "steps": 8
+    }
+  },
+  "1": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 928,
+      "height": 1376,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09886490220790828,
+      "energia_data_center": 0.16312708864304865,
+      "water_for_energy_l": 0.2471622555197707,
+      "water_for_data_center_l": 0.24876881018064917,
+      "w_tot_l": 0.4959310657004199
+    },
+    "metadata": {
+      "id": 122981506,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/08638d1d-088e-47b5-8d50-5be57797aa59/original=true/08638d1d-088e-47b5-8d50-5be57797aa59.mp4",
+      "created_at": "2026-03-13T00:20:45.232Z",
+      "created_by": "iamnuts",
+      "prompt": "unknown",
+      "steps": 25
+    }
+  },
+  "2": {
+    "video_data": {
+      "duration": 5,
+      "width": 464,
+      "height": 688,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.03030233966641334,
+      "energia_data_center": 0.04999886044958201,
+      "water_for_energy_l": 0.07575584916603334,
+      "water_for_data_center_l": 0.07624826218561256,
+      "w_tot_l": 0.1520041113516459
+    },
+    "metadata": {
+      "id": 123684370,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/91775eb1-90d6-489c-8be0-2416736dfe4d/original=true/91775eb1-90d6-489c-8be0-2416736dfe4d.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "INsect",
+      "steps": 25
+    }
+  },
+  "3": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 464,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.04395094896646512,
+      "energia_data_center": 0.07251906579466745,
+      "water_for_energy_l": 0.1098773724161628,
+      "water_for_data_center_l": 0.11059157533686786,
+      "w_tot_l": 0.22046894775303066
+    },
+    "metadata": {
+      "id": 123684376,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/d024aca8-fb3b-445b-84ae-a52954de521b/original=true/d024aca8-fb3b-445b-84ae-a52954de521b.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Space Hy\u00e4ne",
+      "steps": 25
+    }
+  },
+  "4": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 464,
+      "height": 688,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.048057444811568824,
+      "energia_data_center": 0.07929478393908855,
+      "water_for_energy_l": 0.12014361202892206,
+      "water_for_data_center_l": 0.12092454550711004,
+      "w_tot_l": 0.2410681575360321
+    },
+    "metadata": {
+      "id": 123684380,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c4fd413c-1992-43c1-af58-51809be7e6cc/original=true/c4fd413c-1992-43c1-af58-51809be7e6cc.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Space Hy\u00e4ne",
+      "steps": 25
+    }
+  },
+  "5": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 784,
+      "height": 1168,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13371316263854335,
+      "energia_data_center": 0.2206267183535965,
+      "water_for_energy_l": 0.3342829065963584,
+      "water_for_data_center_l": 0.3364557454892347,
+      "w_tot_l": 0.6707386520855931
+    },
+    "metadata": {
+      "id": 123684408,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1b47349c-00f1-4156-bf57-058ee3d60841/original=true/1b47349c-00f1-4156-bf57-058ee3d60841.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Aupercomo",
+      "steps": 25
+    }
+  },
+  "6": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 784,
+      "height": 1168,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11831953186285032,
+      "energia_data_center": 0.19522722757370303,
+      "water_for_energy_l": 0.2957988296571258,
+      "water_for_data_center_l": 0.2977215220498971,
+      "w_tot_l": 0.5935203517070229
+    },
+    "metadata": {
+      "id": 123684410,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/abdbf7aa-a95c-4126-a7c0-524b746d7982/original=true/abdbf7aa-a95c-4126-a7c0-524b746d7982.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Mordaer",
+      "steps": 25
+    }
+  },
+  "7": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 784,
+      "height": 1168,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.13028727077395033,
+      "energia_data_center": 0.21497399677701803,
+      "water_for_energy_l": 0.3257181769348758,
+      "water_for_data_center_l": 0.3278353450849525,
+      "w_tot_l": 0.6535535220198283
+    },
+    "metadata": {
+      "id": 123684414,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fa3a94c3-a558-4a68-9e67-355346977a63/original=true/fa3a94c3-a558-4a68-9e67-355346977a63.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Inkadye",
+      "steps": 25
+    }
+  },
+  "8": {
+    "video_data": {
+      "duration": 5,
+      "width": 784,
+      "height": 1168,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.07410625087881885,
+      "energia_data_center": 0.12227531395005109,
+      "water_for_energy_l": 0.18526562719704712,
+      "water_for_data_center_l": 0.1864698537738279,
+      "w_tot_l": 0.37173548097087505
+    },
+    "metadata": {
+      "id": 123684420,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/854a1721-b5e6-4ea3-be47-626acc48e449/original=true/854a1721-b5e6-4ea3-be47-626acc48e449.mp4",
+      "created_at": "2026-03-12T17:25:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "Ganschkare",
+      "steps": 25
+    }
+  },
+  "9": {
+    "video_data": {
+      "duration": 8.55,
+      "width": 720,
+      "height": 1280,
+      "fps": 60.0
+    },
+    "estimate": {
+      "energia_imagen": 0.2631886281042592,
+      "energia_data_center": 0.4342612363720276,
+      "water_for_energy_l": 0.657971570260648,
+      "water_for_data_center_l": 0.6622483854673421,
+      "w_tot_l": 1.3202199557279901
+    },
+    "metadata": {
+      "id": 123152823,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/88d01afc-9b1e-4eff-a558-b7374a380a02/original=true/88d01afc-9b1e-4eff-a558-b7374a380a02.mp4",
+      "created_at": "2026-03-12T15:17:41.715Z",
+      "created_by": "The_Midnight_Lab",
+      "prompt": "WOMEN",
+      "steps": 25
+    }
+  }
+}

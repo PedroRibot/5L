@@ -19,7 +19,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from fetch import fetch_top_civitai_images
+from fetch import fetch_mixed_sfw_mature, fetch_top_civitai_images
 from water_consumption_estimate import (
     calculate_water_consumption_estimate,
     get_video_properties,
@@ -41,7 +41,8 @@ signal.signal(signal.SIGTERM, _handle_signal)
 # ── Main application ───────────────────────────────────────────────────────
 class WaterEstimatorApp:
     def __init__(self, limit=10, period="Day", sort="Most Reactions",
-                 output_dir="./data", nsfw=False, type="video"):
+                 output_dir="./data", nsfw=False, type="video",
+                 include_mature=False):
         self.limit = limit
         self.period = period
         self.sort = sort
@@ -49,6 +50,7 @@ class WaterEstimatorApp:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.nsfw = nsfw
         self.type = type
+        self.include_mature = include_mature
         self.socketio_instance = None
 
     # ── workflow ────────────────────────────────────────────────────────
@@ -59,13 +61,21 @@ class WaterEstimatorApp:
         print("=" * 60)
 
         # 1) Fetch ---------------------------------------------------------
-        images_data = fetch_top_civitai_images(
-            limit=self.limit,
-            period=self.period,
-            sort=self.sort,
-            type=self.type,
-            nsfw=self.nsfw,
-        )
+        if self.include_mature:
+            images_data = fetch_mixed_sfw_mature(
+                limit=self.limit,
+                period=self.period,
+                sort=self.sort,
+                type=self.type,
+            )
+        else:
+            images_data = fetch_top_civitai_images(
+                limit=self.limit,
+                period=self.period,
+                sort=self.sort,
+                type=self.type,
+                nsfw=self.nsfw,
+            )
         if not images_data or not images_data.get("items"):
             print("No data returned from API – skipping this cycle.")
             return
@@ -269,6 +279,7 @@ if __name__ == "__main__":
         nsfw=config.get("nsfw", False),
         sort=config.get("sort", "Newest"),
         period=config.get("period", "Day"),
+        include_mature=config.get("include_mature", False),
     )
 
     flask_thread = threading.Thread(target=app.start_flask_server, daemon=True)

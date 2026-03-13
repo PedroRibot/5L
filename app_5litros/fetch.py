@@ -24,11 +24,15 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
 
     while len(all_items) < limit:
         remaining = limit - len(all_items)
+        # requests serialises Python bools as "True"/"False" (capital)
+        # but the Civitai API expects lowercase "true"/"false" or a
+        # string level like "Mature".
+        nsfw_param = str(nsfw).lower() if isinstance(nsfw, bool) else nsfw
         params = {
             "limit": min(page_size, remaining),
             "sort": sort,
             "period": period,
-            "nsfw": nsfw,
+            "nsfw": nsfw_param,
             "type": type,
         }
         if cursor:
@@ -77,6 +81,93 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
 
     print(f"✓ Successfully retrieved {len(all_items)} items total\n")
     return {"items": all_items[:limit]}
+
+
+def _interleave_evenly(primary, secondary):
+    """Insert *secondary* items evenly throughout *primary*.
+
+    For example, 100 primary + 10 secondary → one secondary item inserted
+    roughly every 10 primary items so they never appear in a block.
+    """
+    if not secondary:
+        return list(primary)
+    if not primary:
+        return list(secondary)
+
+    result = []
+    # Divide primary into (M+1) equal chunks, inserting one secondary
+    # item after each of the first M chunks.
+    gap = len(primary) / (len(secondary) + 1)
+    sec_idx = 0
+    next_insert = gap
+
+    for i, item in enumerate(primary):
+        result.append(item)
+        if sec_idx < len(secondary) and (i + 1) >= next_insert:
+            result.append(secondary[sec_idx])
+            sec_idx += 1
+            next_insert += gap
+
+    # Safety: append any remaining secondary items
+    result.extend(secondary[sec_idx:])
+    return result
+
+
+def fetch_mixed_sfw_mature(limit=200, period="Day", sort="Newest",
+                           type="video", mature_ratio=1 / 3):
+    """Fetch SFW *and* Mature content and merge them.
+
+    * Two separate API calls (SFW with ``nsfw=False``, Mature with
+      ``nsfw="Mature"``).
+    * Mature items are capped so they never exceed *mature_ratio* of the
+      combined result.
+    * Mature items are spread evenly among the SFW items (no blocks).
+    """
+    # ── 1. Fetch SFW items ───────────────────────────────────────────
+    print("── Fetching SFW content ──")
+    sfw_data = fetch_top_civitai_images(
+        limit=limit, period=period, sort=sort, type=type, nsfw=False,
+    )
+    sfw_items = sfw_data.get("items", []) if sfw_data else []
+
+    if not sfw_items:
+        return {"items": []}
+
+    sfw_ids = {item.get("id") for item in sfw_items}
+
+    # Max mature items: mature_ratio = M / (S + M) → M = S·r/(1−r)
+    max_mature = int(len(sfw_items) * mature_ratio / (1 - mature_ratio))
+    if max_mature < 1:
+        return {"items": sfw_items}
+
+    # ── 2. Fetch Mature-level content ────────────────────────────────
+    # nsfw="Mature" tells the API to include items up to Mature level,
+    # so the response will contain SFW + Soft + Mature items.
+    print("── Fetching Mature content ──")
+    mature_data = fetch_top_civitai_images(
+        limit=limit, period=period, sort=sort, type=type, nsfw="Mature",
+    )
+    mature_raw = mature_data.get("items", []) if mature_data else []
+
+    # ── 3. Keep only truly non-SFW items, remove duplicates ──────────
+    mature_items = [
+        item for item in mature_raw
+        if item.get("id") not in sfw_ids
+    ]
+
+    # ── 4. Cap to maintain the ratio ─────────────────────────────────
+    mature_items = mature_items[:max_mature]
+
+    if not mature_items:
+        print("  No mature items found after filtering.")
+        return {"items": sfw_items}
+
+    # ── 5. Interleave evenly ─────────────────────────────────────────
+    merged = _interleave_evenly(sfw_items, mature_items)
+
+    print(f"✓ Mixed result: {len(sfw_items)} SFW + {len(mature_items)} Mature "
+          f"= {len(merged)} total")
+    return {"items": merged}
 
 
 def download_media(url, save_path, item_id, media_type="image"):

@@ -3,5 +3,6 @@
     "type": "video",
     "nsfw": false,
     "sort": "Newest",
-    "period": "Day"
+    "period": "Day",
+    "include_mature": true
 }
