@@ -16,6 +16,7 @@ services:
     volumes:
       - ./data:/app/data
       - ./config:/app/config
+      - ../downloads/backup:/app/backup
     environment:
       - PYTHONUNBUFFERED=1
     networks:

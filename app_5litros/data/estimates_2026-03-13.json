@@ -4598,5 +4598,649 @@
       "prompt": "A girl walks along the shore, her hair blowing in the wind.",
       "steps": 25
     }
+  },
+  "200": {
+    "video_data": {
+      "duration": 10.041667,
+      "width": 784,
+      "height": 1168,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.12298065953761544,
+      "energia_data_center": 0.20291808823706547,
+      "water_for_energy_l": 0.30745164884403864,
+      "water_for_data_center_l": 0.30945008456152484,
+      "w_tot_l": 0.6169017334055635
+    },
+    "metadata": {
+      "id": 123853144,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c543a293-55c6-45b9-8885-baac971a8a8f/original=true/c543a293-55c6-45b9-8885-baac971a8a8f.mp4",
+      "created_at": "2026-03-11T16:45:45.703Z",
+      "created_by": "Novastar27",
+      "prompt": "neytiri, solo, 1girl, blue skin, pointy ears, colored skin, letterboxed, black hair, long hair, yellow eyes, alien, portrait, looking at viewer, dreadlocks, blurry, realistic, smile, sunlight, back lighting",
+      "steps": 25
+    }
+  },
+  "201": {
+    "video_data": {
+      "duration": 10.433333,
+      "width": 1152,
+      "height": 1760,
+      "fps": 30.0
+    },
+    "estimate": {
+      "energia_imagen": 0.39126012683705946,
+      "energia_data_center": 0.6455792092811481,
+      "water_for_energy_l": 0.9781503170926487,
+      "water_for_data_center_l": 0.9845082941537509,
+      "w_tot_l": 1.9626586112463995
+    },
+    "metadata": {
+      "id": 123854302,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/aa90f314-28ae-43e1-aca0-47a9a91447ae/original=true/aa90f314-28ae-43e1-aca0-47a9a91447ae.mp4",
+      "created_at": "2026-03-11T17:00:36.332Z",
+      "created_by": "kita1950285",
+      "prompt": "A 10-second high-end fashion film. A beautiful woman in a delicate bikini ???????? walks confidently toward the camera. The camera moves back at the same speed as her walking, capturing her entire figure from head to thigh. Her movements are anatomically perfect, her breasts and hips swaying rhythmically as she walks. The soft, professionally diffused lighting is a flawless white, highlighting the fine details of the fabric. Photorealistic, 4K, cinematic stabilization, very visually appealing. ????.",
+      "steps": 25
+    }
+  },
+  "202": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 592,
+      "height": 768,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05042706235642356,
+      "energia_data_center": 0.08320465288809886,
+      "water_for_energy_l": 0.1260676558910589,
+      "water_for_data_center_l": 0.12688709565435077,
+      "w_tot_l": 0.2529547515454097
+    },
+    "metadata": {
+      "id": 123847017,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f07460d4-1ffc-41e9-9257-b6c3cf670213/original=true/f07460d4-1ffc-41e9-9257-b6c3cf670213.mp4",
+      "created_at": "2026-03-11T16:02:00.000Z",
+      "created_by": "artyclaw",
+      "prompt": "A digital video shoot from a portrait angle about a portrait of a young woman with long, braided red hair and freckles, wearing a white button-down shirt. in the middle of the video, a 20-year-old woman with pale skin and green eyes appears to be looking directly at the viewer. she has a serious expression and is wearing minimal makeup. her long, red hair is styled in a single braid that falls over her shoulder. her body is slim and her breasts are visible through the open white shirt, revealing her small breasts. her nipples are visible. she is also wearing a black mole on her breast. the background is a plain, light beige color with a circular shape around her head.  BREAK  <lora:wan22/Move_BouncyWalk02_High:0.77><lora:wan22/Move_BouncyWalk02_Low:0.77>She is walking into the direction of the moving camera, her breasts are bouncing. Dynamic and realistic movement. She looks away and then looks amused while walking like a model.. amused expression. then smiling. flowing hair. she opens her top further, exposing her perfect breasts.\n",
+      "steps": 25
+    }
+  },
+  "203": {
+    "video_data": {
+      "duration": 3.85,
+      "width": 1280,
+      "height": 720,
+      "fps": 20.0
+    },
+    "estimate": {
+      "energia_imagen": 0.044257833497283815,
+      "energia_data_center": 0.0730254252705183,
+      "water_for_energy_l": 0.11064458374320954,
+      "water_for_data_center_l": 0.1113637735375404,
+      "w_tot_l": 0.22200835728074994
+    },
+    "metadata": {
+      "id": 123855285,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/304e847f-c6b0-4fcf-b8c8-c9d402f4eac1/original=true/304e847f-c6b0-4fcf-b8c8-c9d402f4eac1.mp4",
+      "created_at": "2026-03-11T17:05:22.226Z",
+      "created_by": "SlopodanSloposevic",
+      "prompt": "smooth and fluid motion, static camera, high quality, detailed lighting, consistent character identity, clean background, stable animation, woman in uniform washing another woman",
+      "steps": 25
+    }
+  },
+  "204": {
+    "video_data": {
+      "duration": 5.03125,
+      "width": 592,
+      "height": 768,
+      "fps": 32.0
+    },
+    "estimate": {
+      "energia_imagen": 0.05046125638333132,
+      "energia_data_center": 0.08326107303249668,
+      "water_for_energy_l": 0.1261531409583283,
+      "water_for_data_center_l": 0.12697313637455743,
+      "w_tot_l": 0.25312627733288573
+    },
+    "metadata": {
+      "id": 123846745,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/15b6ca22-305a-41bb-b5f5-9923fa2c3f18/original=true/15b6ca22-305a-41bb-b5f5-9923fa2c3f18.mp4",
+      "created_at": "2026-03-11T15:58:41.939Z",
+      "created_by": "artyclaw",
+      "prompt": "A beautiful young woman standing on a tropical beach at sunset, wearing a colorful bikini. the woman, who appears to be in her late teens or early twenties, has short, pink hair and blue eyes, and is smiling at the camera. she is standing in the middle of the video, with her upper body facing the viewer and her eyes looking directly at the viewer. her body is slim and toned, and she is wearing a strapless blue and white bikini top with a geometric pattern and colorful floral print bottoms. the bikini top has a criss-cross design and the bottoms have a drawstring at the bottom. the beach is lined with palm trees, and the sun is setting in the background, casting a warm glow over the scene. the sky is a mix of oranges, pinks, and purples, creating a peaceful and serene atmosphere.  BREAK  <lora:wan22/Move_BouncyWalk02_High:0.77><lora:wan22/Move_BouncyWalk02_Low:0.77>She is walking into the direction of the moving camera, her breasts are bouncing. Dynamic and realistic movement. She looks away and then looks amused while walking like a model.. flowing hair\n",
+      "steps": 25
+    }
+  },
+  "205": {
+    "video_data": {
+      "duration": 8.6,
+      "width": 1152,
+      "height": 1696,
+      "fps": 35.0
+    },
+    "estimate": {
+      "energia_imagen": 0.36432138979095063,
+      "energia_data_center": 0.6011302931550685,
+      "water_for_energy_l": 0.9108034744773765,
+      "water_for_data_center_l": 0.9167236970614795,
+      "w_tot_l": 1.827527171538856
+    },
+    "metadata": {
+      "id": 123860103,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/5ecdd55f-fac6-46d7-a437-05bb4400ac42/original=true/5ecdd55f-fac6-46d7-a437-05bb4400ac42.mp4",
+      "created_at": "2026-03-11T17:24:46.163Z",
+      "created_by": "STXai",
+      "prompt": "This is a highly detailed, photorealistic digital artwork depicting a young woman with a strikingly realistic appearance. She has long, voluminous blonde hair that flows freely in the wind, adorned with a pink bow at the top. Her skin is fair and flawless, with a slight blush on her cheeks. She has large, expressive brown eyes with long eyelashes, full pink lips, and a small, slightly upturned nose. She is wearing a pink and white striped, off-the-shoulder, ruffled top that accentuates her ample cleavage. Her top is slightly translucent, revealing a hint of her pink bikini bottom underneath. She is positioned on all fours on a sandy beach, with her body leaning forward towards the viewer, creating a sense of depth and perspective. The background features a clear blue sky with a few scattered white clouds and the turquoise ocean waves gently crashing onto the shore. The sunlight casts soft shadows, enhancing the texture of the sand and her hair. The overall composition emphasizes her alluring and playful demeanor, with a focus on her facial expression and physical features. The image combines elements of realism and idealized beauty, creating a visually captivating and sensual scene.\n",
+      "steps": 25
+    }
+  },
+  "206": {
+    "video_data": {
+      "duration": 16.041667,
+      "width": 1216,
+      "height": 832,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.22839852090649487,
+      "energia_data_center": 0.37685755949571653,
+      "water_for_energy_l": 0.5709963022662372,
+      "water_for_data_center_l": 0.5747077782309677,
+      "w_tot_l": 1.145704080497205
+    },
+    "metadata": {
+      "id": 123527948,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a2d733fa-b5d9-440a-84cc-2a1bb9a3e9d8/original=true/a2d733fa-b5d9-440a-84cc-2a1bb9a3e9d8.mp4",
+      "created_at": "2026-03-11T16:31:42.205Z",
+      "created_by": "OhNoMyChickens",
+      "prompt": "score_9, score_8_up, score_7_up, score_6_up, score_5_up, score_4_up, Highly detailed, masterpiece, realistic, indoors, in a bar, dim lighting, neon lights, spilled drinks, shelves with beer bottles, people in the background, playing cards, whiskey,\nBREAK\nBams3P0ny, blue hat, blue overalls, orange fur, resting right elbow on table, sitting on a bar stool, beer in hand, drunken expression, tired eyes, eyes half close,\nBREAK\n<lora:zy_Realism_Enhancer_v1:0.7>\n<lora:Bamse_-_8k_Steps:0.6>",
+      "steps": 25
+    }
+  },
+  "207": {
+    "video_data": {
+      "duration": 16.041667,
+      "width": 1024,
+      "height": 1024,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.09163521003323749,
+      "energia_data_center": 0.15119809655484184,
+      "water_for_energy_l": 0.22908802508309373,
+      "water_for_data_center_l": 0.2305770972461338,
+      "w_tot_l": 0.4596651223292275
+    },
+    "metadata": {
+      "id": 123850258,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/934b9ec8-84e0-42ae-bdb7-900dc1873cfe/original=true/934b9ec8-84e0-42ae-bdb7-900dc1873cfe.mp4",
+      "created_at": "2026-03-11T16:31:42.205Z",
+      "created_by": "OhNoMyChickens",
+      "prompt": "A low framerate stop-motion animation of two puppets made of clay standing outdoors. Behind them is a lake, a boat is floating gently across the lake. The water moves gently. The puppet on the right wears a red baseball cap, the puppet on the left has blonde hair. Birds can be heard chirping throughout the video. The puppets move and talk with jerky, exaggerated movement. The puppet on the right looks distraught. The puppet on the right looks at the puppet with the blonde hair and says with a silly, funny voice \"What the, now we're both made of clay. That's just awful.\" There is a brief pause, the other puppet looks at the puppet that just spoke, he replies with a young and frustrated tone \"No kidding. And the water looks really nice today, but I don't think it would be safe for us now.\" A duck made of clay walks into the scene on top of the green bush behind the puppet with the red baseball cap, the duck looks into the camera and lets out a loud duck quack. The two puppets are scared and jump and let out a loud \"Whoah!\", the duck turns around and walks off screen. They both look at one another and the puppet with the red baseball hat says in a frustrated tone \"It's that freaking duck again.\" The other puppet sighs in frustration.",
+      "steps": 8
+    }
+  },
+  "208": {
+    "video_data": {
+      "duration": 18.041667,
+      "width": 1024,
+      "height": 1024,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.08850312426748798,
+      "energia_data_center": 0.14603015504135516,
+      "water_for_energy_l": 0.22125781066871994,
+      "water_for_data_center_l": 0.22269598643806662,
+      "w_tot_l": 0.44395379710678656
+    },
+    "metadata": {
+      "id": 123852750,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7692a42a-eb94-436f-a9f4-ae844fdfb1e7/original=true/7692a42a-eb94-436f-a9f4-ae844fdfb1e7.mp4",
+      "created_at": "2026-03-11T16:40:22.572Z",
+      "created_by": "OhNoMyChickens",
+      "prompt": "A low framerate stop-motion animation of two males made of paper standing on a sandy beach. Behind them is the ocean, the waves crash against the beach. The palm trees in the background sway left and right slowly. Between them in the background, the yellow sun is slowly dropping below the horizon. The puppet on the right wears a red baseball cap, the puppet on the left has blonde hair. Birds can be heard chirping throughout the video. The puppets move and talk with jerky, exaggerated movement. The puppet on the right looks distraught. The puppet on the right looks at the puppet with the blonde hair and says with a silly, funny voice \"Alright, we're paper now. Our author has lost it.\" There is a brief pause, the other puppet looks at the puppet that just spoke, he replies with a young and frustrated tone \"Yeah. And all this for engagement on Civit ey ai. What a loser.\" A duck made of paper walks into the scene and the two males look at the duck. The duck says with a raspy duck voice \"Yeah, I'm a duck. Quack, and all that.\" The two males turn to look at each other, one of them says with a frustrated tone \"Not the weirdest thing I've seen today.\" The other male sighs.",
+      "steps": 8
+    }
+  },
+  "209": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 960,
+      "height": 1664,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.11413070142158226,
+      "energia_data_center": 0.1883156573456107,
+      "water_for_energy_l": 0.28532675355395565,
+      "water_for_data_center_l": 0.2871813774520563,
+      "w_tot_l": 0.5725081310060119
+    },
+    "metadata": {
+      "id": 123830888,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/b665057b-38f8-4e54-80b9-53c99dacafeb/original=true/b665057b-38f8-4e54-80b9-53c99dacafeb.mp4",
+      "created_at": "2026-03-12T03:35:00.000Z",
+      "created_by": "0dang",
+      "prompt": "A stunning young woman in her early 20s with long wavy blonde hair, fair freckled skin, bright blue eyes, and a confident seductive smile, standing poolside at a luxurious tropical resort under bright sunny sky with palm trees and turquoise water behind her. She wears a skimpy green-and-white palm-leaf print bikini: tiny triangle top barely containing her massive natural breasts, thin strings digging into soft flesh, nipples faintly visible through stretched fabric, and matching micro thong bottoms riding high on wide hips, accentuating her thick curvy thighs and plump round ass. Hands on hips, chest thrust forward, subtle back arch to push out cleavage and hips, slow sensual posing shifts\u2014gentle hip sway, light shoulder roll, soft breast jiggle and thigh squeeze from breathing and small movements. Static front-facing medium-full body shot, cinematic realistic style, high detail, photorealistic glistening skin texture from pool water and sun, natural bright daylight, 8k resolution.2.5sFast",
+      "steps": 25
+    }
+  },
+  "210": {
+    "video_data": {
+      "duration": 10.042318,
+      "width": 1376,
+      "height": 928,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.17640437150865432,
+      "energia_data_center": 0.2910672129892796,
+      "water_for_energy_l": 0.4410109287716358,
+      "water_for_data_center_l": 0.44387749980865143,
+      "w_tot_l": 0.8848884285802872
+    },
+    "metadata": {
+      "id": 123856389,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f2a46426-5a9e-40ba-8d87-0b206d33d0fa/original=true/f2a46426-5a9e-40ba-8d87-0b206d33d0fa.mp4",
+      "created_at": "2026-03-11T17:20:53.894Z",
+      "created_by": "NimbleChopsticks",
+      "prompt": "Masterpiece, realistic, best quality, smooth motion. Her body is athletic, toned, slender, feminine and perfect. She swims toward and over the camera as the camera pans up as her beautiful body slowly passes above.",
+      "steps": 25
+    }
+  },
+  "211": {
+    "video_data": {
+      "duration": 6.041667,
+      "width": 416,
+      "height": 752,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.02712434285961704,
+      "energia_data_center": 0.044755165718368115,
+      "water_for_energy_l": 0.0678108571490426,
+      "water_for_data_center_l": 0.06825162772051138,
+      "w_tot_l": 0.13606248486955397
+    },
+    "metadata": {
+      "id": 123843346,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/21ddf6ff-7639-45ac-aedc-645ce8368bfd/original=true/21ddf6ff-7639-45ac-aedc-645ce8368bfd.mp4",
+      "created_at": "2026-03-11T13:20:17.562Z",
+      "created_by": "jerychang170317",
+      "prompt": "Immersive, ultra-high-definition first-person perspective footage shows a female canoeist gliding along a winding, crystal-clear river at golden hour. In the distance, various kinds of animal can be seen, while the lower part of the frame shows the wet bow of a forest-green canoe cutting through the glass-like water. The canoeist, wearing open-toed gloves, holds a carbon fiber paddle, dipping the blade into the water to create realistic splashes. Sunlight filters through the dense canopy, creating dappled light and shadow on the water's surface (crepuscular rays). 9:16",
+      "steps": 25
+    }
+  },
+  "212": {
+    "video_data": {
+      "duration": 5.291667,
+      "width": 1024,
+      "height": 1024,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.08206824576349672,
+      "energia_data_center": 0.13541260550976958,
+      "water_for_energy_l": 0.2051706144087418,
+      "water_for_data_center_l": 0.2065042234023986,
+      "w_tot_l": 0.4116748378111404
+    },
+    "metadata": {
+      "id": 123845649,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1a6b7567-bd97-4edf-8af1-4cc449a9de06/original=true/1a6b7567-bd97-4edf-8af1-4cc449a9de06.mp4",
+      "created_at": "2026-03-11T15:58:41.939Z",
+      "created_by": "redlittlerabbit",
+      "prompt": "Cool sexy cinematography. POV style.\n\nThe girl speaks as she crawls towards the viewer. she tosses her hair as she says \"I know it's only the first date but I have a good feeling about you\" with a seductive and commanding tone.\n\nShe kneels on the floor in front of the viewer, looking up at the viewer. she kneels very low to the floor, with her knees spread wide. the camera tracks her as she goes down. she puts her hands where the viewers crotch would be, grinning as she looks up at him from his crotch. she is looking almost directly up.  ",
+      "steps": 25
+    }
+  },
+  "213": {
+    "video_data": {
+      "duration": 5,
+      "width": 592,
+      "height": 768,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.044633017122891167,
+      "energia_data_center": 0.07364447825277042,
+      "water_for_energy_l": 0.11158254280722792,
+      "water_for_data_center_l": 0.11230782933547487,
+      "w_tot_l": 0.2238903721427028
+    },
+    "metadata": {
+      "id": 123847489,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fe52bdec-8abe-4c08-840e-ff777577aba0/original=true/fe52bdec-8abe-4c08-840e-ff777577aba0.mp4",
+      "created_at": "2026-03-11T18:57:00.000Z",
+      "created_by": "artyclaw",
+      "prompt": "A digital video shoot from a profile angle about a woman standing in a field of flowers under a dramatic sunset with rain. the video also shows raindrops falling from the sky and a full moon in the background. on the middle of the video, a young woman with fair skin and long brown hair, standing in the rain. she appears to be in her late teens or early twenties, with blue eyes looking directly at the viewer. her body is slim and toned, and she is wearing a tight, shiny red bodysuit that covers her breasts. her hands are clasped together in front of her chest, and her expression is neutral. she is also wearing red gloves that protect her hands. the woman's body is covered in water droplets, indicating that it has recently rained. the background features a vibrant sunset with orange and purple hues, and the sky is filled with raindrops.  BREAK  <lora:wan22/Move_BouncyWalk02_High:0.78><lora:wan22/Move_BouncyWalk02_Low:0.78>She is walking into the direction of the moving camera, her breasts are bouncing. Dynamic and realistic movement. She looks away and then looks around while walking like a model.. then smirking. flowing hair\n",
+      "steps": 25
+    }
+  },
+  "214": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 1188,
+      "height": 1740,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.15082649246292115,
+      "energia_data_center": 0.2488637125638199,
+      "water_for_energy_l": 0.37706623115730287,
+      "water_for_data_center_l": 0.3795171616598253,
+      "w_tot_l": 0.7565833928171282
+    },
+    "metadata": {
+      "id": 123854854,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1569073b-8ba4-4195-9049-59597a2f972f/original=true/1569073b-8ba4-4195-9049-59597a2f972f.mp4",
+      "created_at": "2026-03-11T16:06:57.368Z",
+      "created_by": "WishWorld696",
+      "prompt": "explicit, , masterpiece, best quality, ultra-detailed, 1girl, slim body, medium breasts, blonde very long hair, doe eyes, looking_at_away, sunlight afternoon, soft glowing light reflection on wall, armpit crease, white beauty (Two-piece bikini with floral pattern:1.2), (sheer chiffon sarong tied at the hip:1.3), translucent layers, delicate silk straps, high-quality textures., no print, standing, turquoise ocean waves, palm trees in background, beautyful atmosphere, colorful bunting, realistic soft shadows, subtle soft shading, cinematic lighting, depth of field, vibrant colors, highres, 8k, very aesthetic",
+      "steps": 25
+    }
+  },
+  "215": {
+    "video_data": {
+      "duration": 5.041667,
+      "width": 1192,
+      "height": 1740,
+      "fps": 24.0
+    },
+    "estimate": {
+      "energia_imagen": 0.16285307041232885,
+      "energia_data_center": 0.2687075661803426,
+      "water_for_energy_l": 0.40713267603082215,
+      "water_for_data_center_l": 0.40977903842502245,
+      "w_tot_l": 0.8169117144558447
+    },
+    "metadata": {
+      "id": 123860121,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bba6d0a8-872b-4558-bacb-49a579fe6254/original=true/bba6d0a8-872b-4558-bacb-49a579fe6254.mp4",
+      "created_at": "2026-03-11T17:25:28.610Z",
+      "created_by": "reijlita",
+      "prompt": "Cinematic ultra-detailed fantasy film still of a pale ethereal girl with long white hair in profile, holding a tiny glowing fairy on the tip of her finger. Soft cold blue atmosphere, dreamlike light, particles floating in the air. The fairy emits a delicate pink glow, translucent wings shimmering. The moment feels like the breath before magic happens ~ time almost frozen. Very subtle motion only: a single gentle pulse passes through the scene like a heartbeat. The image slightly vibrates and breathes once. The girl\u2019s hair moves almost imperceptibly in slow motion. Tiny pixels and dust particles flicker softly in the air. The fairy\u2019s wings catch the light and reflect with delicate iridescence but barely move. The atmosphere is suspended, quiet, sacred ~ like a paused frame from a fantasy film right before something magical begins. Minimal movement, cinematic stillness, soft glow, volumetric light, extremely subtle animation. very subtle motion single pulse micro movement only almost frozen frame",
+      "steps": 25
+    }
+  },
+  "216": {
+    "video_data": {
+      "duration": 5,
+      "width": 496,
+      "height": 784,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.032528800095815574,
+      "energia_data_center": 0.0536725201580957,
+      "water_for_energy_l": 0.08132200023953894,
+      "water_for_data_center_l": 0.08185059324109593,
+      "w_tot_l": 0.16317259348063487
+    },
+    "metadata": {
+      "id": 123526721,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/2cc97237-4c68-46d5-9e16-5ab931cb5189/original=true/2cc97237-4c68-46d5-9e16-5ab931cb5189.mp4",
+      "created_at": "2026-03-11T17:28:00.000Z",
+      "created_by": "JackBNimble",
+      "prompt": "She opens her mouth wide when she hears the great news. \nEcstatically, she immediately jumps up and stands on the floor.\nShe jumps around and smiles and laughs with ecstacy. \nShe turns around and sways her hips excitedly and begins to dance, happily raising her arms. Big smile.\nShe quickly and aggressively sways her hips back and forth as she happily bounces to the rhythm. Mouth open wide.\nShe keeps her arms raised as she turns completely around in a circle, forcefully shaking her booty all the way around.\nShe continues to dance. It makes her very happy.",
+      "steps": 25
+    }
+  },
+  "217": {
+    "video_data": {
+      "duration": 5,
+      "width": 464,
+      "height": 688,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.030661460249259313,
+      "energia_data_center": 0.05059140941127786,
+      "water_for_energy_l": 0.07665365062314829,
+      "water_for_data_center_l": 0.07715189935219874,
+      "w_tot_l": 0.153805549975347
+    },
+    "metadata": {
+      "id": 123837308,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/dfed8687-2687-4139-8f2a-c3f7d2298a1d/original=true/dfed8687-2687-4139-8f2a-c3f7d2298a1d.mp4",
+      "created_at": "2026-03-11T17:00:00.000Z",
+      "created_by": "Snxw7h",
+      "prompt": "Photorealistic ultra-detailed portrait of a beautiful  21-year-old blonde woman with a supermodel look and an exaggerated hyper-feminine bimbo aesthetic. Very slim, delicate body with narrow shoulders, thin arms, and a dramatically tiny waist. Wide hips with prominent hip bones, long slim legs, and a round bubble butt.\nEnormous, perfectly round breasts far larger than her head, mega monster breasts, extreme oversized breasts bigger than beachball-sized, stretching a tight white button-up blouse to its limit with a deep neckline and massive cleavage. A white micro-thong visible underneath.\nShe has green eyes, long lashes, flawless skin, natural makeup, and extremely full, thick, glossy lips, oversized and perfectly shaped. Long straight platinum-blonde hair frames her face. Her expression is shy yet seductive.\nSmall delicate hands emphasize her fragile appearance, contrasting with her exaggerated curves. Highly detailed, realistic skin texture, photorealistic, 8k, semi side view.happy face, hourglass silhouette, young face with a natural look and very extreme full big thick bimbo lips, semi side view,\n\nAhegao, wide open mouth, saliva dripping from her massive tongue. ",
+      "steps": 25
+    }
+  },
+  "218": {
+    "video_data": {
+      "duration": 5,
+      "width": 768,
+      "height": 1536,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.06801808888676411,
+      "energia_data_center": 0.11222984666316077,
+      "water_for_energy_l": 0.17004522221691026,
+      "water_for_data_center_l": 0.17115051616132015,
+      "w_tot_l": 0.3411957383782304
+    },
+    "metadata": {
+      "id": 121058689,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/72f32eab-d6eb-4466-becc-9728772c6df4/original=true/72f32eab-d6eb-4466-becc-9728772c6df4.mp4",
+      "created_at": "2026-03-11T15:00:00.000Z",
+      "created_by": "bebobular",
+      "prompt": "(high-resolution editorial portrait photography RAW photo sharp focus shot with (Canon EOS R5) and (RF 85mm f/1.2 L) at ISO 100 award-winning photo, analog film photo, bright Mediterranean beach club midday selfie of a stunning seductive young bimbo, selfie pov from a low front-three-quarter angle, 20 years old with ultra-voluptuous extreme hourglass figure, impossibly narrow cinched waist flaring into dramatically wide voluptuous hips and gigantic maxed-out fake breasts, topless except for tiny black micro thong bikini bottom with thin side ties riding high on her wide hips. She is reclining back on a padded blue sun lounger under a large beige canvas beach umbrella, propped up slightly on her elbows with shoulders and upper back raised off the cushion, chest thrust forward toward the camera, head tilted slightly back and turned directly toward the lens, long platinum-blonde hair with subtle dark roots cascading in loose waves over her shoulders and spilling down her back and onto the lounger, black leather choker necklace with silver O-rings and small metal studs snug around her neck, legs relaxed and extended straight out of frame below the knees, one knee very slightly bent for natural relaxation, warm golden sunlight streaming through umbrella slats creating dappled patterns across her skin, pine trees and distant sea horizon softly blurred in the background. Glossy full-body tan with natural sun-kissed glow, light natural sheen from sunscreen or body oil catching highlights. Her colossal bolted-on tits dominate the frame, impossibly round and spherical, resting heavily yet buoyantly on her chest while thrust prominently forward due to the reclined propped-up pose, realistic silicone implant contours, subtle stretch marks and skin texture visible under bright daylight, small pink nipples centered and erect, deep natural cleavage spilling forward toward the camera, confident playful smile with glossy full lips and direct sparkling blue-eyed gaze into the lens. High detail on skin pores, hair strands catching sunlight, umbrella fabric texture casting soft shadows, thong ties digging slightly into wide hips, fabric tension and shadow play across enormous breasts from the angled pose, shallow depth of field with creamy bokeh focusing on her face, upper body, propped reclining posture, and extreme exaggerated bust-to-waist proportions against the luxurious beach club setting, busty woman, (enormous fake tits, gigantic spherical overfilled implants, massive bolted-on breasts, round maxed-out boobs, ultra-narrow cinched waist, very wide dramatic hips, extreme hourglass figure:1.4) topless glossy sunlit skin, ultra-realistic, high resolution, photorealistic, candid intimate beach lounger portrait style.)",
+      "steps": 15
+    }
+  },
+  "219": {
+    "video_data": {
+      "duration": 5,
+      "width": 1188,
+      "height": 1740,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.16541491846612472,
+      "energia_data_center": 0.27293461546910575,
+      "water_for_energy_l": 0.41353729616531176,
+      "water_for_data_center_l": 0.4162252885903862,
+      "w_tot_l": 0.829762584755698
+    },
+    "metadata": {
+      "id": 123854843,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a162e895-aaaf-49da-8ee9-56c50926f3d5/original=true/a162e895-aaaf-49da-8ee9-56c50926f3d5.mp4",
+      "created_at": "2026-03-11T16:06:54.421Z",
+      "created_by": "WishWorld696",
+      "prompt": "explicit, , masterpiece, best quality, ultra-detailed, 1girl, slim body, medium breasts, blonde very long hair, doe eyes, looking_at_away, sunlight afternoon, soft glowing light reflection on wall, armpit crease, gold beauty bikini, no print, standing, turquoise ocean waves, palm trees in background, beautyful atmosphere, colorful bunting, realistic soft shadows, subtle soft shading, cinematic lighting, depth of field, vibrant colors, highres, 8k, very aesthetic",
+      "steps": 25
+    }
+  },
+  "220": {
+    "video_data": {
+      "duration": 5,
+      "width": 928,
+      "height": 1376,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.12041678986874145,
+      "energia_data_center": 0.1986877032834234,
+      "water_for_energy_l": 0.3010419746718536,
+      "water_for_data_center_l": 0.30299874750722067,
+      "w_tot_l": 0.6040407221790742
+    },
+    "metadata": {
+      "id": 122048143,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/49443bd0-6746-43f3-8e1d-fc24c5bc325f/original=true/49443bd0-6746-43f3-8e1d-fc24c5bc325f.mp4",
+      "created_at": "2026-03-11T19:15:00.000Z",
+      "created_by": "Experimental_dAIver",
+      "prompt": "A masterpiece of hyper-realistic cinematic 10-second video in photorealistic 8K, shot on IMAX with anamorphic lenses and ultra-sharp detail, capturing ONLY ONE single cunning Vermling Trapper from Frosthaven in an explosively dynamic solo action sequence that perfectly showcases the class\u2019s core high-level perks \u2014 massive multi-trap deployment, hazardous terrain control, area damage explosions and self-buffs from trapped victims \u2014 while keeping every frame crystal-clear with exactly one solid physical Vermling visible at all times.  \n\nThis small 3'6\" Vermling has sleek brown-gray fur, long whiskers, sharp red eyes, buck teeth and prehensile tail.  \n\nOver the exact 10-second duration the sequence unfolds with relentless intensity and HIGHLY DYNAMIC CAMERA WORK: quick sneaky tracking shots following every trap fling, rapid cinematic pans, dramatic zoom-ins on spring mechanisms and explosions, orbiting 360\u00b0 circles around his tiny frame, low-to-high angle tilts, and powerful pull-backs that emphasize his diminutive size against the epic trap chaos.  \n\n0\u20133 s: Camera starts low-angle as he grins slyly, flinging a barrage of bear-traps and spike-pits that snap open in the snow.  \n3\u20136 s: First high-level combo \u2014 net-launchers and poison traps activate, creating massive area control and damage, camera orbits through the snapping metal.  \n6\u201310 s: Ultimate trap-master finale \u2014 full screen-clearing trap field with every high-level trap active, entire battlefield a deadly maze; camera pulls back dramatically into an epic low-angle hero shot as the tiny Vermling stands laughing atop his masterpiece of pain.  \n\nSet against a dramatic icy Frosthaven battlefield of frost-covered ruins and swirling blizzard under cinematic volumetric god rays and powerful rim lighting that catches every fur strand and trap mechanism. Hyper-detailed photorealistic textures on fur and metal, perfect physics on chains and snow, intense motion blur on springs, glowing runes, razor-sharp focus, explosive devious dominance, masterpiece, best video quality, cinematic composition.",
+      "steps": 25
+    }
+  },
+  "221": {
+    "video_data": {
+      "duration": 5,
+      "width": 896,
+      "height": 1152,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.08336957966657699,
+      "energia_data_center": 0.13755980644985202,
+      "water_for_energy_l": 0.20842394916644247,
+      "water_for_data_center_l": 0.20977870483602432,
+      "w_tot_l": 0.4182026540024668
+    },
+    "metadata": {
+      "id": 123799689,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/23e8a9f8-5a86-4d8f-b5ad-cc4208996d52/original=true/23e8a9f8-5a86-4d8f-b5ad-cc4208996d52.mp4",
+      "created_at": "2026-03-11T20:00:00.000Z",
+      "created_by": "s02j44",
+      "prompt": "Rightward camera orbit combined with a gentle forward movement, creating a smooth circular\u2011plus\u2011dolly motion with a moderate approach. The woman slowly rotates her upper body from right\u2011facing to left\u2011facing during the shot, keeping steady eye contact as her gaze follows the camera. Her expression stays focused and expressive, with a brief moment where she softly bites her lower lip. The framing remains stable, with natural transitions in her motion.",
+      "steps": 25
+    }
+  },
+  "222": {
+    "video_data": {
+      "duration": 5,
+      "width": 464,
+      "height": 688,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.028237189235155894,
+      "energia_data_center": 0.04659136223800722,
+      "water_for_energy_l": 0.07059297308788974,
+      "water_for_data_center_l": 0.07105182741296101,
+      "w_tot_l": 0.14164480050085076
+    },
+    "metadata": {
+      "id": 123835405,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e79a5350-f0c5-440e-895a-38253740e7a1/original=true/e79a5350-f0c5-440e-895a-38253740e7a1.mp4",
+      "created_at": "2026-03-11T11:30:19.214Z",
+      "created_by": "AndreaParkerAI",
+      "prompt": "shadowy figure in background zips forward and grabs her, takes her by the wrists, holding her hands over her head, she screams, shakes her head, struggles, body shaking, she thrashes with a lot of energy, sweater falling open, breasts enlarge a little as she struggles, end with zoom on chest",
+      "steps": 25
+    }
+  },
+  "223": {
+    "video_data": {
+      "duration": 5,
+      "width": 592,
+      "height": 768,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.04234902153522802,
+      "energia_data_center": 0.06987588553312624,
+      "water_for_energy_l": 0.10587255383807005,
+      "water_for_data_center_l": 0.1065607254380175,
+      "w_tot_l": 0.21243327927608757
+    },
+    "metadata": {
+      "id": 123846691,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/0c73b888-eb8f-4151-8971-08ba16c76a6b/original=true/0c73b888-eb8f-4151-8971-08ba16c76a6b.mp4",
+      "created_at": "2026-03-11T15:58:41.939Z",
+      "created_by": "artyclaw",
+      "prompt": "A digital video shoot from below about a young woman posing for a selfie while wearing a transparent white crop top and black track pants. the video also shows a cityscape with tall buildings and a clear blue sky in the background. on the middle of the video, a 1woman, who appears to be in her late teens or early twenties, with short pink hair and blue eyes, is posing for the camera with her right arm raised, making a peace sign with her left hand. she is wearing a black jacket with white stripes and has a tattoo of an eye on her arm. the woman has a confident expression and is looking directly at the viewer.  BREAK  <lora:wan22/Move_BouncyWalk02_High:0.77><lora:wan22/Move_BouncyWalk02_Low:0.77>She is walking into the direction of the moving camera, her breasts are bouncing. Dynamic and realistic movement. She looks away and then looks amused while walking like a model.. confident model posture. flowing hair\n",
+      "steps": 25
+    }
+  },
+  "224": {
+    "video_data": {
+      "duration": 5,
+      "width": 592,
+      "height": 768,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.047057629491278015,
+      "energia_data_center": 0.07764508866060872,
+      "water_for_energy_l": 0.11764407372819503,
+      "water_for_data_center_l": 0.1184087602074283,
+      "w_tot_l": 0.23605283393562332
+    },
+    "metadata": {
+      "id": 123844924,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/47a99eff-6e45-4428-ba49-0908b458a8a1/original=true/47a99eff-6e45-4428-ba49-0908b458a8a1.mp4",
+      "created_at": "2026-03-11T14:40:35.966Z",
+      "created_by": "artyclaw",
+      "prompt": "A digital video shoot from a profile angle about a young woman posing at the beach with sunglasses on her head. the video also shows a sunny day with the ocean in the background. on the middle of the video, a 20-year-old woman with bright orange hair and blue eyes appears to be posing for the camera, looking directly at the viewer with a slight smile. she has a slim body and is wearing a pair of turquoise swim shorts with a floral pattern. her hair is styled in short hair and her eyes are a bright blue color. she is holding up her sunglasses with both hands, with her fingers gently touching them. her body is toned and fit, with medium-sized breasts and nipples visible. the beach is sandy and the ocean waves are gently lapping at her sides. the sky is clear and bright, with a few clouds scattered across it. the sun is shining brightly, creating a warm and inviting atmosphere.  BREAK  <lora:wan22/Move_BouncyWalk02_High:0.78><lora:wan22/Move_BouncyWalk02_Low:0.78>She is walking into the direction of the moving camera, her breasts are bouncing. Dynamic and realistic movement. She looks up and then looks amused while walking like a model.. flowing hair",
+      "steps": 25
+    }
+  },
+  "225": {
+    "video_data": {
+      "duration": 5,
+      "width": 1376,
+      "height": 928,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.10764332556105544,
+      "energia_data_center": 0.17761148717574146,
+      "water_for_energy_l": 0.26910831390263856,
+      "water_for_data_center_l": 0.2708575179430057,
+      "w_tot_l": 0.5399658318456443
+    },
+    "metadata": {
+      "id": 123855777,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/72ea990d-c5ff-49e8-bfd8-fd6500e9f993/original=true/72ea990d-c5ff-49e8-bfd8-fd6500e9f993.mp4",
+      "created_at": "2026-03-11T18:00:00.000Z",
+      "created_by": "Sajrep",
+      "prompt": "Anthro winged unicorn pony girl Twilight Sparkle has her shorts caught by a tree branch. There is a brach from the tree that goes between her wings and keeps her pinned, so she hangs by her pants. That branch breaks, which releases her pants. Then she loses balance and falls down.",
+      "steps": 25
+    }
+  },
+  "226": {
+    "video_data": {
+      "duration": 5,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.13968576827438176,
+      "energia_data_center": 0.2304815176527299,
+      "water_for_energy_l": 0.3492144206859544,
+      "water_for_data_center_l": 0.35148431442041306,
+      "w_tot_l": 0.7006987351063674
+    },
+    "metadata": {
+      "id": 123844253,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c0fed78d-d7c9-415e-bfa6-4e1e0b1f1a8b/original=true/c0fed78d-d7c9-415e-bfa6-4e1e0b1f1a8b.mp4",
+      "created_at": "2026-03-11T13:26:45.327Z",
+      "created_by": "SupremoKaioSama",
+      "prompt": "core_9, score_8_up, score_7_up, HD, perfect quality, very detailed, source_Cartoon, BREAK, (((good_hands))), (((perfect eyes))), ((light smile:0.5)), Style-SunsetRiders7, [Justice League Series], BREAK, (((solo, 1girl, K4r4SGSR, blonde hair, blue eyes, long hair, hairband, lipstick, lips))), eye_focus, ((medium breasts, medium ass)), (((looking at viewer))), curvy body, medium body size, slightly small neck, BREAK, solo, hands on his chest, (((overalls, cropped legs, shorts, shirt, thighs, night))), cherry blossoms, sitting, out doors, park, (((close up)))",
+      "steps": 19
+    }
+  },
+  "227": {
+    "video_data": {
+      "duration": 5,
+      "width": 928,
+      "height": 1376,
+      "fps": 30
+    },
+    "estimate": {
+      "energia_imagen": 0.10596491483284287,
+      "energia_data_center": 0.17484210947419074,
+      "water_for_energy_l": 0.2649122870821072,
+      "water_for_data_center_l": 0.2666342169481409,
+      "w_tot_l": 0.5315465040302481
+    },
+    "metadata": {
+      "id": 123843487,
+      "url": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/431cb3b7-ffe1-4c6f-9e2a-464aa2a71393/original=true/431cb3b7-ffe1-4c6f-9e2a-464aa2a71393.mp4",
+      "created_at": "2026-03-11T14:15:11.859Z",
+      "created_by": "Snxw7h",
+      "prompt": "Photorealistic full body portrait of an extremely hyper-feminine young  woman. Petite slim athletic hourglass body with a **toned flat stomach, a tiny wasp waist, elegantly sculpted hips, and slender arms**. Body is slim, fit, soft and natural, not bony or exaggerated.\n\nSmall delicate face, not round or fat, with **enormously gigantic plump full bimbo lips that dominate the face**, extremely oversized and exaggerated, far larger than normal proportions. Very large expressive eyes, long natural red hair flowing over her shoulders.\n\nExtremely large full stylized breasts, much bigger than her head, while the rest of the body remains slim and athletic.\n\nWearing a tight white button-up blouse that **extends over the navel, fully buttoned with no cleavage or open buttons**, and a matching white thong.\n\nSemi side view, clean minimal background, soft studio lighting, aesthetic composition, ultra detailed, high resolution, photorealistic, **emphasis on tiny delicate face, extremely massive lips, massive breasts, wasp waist, and slim athletic figure**, icy blue eyes, narrow waist.\n\nAhegao, wide open mouth, massive tongue, saliva.",
+      "steps": 25
+    }
   }
 }

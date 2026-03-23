@@ -5,3 +5,7 @@
 *.gz
 
 *.DS_Store
+/app_5litros/data
+/app_5litros/__pycache__
+app_5litros/.DS_Store
+app_5litros/static/.DS_Store
