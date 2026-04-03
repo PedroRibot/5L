@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 </head>
-<body>
-    <div class="data-only">
-        <div class="combo-global">
-            <div class="combo-global-item">
-                <div class="combo-global-label">Images / Day</div>
-                <div class="combo-global-value" id="total-counter">0</div>
-            </div>
-            <div class="combo-global-item">
-                <div class="combo-global-label">Liters / Day</div>
-                <div class="combo-global-value" id="total-liters">0</div>
-            </div>
-        </div>
+<body class="{{ 'xxx-mode' if mode|default('default') == 'xxx' else '' }}">
+    <div class="data-only data-bottom-grow">
         <div class="combo-data">
             <div class="data">
                 <div class="prompt-section">
                     <p class="prompt" id="promptText">{{ metadata.get('prompt', 'Could not retrieve the prompt') }}</p>
                 </div>
+
+                {% if mode|default('default') == 'xxx' %}
+                <!-- <div class="energia-water energia-water-left">
+                    <div class="video-meta-info">
+                        <span>{{ metadata.get('created_at', '')[0:10] or '' }} at {{ metadata.get('created_at', '')[11:19] or '00:00:00' }}</span>
+                        <span>By: {{ metadata.get('created_by', 'Unknown') or 'Unknown' }}</span>
+                    </div>
+                    <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
+                </div> -->
+                {% else %}
                 <div class="energia-water">
                     <h2>Energy Consumption Estimation</h2>
                     <p>{{ "%.6f"|format(estimate.get('energia_imagen', 0)) }} kWh (Image Creation)</p>
@@ -33,14 +33,26 @@
                     <p>{{ "%.6f"|format(estimate.get('water_for_data_center_l', 0)) }} Liters (Data Center)</p>
 
                     <h1>{{ "%.6f"|format(estimate.get('w_tot_l', 0)) }} Liters</h1>
-                    <p>Total Water consumed</p>
                 </div>
+                {% endif %}
             </div>
 
             <div class="today_data">
                 <p>Videos analyzed today</p>
                 <p>{{ today_data.get('n_images_videos', 0) }} videos</p>
                 <p>{{ "%.6f"|format(today_data.get('total_liters', 0)) }} Liters</p>
+                <p>{{"%.6f"|format(today_data.get('average_liters', 0))}} Average Liters</p>
+            </div>
+        </div>
+
+        <div class="combo-global">
+            <div class="combo-global-item">
+                <div class="combo-global-label">Images / Day</div>
+                <div class="combo-global-value" id="total-counter">0</div>
+            </div>
+            <div class="combo-global-item">
+                <div class="combo-global-label">Liters / Day</div>
+                <div class="combo-global-value" id="total-liters">0</div>
             </div>
         </div>
     </div>
@@ -66,26 +78,28 @@
             loadData();
         });
 
-        function fitTextToHeight() {
+        function fitTextToContainer() {
             const prompt = document.getElementById('promptText');
             if (!prompt) return;
             const container = prompt.parentElement;
-            let fontSize = 24;
-            prompt.style.fontSize = fontSize + 'px';
+            const maxW = container.clientWidth;
+            const maxH = container.clientHeight;
+            if (maxW === 0 || maxH === 0) return;
 
-            while (prompt.scrollHeight > container.clientHeight && fontSize > 7) {
-                fontSize -= 1;
-                prompt.style.fontSize = fontSize + 'px';
-            }
-            while (prompt.scrollHeight < container.clientHeight && fontSize < 40) {
-                fontSize += 1;
-                prompt.style.fontSize = fontSize + 'px';
-                if (prompt.scrollHeight > container.clientHeight) {
-                    fontSize -= 1;
-                    prompt.style.fontSize = fontSize + 'px';
-                    break;
+            let lo = 8, hi = 200, best = lo;
+            prompt.style.lineHeight = '1.15';
+
+            while (lo <= hi) {
+                const mid = Math.floor((lo + hi) / 2);
+                prompt.style.fontSize = mid + 'px';
+                if (prompt.scrollWidth <= maxW && prompt.scrollHeight <= maxH) {
+                    best = mid;
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
                 }
             }
+            prompt.style.fontSize = best + 'px';
         }
 
         function animateCounter(elementId, totalPerDay) {
@@ -104,7 +118,7 @@
         }
 
         window.addEventListener('load', function() {
-            fitTextToHeight();
+            fitTextToContainer();
             const sd  = {{ global_data.get('StableDiffusion', {}).get('images_per_day', 0) }};
             const gg  = {{ global_data.get('GoogleGemini',    {}).get('images_per_day', 0) }};
             const mj  = {{ global_data.get('Midjourney',      {}).get('images_per_day', 0) }};
@@ -115,7 +129,7 @@
             animateCounter('total-counter', total);
             animateCounter('total-liters',  total * avg);
         });
-        window.addEventListener('resize', fitTextToHeight);
+        window.addEventListener('resize', fitTextToContainer);
 
         // Auto-advance every 8 seconds to match video page pace
         setInterval(function() {

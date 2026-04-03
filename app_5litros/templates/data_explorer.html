@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POLARI – Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body.data-explorer-body {
+            overflow-y: auto;
+        }
+
+        .explorer-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        .explorer-container h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.15rem;
+            margin: 0 0 0.4rem;
+        }
+
+        .explorer-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.45;
+            margin: 0 0 2rem;
+        }
+
+        /* ── Chart ─────────────────────────────────────────────── */
+        .chart-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: 260px;
+            display: block;
+        }
+
+        .chart-line {
+            fill: none;
+            stroke: rgba(255,255,255,0.35);
+            stroke-width: 1.5;
+        }
+
+        .chart-dot {
+            fill: transparent;
+            stroke: rgba(255,255,255,0.6);
+            stroke-width: 1.5;
+            cursor: pointer;
+            pointer-events: all;
+            transition: stroke 0.15s;
+        }
+
+        .chart-dot:hover {
+            stroke: #fff;
+            stroke-width: 2;
+        }
+
+        .chart-axis text {
+            fill: rgba(255,255,255,0.35);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.65rem;
+        }
+
+        .chart-axis line,
+        .chart-axis path {
+            stroke: rgba(255,255,255,0.1);
+        }
+
+        .chart-grid line {
+            stroke: rgba(255,255,255,0.05);
+        }
+
+        .chart-label {
+            fill: rgba(255,255,255,0.3);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.6rem;
+        }
+
+        /* ── Floating video tooltip ────────────────────────────── */
+        .video-tooltip {
+            position: fixed;
+            pointer-events: none;
+            z-index: 200;
+            display: none;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .video-tooltip video {
+            display: block;
+            width: 180px;
+            height: auto;
+        }
+
+        /* ── File list ─────────────────────────────────────────── */
+        .file-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            cursor: pointer;
+            transition: background 0.15s;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+        }
+
+        .file-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .file-item.active {
+            background: rgba(255,255,255,0.08);
+            border-left: 2px solid #fff;
+        }
+
+        .file-name { opacity: 0.9; }
+        .file-size { opacity: 0.3; font-size: 0.75rem; }
+
+        /* ── JSON viewer ───────────────────────────────────────── */
+        .viewer-panel {
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .viewer-panel.open {
+            display: block;
+        }
+
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.6rem;
+        }
+
+        .viewer-filename {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        .viewer-close {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            transition: border-color 0.2s;
+        }
+
+        .viewer-close:hover {
+            border-color: #fff;
+        }
+
+        .json-view {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 4px;
+            padding: 1rem;
+            max-height: 70vh;
+            overflow: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.78rem;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .json-view .json-key { color: #8bb8e8; }
+        .json-view .json-string { color: #98c379; }
+        .json-view .json-number { color: #d19a66; }
+        .json-view .json-bool { color: #c678dd; }
+        .json-view .json-null { color: #c678dd; opacity: 0.6; }
+    </style>
+</head>
+<body class="data-explorer-body">
+    <canvas id="dotGrid" class="home-grid"></canvas>
+
+    <!-- Floating video tooltip -->
+    <div class="video-tooltip" id="videoTooltip">
+        <video id="tooltipVideo" muted loop playsinline></video>
+    </div>
+
+    <div class="explorer-container">
+        <h1>Data</h1>
+        <p class="explorer-subtitle">{{ files|length }} files · /data/</p>
+
+        <!-- Chart -->
+        <div class="chart-section" id="chartSection"></div>
+
+        <!-- File list -->
+        <ul class="file-list" id="fileList">
+            {% for f in files %}
+            <li class="file-item" data-filename="{{ f.name }}">
+                <span class="file-name">{{ f.name }}</span>
+                <span class="file-size">{{ (f.size / 1024)|round(1) }} KB</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="viewer-panel" id="viewerPanel">
+            <div class="viewer-header">
+                <span class="viewer-filename" id="viewerFilename"></span>
+                <button class="viewer-close" id="viewerClose">close</button>
+            </div>
+            <div class="json-view" id="jsonView"></div>
+        </div>
+    </div>
+
+    <div class="page-nav bottom-nav">
+        <a href="/play/random" class="nav-link">Digital Twin</a>
+        <a href="/" class="nav-link">home</a>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+    // ═══════════════════════════════════════════════════════════════
+    //  Liters / Day chart
+    // ═══════════════════════════════════════════════════════════════
+    const CHART_DATA = {{ chart_data | tojson }};
+
+    (function drawChart() {
+        const container = document.getElementById('chartSection');
+        const margin = { top: 20, right: 20, bottom: 40, left: 55 };
+        const fullW  = container.clientWidth || 860;
+        const fullH  = 260;
+        const w = fullW - margin.left - margin.right;
+        const h = fullH - margin.top - margin.bottom;
+
+        const svg = d3.select('#chartSection')
+            .append('svg')
+            .attr('class', 'chart-svg')
+            .attr('viewBox', `0 0 ${fullW} ${fullH}`)
+            .attr('preserveAspectRatio', 'xMidYMid meet');
+
+        const g = svg.append('g')
+            .attr('transform', `translate(${margin.left},${margin.top})`);
+
+        const parseDate = d3.timeParse('%Y-%m-%d');
+        const data = CHART_DATA.map(d => ({
+            date: parseDate(d.date),
+            dateStr: d.date,
+            liters: d.liters,
+            videoUrl: d.video_url,
+        }));
+
+        const x = d3.scaleTime()
+            .domain(d3.extent(data, d => d.date))
+            .range([0, w]);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.liters) * 1.1])
+            .nice()
+            .range([h, 0]);
+
+        // Grid lines
+        g.append('g')
+            .attr('class', 'chart-grid')
+            .selectAll('line')
+            .data(y.ticks(5))
+            .enter().append('line')
+            .attr('x1', 0).attr('x2', w)
+            .attr('y1', d => y(d)).attr('y2', d => y(d));
+
+        // Axes
+        g.append('g')
+            .attr('class', 'chart-axis')
+            .attr('transform', `translate(0,${h})`)
+            .call(d3.axisBottom(x).ticks(d3.timeMonth.every(1)).tickFormat(d3.timeFormat('%b %d')))
+            .select('.domain').remove();
+
+        g.append('g')
+            .attr('class', 'chart-axis')
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d => d + ' L'))
+            .select('.domain').remove();
+
+        // Y-axis label
+        g.append('text')
+            .attr('class', 'chart-label')
+            .attr('transform', 'rotate(-90)')
+            .attr('x', -h / 2).attr('y', -42)
+            .attr('text-anchor', 'middle')
+            .text('Liters / Day');
+
+        // Line
+        const line = d3.line()
+            .x(d => x(d.date))
+            .y(d => y(d.liters))
+            .curve(d3.curveMonotoneX);
+
+        g.append('path')
+            .datum(data)
+            .attr('class', 'chart-line')
+            .attr('d', line);
+
+        // Dots (hollow circles)
+        const tooltip = document.getElementById('videoTooltip');
+        const tooltipVideo = document.getElementById('tooltipVideo');
+        let currentVideoUrl = null;
+
+        g.selectAll('.chart-dot')
+            .data(data)
+            .enter().append('circle')
+            .attr('class', 'chart-dot')
+            .attr('cx', d => x(d.date))
+            .attr('cy', d => y(d.liters))
+            .attr('r', 5)
+            .on('mouseenter', function (event, d) {
+                if (d.videoUrl) {
+                    if (currentVideoUrl !== d.videoUrl) {
+                        tooltipVideo.src = d.videoUrl;
+                        currentVideoUrl = d.videoUrl;
+                    }
+                    tooltipVideo.play().catch(() => {});
+                    tooltip.style.display = 'block';
+                }
+            })
+            .on('mousemove', function (event) {
+                const offset = 15;
+                let tx = event.clientX + offset;
+                let ty = event.clientY + offset;
+                // Keep within viewport
+                if (tx + 200 > window.innerWidth) tx = event.clientX - 200;
+                if (ty + 160 > window.innerHeight) ty = event.clientY - 160;
+                tooltip.style.left = tx + 'px';
+                tooltip.style.top  = ty + 'px';
+            })
+            .on('mouseleave', function () {
+                tooltip.style.display = 'none';
+                tooltipVideo.pause();
+                currentVideoUrl = null;
+            })
+            .on('click', function (event, d) {
+                // Navigate to the day's estimates file in the file list
+                const filename = 'estimates_' + d.dateStr + '.json';
+                const item = document.querySelector(`.file-item[data-filename="${filename}"]`);
+                if (item) {
+                    item.click();
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+    })();
+
+    // ═══════════════════════════════════════════════════════════════
+    //  JSON viewer
+    // ═══════════════════════════════════════════════════════════════
+    function highlightJSON(obj, indent) {
+        indent = indent || 0;
+        const pad = '  '.repeat(indent);
+        if (obj === null) return '<span class="json-null">null</span>';
+        if (typeof obj === 'boolean') return '<span class="json-bool">' + obj + '</span>';
+        if (typeof obj === 'number') return '<span class="json-number">' + obj + '</span>';
+        if (typeof obj === 'string') {
+            const escaped = obj.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+            return '<span class="json-string">"' + escaped + '"</span>';
+        }
+        if (Array.isArray(obj)) {
+            if (obj.length === 0) return '[]';
+            const items = obj.map(v => pad + '  ' + highlightJSON(v, indent + 1));
+            return '[\n' + items.join(',\n') + '\n' + pad + ']';
+        }
+        const keys = Object.keys(obj);
+        if (keys.length === 0) return '{}';
+        const entries = keys.map(k => {
+            const escaped = k.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+            return pad + '  <span class="json-key">"' + escaped + '"</span>: ' + highlightJSON(obj[k], indent + 1);
+        });
+        return '{\n' + entries.join(',\n') + '\n' + pad + '}';
+    }
+
+    const panel = document.getElementById('viewerPanel');
+    const jsonView = document.getElementById('jsonView');
+    const viewerFilename = document.getElementById('viewerFilename');
+    let activeItem = null;
+
+    document.querySelectorAll('.file-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const filename = this.dataset.filename;
+            if (activeItem) activeItem.classList.remove('active');
+            this.classList.add('active');
+            activeItem = this;
+            viewerFilename.textContent = filename;
+            jsonView.innerHTML = 'Loading...';
+            panel.classList.add('open');
+
+            fetch('/api/data-file/' + encodeURIComponent(filename))
+                .then(r => r.json())
+                .then(data => { jsonView.innerHTML = highlightJSON(data); })
+                .catch(() => { jsonView.textContent = 'Error loading file.'; });
+        });
+    });
+
+    document.getElementById('viewerClose').addEventListener('click', function() {
+        panel.classList.remove('open');
+        if (activeItem) { activeItem.classList.remove('active'); activeItem = null; }
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    //  Background dot grid
+    // ═══════════════════════════════════════════════════════════════
+    (function() {
+        const canvas = document.getElementById("dotGrid");
+        const ctx = canvas.getContext("2d");
+        let mouse = { x: -9999, y: -9999 };
+        function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
+            canvas.style.width = window.innerWidth + "px";
+            canvas.style.height = window.innerHeight + "px";
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        function draw() {
+            const w = window.innerWidth, h = window.innerHeight;
+            ctx.clearRect(0, 0, w, h);
+            for (let y = 7.5; y < h; y += 15) {
+                for (let x = 7.5; x < w; x += 15) {
+                    const dx = x - mouse.x, dy = y - mouse.y;
+                    const glow = Math.max(0, 1 - Math.sqrt(dx*dx+dy*dy) / 50);
+                    ctx.beginPath();
+                    ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
+                    ctx.arc(x, y, 1 + glow * 1.2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+        window.addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener("mouseleave", () => { mouse.x = -9999; mouse.y = -9999; });
+        window.addEventListener("resize", resize);
+        resize(); draw();
+    })();
+    </script>
+</body>
+</html>

@@ -39,20 +39,31 @@
 
         // Projects (depth 1) ──────────────────────────────────────
         { id: "5l",         label: "5L",   href: "/installation",  parent: "root", depth: 1 },
-        { id: "about",      label: "About Us",     href: "/about",        parent: "root", depth: 1 },
-        // { id: "research",   label: "Research",     href: "/research",     parent: "root", depth: 1 },
-        { id: "contact",    label: "Contact",      href: "/contact",      parent: "root", depth: 1 },
+        { id: "about",      label: "Studio",     href: "/about",        parent: "root", depth: 1 },
 
         // 5L sub-pages (depth 2) ──────────────────────────────────
         { id: "5l_live",    label: "Digital Twin",    href: "/play/random",  parent: "5l",   depth: 2 },
         { id: "5l_info",    label: "Research",         href: "/info",         parent: "5l",   depth: 2 },
         { id: "5l_install", label: "Installation",     href: "/installation", parent: "5l",   depth: 2 },
+
+        { id: "5l_data",    label: "Data",             href: "/data-explorer",parent: "5l_live",   depth: 3 },
+        
+        // About Us sub-pages (depth 2) ───────────────────────────────
+        // { id: "team",       label: "Team",         href: "/team",         parent: "about", depth: 2 },
+        { id: "contact",    label: "Contact",      href: "/contact",      parent: "about", depth: 2 },
     ];
 
     /* ── Build internal structures ───────────────────────────────
        We derive children[], expanded, visible from the flat list
        so you only ever need to edit GRAPH_NODES above.            */
     const nodeMap = {};
+    // ── Restore expansion state from sessionStorage ────────────
+    let savedState = null;
+    try {
+        const raw = sessionStorage.getItem('graphExpandedState');
+        if (raw) savedState = JSON.parse(raw);
+    } catch(e) {}
+
     GRAPH_NODES.forEach(n => {
         n.children = [];
         n.expanded = false;
@@ -205,12 +216,29 @@
                 .attr("ry", 4);
         });
 
-        // ── Click behaviour ─────────────────────────────────────
-        enter.on("click", function (event, d) {
+        // ── Long-press detection + Click behaviour ──────────────
+        let pressTimer = null;
+        let longPressed = false;
+
+        enter.on("pointerdown", function (event, d) {
+            longPressed = false;
+            if (d.children.length > 0) {
+                pressTimer = setTimeout(() => {
+                    longPressed = true;
+                    expandAllStepByStep(d);
+                }, 500);
+            }
+        })
+        .on("pointerup pointerleave", function () {
+            clearTimeout(pressTimer);
+        })
+        .on("click", function (event, d) {
             event.stopPropagation();
+            if (longPressed) { longPressed = false; return; }
 
             // "go to →" label clicked → navigate
             if (event.target.classList.contains("node-goto")) {
+                saveExpansionState();
                 window.location.href = d.href;
                 return;
             }
@@ -223,6 +251,7 @@
 
             // Leaf node → navigate directly
             if (d.href) {
+                saveExpansionState();
                 window.location.href = d.href;
             }
         });
@@ -236,6 +265,12 @@
     function sid(d) { return typeof d === "object" ? d.id : d; }
 
     // ── Expand / collapse ───────────────────────────────────────
+    // ── Save expansion state to sessionStorage ──────────────────
+    function saveExpansionState() {
+        const expanded = GRAPH_NODES.filter(n => n.expanded).map(n => n.id);
+        try { sessionStorage.setItem('graphExpandedState', JSON.stringify(expanded)); } catch(e) {}
+    }
+
     function toggleExpand(d) {
         if (d.expanded) {
             collapseDescendants(d);
@@ -244,6 +279,29 @@
             d.children.forEach(cid => { nodeMap[cid].visible = true; });
         }
         render();
+        saveExpansionState();
+    }
+
+    // ── Expand all descendants step by step ──────────────────────
+    function expandAllStepByStep(d) {
+        // Collect nodes depth-first that need expanding
+        const queue = [];
+        function collect(node) {
+            if (node.children.length > 0 && !node.expanded) {
+                queue.push(node);
+            }
+            node.children.forEach(cid => collect(nodeMap[cid]));
+        }
+        collect(d);
+        // Expand them one by one with a delay
+        queue.forEach((node, i) => {
+            setTimeout(() => {
+                node.expanded = true;
+                node.children.forEach(cid => { nodeMap[cid].visible = true; });
+                render();
+                saveExpansionState();
+            }, i * 300);
+        });
     }
 
     function collapseDescendants(d) {
@@ -299,9 +357,21 @@
     rootNode.visible = true;
     rootNode.x = W / 2;
     rootNode.y = H / 2;
+
+    // Restore saved expansion state
+    if (savedState && Array.isArray(savedState)) {
+        savedState.forEach(id => {
+            const n = nodeMap[id];
+            if (n && n.children.length > 0) {
+                n.expanded = true;
+                n.children.forEach(cid => { nodeMap[cid].visible = true; });
+            }
+        });
+    }
+
     render();
 
-    /* ── Background dot grid (unchanged from original) ───────── */
+    /* ── Background dot grid – nodes dim dots (opposite of mouse) */
     (function initDotGrid() {
         const canvas = document.getElementById("dotGrid");
         const ctx    = canvas.getContext("2d");
@@ -319,16 +389,38 @@
         function draw() {
             const w = window.innerWidth, h = window.innerHeight;
             const spacing = 15, radius = 1;
+            const nodeRadius = 45;
+
+            // Collect visible node positions once per frame
+            const nodePositions = visibleNodes()
+                .filter(n => n.x !== undefined && n.y !== undefined)
+                .map(n => ({ x: n.x, y: n.y }));
+
             ctx.clearRect(0, 0, w, h);
             for (let y = spacing / 2; y < h; y += spacing) {
                 for (let x = spacing / 2; x < w; x += spacing) {
-                    const dx   = x - mouse.x;
-                    const dy   = y - mouse.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    const glow = Math.max(0, 1 - dist / 50);
+                    // Mouse glow (brighter near cursor)
+                    const mdx  = x - mouse.x;
+                    const mdy  = y - mouse.y;
+                    const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+                    const glow = Math.max(0, 1 - mDist / 45);
+
+                    // Node dim (darker near nodes – opposite effect)
+                    let dim = 0;
+                    for (let i = 0; i < nodePositions.length; i++) {
+                        const ndx  = x - nodePositions[i].x;
+                        const ndy  = y - nodePositions[i].y;
+                        const nDist = Math.sqrt(ndx * ndx + ndy * ndy);
+                        const d = Math.max(0, 1 - nDist / nodeRadius);
+                        if (d > dim) dim = d;
+                    }
+
+                    const alpha = Math.max(0, 0.15 + glow * 0.6 - dim * 0.15);
+                    const r2    = Math.max(0.2, radius + glow * 1.2 - dim * 0.6);
+
                     ctx.beginPath();
-                    ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
-                    ctx.arc(x, y, radius + glow * 1.2, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+                    ctx.arc(x, y, r2, 0, Math.PI * 2);
                     ctx.fill();
                 }
             }

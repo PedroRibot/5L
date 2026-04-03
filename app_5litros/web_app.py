@@ -259,6 +259,64 @@ def installation_view():
     return render_template("installation.html")
 
 
+@app.route("/data-explorer")
+def data_explorer_view():
+    """File explorer for the data folder."""
+    files = []
+    for p in sorted(DATA_DIR.iterdir()):
+        if p.suffix == ".json" and not p.name.startswith(".") and p.name != "global.json":
+            files.append({
+                "name": p.name,
+                "size": p.stat().st_size,
+            })
+
+    # Build chart data: per-day total liters + max-liters video URL
+    day_data = _load_json(DATA_DIR / "day_data.json")
+    chart_points = []
+    for date_str in sorted(day_data.keys()):
+        dd = day_data[date_str]
+        total = dd.get("total_liters", 0)
+        if total == 0:
+            # Fallback: average * n_images
+            n = dd.get("n_images_videos", dd.get("n_images", 0))
+            avg = dd.get("average_liters", 0)
+            total = round(n * avg, 2)
+
+        # Find the max-liters video for the day
+        est_path = DATA_DIR / f"estimates_{date_str}.json"
+        max_video_url = None
+        if est_path.exists():
+            estimates = _load_json(est_path)
+            max_liters = -1
+            for entry in estimates.values():
+                wl = entry.get("estimate", {}).get("w_tot_l", 0)
+                if wl > max_liters:
+                    max_liters = wl
+                    max_video_url = entry.get("metadata", {}).get("url")
+
+        chart_points.append({
+            "date": date_str,
+            "liters": round(total, 2),
+            "video_url": max_video_url,
+        })
+
+    return render_template("data_explorer.html", files=files, chart_data=chart_points)
+
+
+@app.route("/api/data-file/<path:filename>")
+def api_data_file(filename):
+    """Return contents of a JSON file from the data folder."""
+    # Sanitize: only allow .json files, no path traversal
+    safe_name = Path(filename).name
+    if not safe_name.endswith(".json") or safe_name != filename:
+        return jsonify({"error": "Invalid filename"}), 400
+    file_path = DATA_DIR / safe_name
+    if not file_path.exists():
+        return jsonify({"error": "File not found"}), 404
+    data = _load_json(file_path)
+    return jsonify(data)
+
+
 @app.route("/data/info.pdf")
 def serve_info_pdf():
     """Serve the PDF file from the data directory."""

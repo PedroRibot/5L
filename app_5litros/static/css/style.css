@@ -477,6 +477,65 @@ html, body {
     flex: 1;
 }
 
+/* ── data.html: bottom-grow layout ───────────────────────────── */
+.data-bottom-grow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /* everything grows from bottom */
+}
+
+.data-bottom-grow .combo-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /* push content to bottom */
+}
+
+.data-bottom-grow .combo-global {
+    flex: 0 0 auto;
+    border-bottom: none;
+    border-top: 1px solid #111;
+}
+
+.data-bottom-grow .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /* stack toward bottom */
+}
+
+.data-bottom-grow .prompt-section {
+    flex: 1 1 auto;
+    align-items: flex-end;       /* text hugs the bottom of its box */
+    display: flex;
+}
+
+.data-bottom-grow .energia-water {
+    flex: 0 0 auto;              /* only as tall as content */
+}
+
+/* Left-aligned liters in xxx mode */
+.energia-water-left {
+    text-align: left;
+}
+
+.energia-water-left h1 {
+    text-align: left;
+}
+
+/* Created-at / by-who metadata line */
+.video-meta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 0.3em;
+}
+
+.video-meta-info span {
+    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+    opacity: 0.65;
+    line-height: 1.4;
+}
+
 @media (max-width: 1200px) {
     .combo-layout {
         flex-direction: column;
@@ -728,7 +787,91 @@ html, body {
 body.install-body {
     overflow-y: auto;
 }
+/* ═══════════════════════════════════════════════════════════════
+   XXX mode – pink / red theme override
+   Applied when <body class="xxx-mode"> is set by the template.
+   Only affects data.html and combined.html layouts.
+   ═══════════════════════════════════════════════════════════════ */
 
+body.xxx-mode {
+    background-color: #1a0008;
+    color: #fff;
+}
+
+body.xxx-mode .combo-layout {
+    background: #1a0008;
+}
+
+body.xxx-mode .data-only {
+    background: #1a0008;
+}
+
+body.xxx-mode .combo-global {
+    background: rgba(255, 5, 67, 0.7);
+    border-bottom: 1px solid #4a0012;
+}
+
+body.xxx-mode .combo-global-label {
+    color: #ff8fa3;
+}
+
+body.xxx-mode .combo-global-value {
+    color: #fff;
+}
+
+body.xxx-mode .energia-water h1 {
+    color: #ff4d6d;
+}
+
+body.xxx-mode .energia-water h2 {
+    color: #ff8fa3;
+}
+
+body.xxx-mode .energia-water p {
+    color: #ffccd5;
+}
+
+body.xxx-mode .prompt {
+    color: #ffdde1;
+}
+
+body.xxx-mode .today_data {
+    color: #ff8fa3;
+}
+
+body.xxx-mode .video-meta-info span {
+    color: #ff8fa3;
+}
+
+body.xxx-mode .combo-global {
+    border-top-color: #ff0040;
+}
+
+body.xxx-mode .combo-video {
+    background: #fb014c;
+}
+
+body.xxx-mode .bottom-nav,
+body.xxx-mode .bottom-nav-half {
+    background: rgba(40, 0, 10, 0.85);
+}
+
+body.xxx-mode .nav-link:hover {
+    color: #ff4d6d;
+}
+
+body.xxx-mode .expo-section {
+    background: rgba(40, 0, 10, 0.25);
+}
+
+body.xxx-mode .expo-link:hover {
+    color: #ff4d6d;
+    border-color: #ff4d6d;
+}
+
+body.xxx-mode .video-overlay-info span {
+    text-shadow: 0 1px 4px rgba(80, 0, 20, 0.9);
+}
 @media (max-width: 768px) {
     .install-row {
         flex-direction: column;
