@@ -104,6 +104,54 @@
             height: auto;
         }
 
+        /* ── Month groups ───────────────────────────────────────── */
+        .month-group {
+            margin-bottom: 0.15rem;
+        }
+
+        .month-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.55rem 0.8rem;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            transition: background 0.15s;
+            user-select: none;
+        }
+
+        .month-header:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .month-header .month-label {
+            opacity: 0.7;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+        }
+
+        .month-header .month-toggle {
+            opacity: 0.3;
+            font-size: 0.7rem;
+            transition: transform 0.25s;
+        }
+
+        .month-group.open .month-toggle {
+            transform: rotate(90deg);
+        }
+
+        .month-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .month-group.open .month-items {
+            max-height: 2000px;
+        }
+
         /* ── File list ─────────────────────────────────────────── */
         .file-list {
             list-style: none;
@@ -115,12 +163,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.6rem 0.8rem;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding: 0.5rem 0.8rem 0.5rem 1.6rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             cursor: pointer;
             transition: background 0.15s;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
         }
 
         .file-item:hover {
@@ -134,11 +182,12 @@
 
         .file-name { opacity: 0.9; }
         .file-size { opacity: 0.3; font-size: 0.75rem; }
+        .file-count { opacity: 0.3; font-size: 0.72rem; }
 
-        /* ── JSON viewer ───────────────────────────────────────── */
+        /* ── JSON viewer (inline) ──────────────────────────────── */
         .viewer-panel {
-            margin-top: 1.5rem;
             display: none;
+            padding: 0 0.8rem 0.6rem 1.6rem;
         }
 
         .viewer-panel.open {
@@ -179,7 +228,7 @@
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 4px;
             padding: 1rem;
-            max-height: 70vh;
+            max-height: 50vh;
             overflow: auto;
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.78rem;
@@ -211,16 +260,10 @@
         <!-- Chart -->
         <div class="chart-section" id="chartSection"></div>
 
-        <!-- File list -->
-        <ul class="file-list" id="fileList">
-            {% for f in files %}
-            <li class="file-item" data-filename="{{ f.name }}">
-                <span class="file-name">{{ f.name }}</span>
-                <span class="file-size">{{ (f.size / 1024)|round(1) }} KB</span>
-            </li>
-            {% endfor %}
-        </ul>
+        <!-- File list grouped by month -->
+        <div id="fileList"></div>
 
+        <!-- Floating viewer panel (inserted inline via JS) -->
         <div class="viewer-panel" id="viewerPanel">
             <div class="viewer-header">
                 <span class="viewer-filename" id="viewerFilename"></span>
@@ -358,14 +401,90 @@
                 const filename = 'estimates_' + d.dateStr + '.json';
                 const item = document.querySelector(`.file-item[data-filename="${filename}"]`);
                 if (item) {
-                    item.click();
-                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Ensure parent month group is open
+                    const group = item.closest('.month-group');
+                    if (group && !group.classList.contains('open')) group.classList.add('open');
+                    openViewer(item, filename);
+                    setTimeout(() => item.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
                 }
             });
     })();
 
     // ═══════════════════════════════════════════════════════════════
-    //  JSON viewer
+    //  Build grouped file list
+    // ═══════════════════════════════════════════════════════════════
+    const FILES = {{ files | tojson }};
+    const MONTH_NAMES = ['January','February','March','April','May','June',
+                         'July','August','September','October','November','December'];
+
+    (function buildFileList() {
+        const container = document.getElementById('fileList');
+        const groups = {};   // 'YYYY-MM' -> [file, ...]
+        const other = [];    // non-estimate files
+
+        FILES.forEach(f => {
+            const m = f.name.match(/^estimates_(\d{4})-(\d{2})-\d{2}\.json$/);
+            if (m) {
+                const key = m[1] + '-' + m[2];
+                (groups[key] = groups[key] || []).push(f);
+            } else {
+                other.push(f);
+            }
+        });
+
+        // Render non-estimate files first
+        if (other.length) {
+            const ul = document.createElement('ul');
+            ul.className = 'file-list';
+            other.forEach(f => ul.appendChild(makeFileItem(f)));
+            container.appendChild(ul);
+        }
+
+        // Render month groups (sorted descending)
+        const sortedKeys = Object.keys(groups).sort().reverse();
+        sortedKeys.forEach(key => {
+            const [yr, mo] = key.split('-');
+            const label = MONTH_NAMES[parseInt(mo, 10) - 1] + ' ' + yr;
+            const items = groups[key].sort((a, b) => a.name.localeCompare(b.name));
+
+            const div = document.createElement('div');
+            div.className = 'month-group';
+
+            const header = document.createElement('div');
+            header.className = 'month-header';
+            header.innerHTML = '<span class="month-label">' + label + '</span>'
+                             + '<span class="file-count">' + items.length + ' files</span>'
+                             + '<span class="month-toggle">▶</span>';
+            header.addEventListener('click', () => div.classList.toggle('open'));
+            div.appendChild(header);
+
+            const itemsDiv = document.createElement('div');
+            itemsDiv.className = 'month-items';
+            const ul = document.createElement('ul');
+            ul.className = 'file-list';
+            items.forEach(f => ul.appendChild(makeFileItem(f)));
+            itemsDiv.appendChild(ul);
+            div.appendChild(itemsDiv);
+
+            container.appendChild(div);
+        });
+    })();
+
+    function makeFileItem(f) {
+        const li = document.createElement('li');
+        li.className = 'file-item';
+        li.dataset.filename = f.name;
+        const detail = f.total_liters != null
+            ? (f.total_liters.toFixed(1) + ' L')
+            : ((f.size / 1024).toFixed(1) + ' KB');
+        li.innerHTML = '<span class="file-name">' + f.name + '</span>'
+                     + '<span class="file-size">' + detail + '</span>';
+        li.addEventListener('click', () => openViewer(li, f.name));
+        return li;
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  JSON viewer (inline)
     // ═══════════════════════════════════════════════════════════════
     function highlightJSON(obj, indent) {
         indent = indent || 0;
@@ -396,22 +515,30 @@
     const viewerFilename = document.getElementById('viewerFilename');
     let activeItem = null;
 
-    document.querySelectorAll('.file-item').forEach(item => {
-        item.addEventListener('click', function() {
-            const filename = this.dataset.filename;
-            if (activeItem) activeItem.classList.remove('active');
-            this.classList.add('active');
-            activeItem = this;
-            viewerFilename.textContent = filename;
-            jsonView.innerHTML = 'Loading...';
-            panel.classList.add('open');
+    function openViewer(li, filename) {
+        // Close previous
+        if (activeItem) activeItem.classList.remove('active');
+        if (activeItem === li) {
+            // Toggle off
+            panel.classList.remove('open');
+            panel.remove();
+            activeItem = null;
+            return;
+        }
+        li.classList.add('active');
+        activeItem = li;
+        viewerFilename.textContent = filename;
+        jsonView.innerHTML = 'Loading...';
+        panel.classList.add('open');
 
-            fetch('/api/data-file/' + encodeURIComponent(filename))
-                .then(r => r.json())
-                .then(data => { jsonView.innerHTML = highlightJSON(data); })
-                .catch(() => { jsonView.textContent = 'Error loading file.'; });
-        });
-    });
+        // Insert panel right after the clicked item
+        li.parentNode.insertBefore(panel, li.nextSibling);
+
+        fetch('/api/data-file/' + encodeURIComponent(filename))
+            .then(r => r.json())
+            .then(data => { jsonView.innerHTML = highlightJSON(data); })
+            .catch(() => { jsonView.textContent = 'Error loading file.'; });
+    }
 
     document.getElementById('viewerClose').addEventListener('click', function() {
         panel.classList.remove('open');

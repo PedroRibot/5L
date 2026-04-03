@@ -262,16 +262,23 @@ def installation_view():
 @app.route("/data-explorer")
 def data_explorer_view():
     """File explorer for the data folder."""
+    day_data = _load_json(DATA_DIR / "day_data.json")
+
     files = []
     for p in sorted(DATA_DIR.iterdir()):
         if p.suffix == ".json" and not p.name.startswith(".") and p.name != "global.json":
-            files.append({
-                "name": p.name,
-                "size": p.stat().st_size,
-            })
+            entry = {"name": p.name, "size": p.stat().st_size}
+            m = __import__('re').match(r'^estimates_(\d{4}-\d{2}-\d{2})\.json$', p.name)
+            if m and m.group(1) in day_data:
+                dd = day_data[m.group(1)]
+                total = dd.get("total_liters", 0)
+                if total == 0:
+                    n = dd.get("n_images_videos", dd.get("n_images", 0))
+                    total = round(n * dd.get("average_liters", 0), 2)
+                entry["total_liters"] = total
+            files.append(entry)
 
     # Build chart data: per-day total liters + max-liters video URL
-    day_data = _load_json(DATA_DIR / "day_data.json")
     chart_points = []
     for date_str in sorted(day_data.keys()):
         dd = day_data[date_str]
