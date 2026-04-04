@@ -389,7 +389,6 @@ html, body {
     justify-content: center;
     gap: 2rem;
     padding: 0.6rem 1rem;
-    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
     z-index: 100;
 }
@@ -433,7 +432,7 @@ html, body {
     justify-content: center;
     gap: 2rem;
     padding: 0.6rem 1rem;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     z-index: 100;
 }
