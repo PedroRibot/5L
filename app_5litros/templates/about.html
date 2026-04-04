@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>POLARI – About Us</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/accent.js') }}"></script>
 </head>
 <body>
     <canvas id="dotGrid" class="home-grid"></canvas>
 
     <div class="page-container">
         <div class="page-content">
-            <h1>About Us</h1>
             <p class="page-subtitle">POLARI is a creative studio exploring the intersection of technology, ecology, and media art.</p>
 
             <div class="page-section">
@@ -51,13 +51,14 @@
         }
         function draw() {
             const w = window.innerWidth, h = window.innerHeight;
+            const [ar, ag, ab] = getAccentRGB();
             ctx.clearRect(0, 0, w, h);
             for (let y = 7.5; y < h; y += 15) {
                 for (let x = 7.5; x < w; x += 15) {
                     const dx = x - mouse.x, dy = y - mouse.y;
                     const glow = Math.max(0, 1 - Math.sqrt(dx*dx+dy*dy) / 50);
                     ctx.beginPath();
-                    ctx.fillStyle = `rgba(255,255,255,${0.15 + glow * 0.6})`;
+                    ctx.fillStyle = `rgba(${ar},${ag},${ab},${0.15 + glow * 0.6})`;
                     ctx.arc(x, y, 1 + glow * 1.2, 0, Math.PI * 2);
                     ctx.fill();
                 }

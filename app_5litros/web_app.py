@@ -247,6 +247,12 @@ def research_view():
     return render_template("research.html")
 
 
+@app.route("/timeline")
+def timeline_view():
+    """Timeline page."""
+    return render_template("timeline.html")
+
+
 @app.route("/contact")
 def contact_view():
     """Contact page."""
