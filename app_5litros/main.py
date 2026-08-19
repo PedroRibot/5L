@@ -19,7 +19,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from fetch import fetch_top_civitai_images, load_backup_data
+from fetch import fetch_top_civitai_images, fetch_filler_videos, load_backup_data
 from water_consumption_estimate import (
     calculate_water_consumption_estimate,
     get_video_properties,
@@ -41,7 +41,7 @@ signal.signal(signal.SIGTERM, _handle_signal)
 # ── Main application ───────────────────────────────────────────────────────
 class WaterEstimatorApp:
     def __init__(self, limit=10, period="Day", sort="Most Reactions",
-                 output_dir="./data", nsfw=False, type="video"):
+                 output_dir="./data", nsfw=False, type="video", daily_target=150):
         self.limit = limit
         self.period = period
         self.sort = sort
@@ -49,6 +49,7 @@ class WaterEstimatorApp:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.nsfw = nsfw
         self.type = type
+        self.daily_target = daily_target
         self.socketio_instance = None
 
     # ── workflow ────────────────────────────────────────────────────────
@@ -69,15 +70,12 @@ class WaterEstimatorApp:
 
         video_count = len(images_data["items"]) if images_data and images_data.get("items") else 0
 
-        if video_count < 60:
-            if video_count > 0:
-                print(f"Only {video_count} videos returned (< 60) – activating backup fallback.")
-            else:
-                print("API returned no data – activating backup fallback.")
+        if video_count == 0:
+            print("Civitai API returned no data – activating backup fallback.")
             backup_data = load_backup_data()
             if backup_data:
                 images_data = backup_data
-            elif video_count == 0:
+            else:
                 print("No data from API or backup – skipping this cycle.")
                 return
 
@@ -97,7 +95,22 @@ class WaterEstimatorApp:
         n = len(estimates)
 
         # 3) Estimate new videos -------------------------------------------
-        self._update_estimates(images_data, estimates, n)
+        n, known_ids = self._update_estimates(images_data, estimates, n)
+
+        # 3b) Top up with older/random filler videos if short of target ----
+        if len(estimates) < self.daily_target:
+            needed = self.daily_target - len(estimates)
+            print(f"Only {len(estimates)} videos today (< {self.daily_target}) – "
+                  f"fetching {needed} filler videos from older content.")
+            filler_items = fetch_filler_videos(
+                needed=needed,
+                exclude_ids=known_ids,
+                min_age_days=15,
+                nsfw=self.nsfw,
+                type=self.type,
+                state_path=str(self.output_dir / "filler_state.json"),
+            )
+            self._add_items(filler_items, estimates, known_ids, n)
 
         # 4) Persist estimates ---------------------------------------------
         try:
@@ -127,7 +140,12 @@ class WaterEstimatorApp:
             if isinstance(entry, dict) and "metadata" in entry:
                 known_ids.add(entry["metadata"].get("id"))
 
-        for item in images_data["items"]:
+        n = self._add_items(images_data["items"], estimates, known_ids, n)
+        return n, known_ids
+
+    def _add_items(self, items, estimates, known_ids, n):
+        """Estimate and append *items* to *estimates*, skipping known ids."""
+        for item in items:
             item_id = item.get("id")
             if item_id in known_ids:
                 continue
@@ -137,10 +155,12 @@ class WaterEstimatorApp:
                 if result is None:
                     continue
                 estimates[str(n)] = result
+                known_ids.add(item_id)
                 n += 1
             except Exception as e:
                 print(f"  ✗ Error estimating {item_id}: {e}")
                 traceback.print_exc()
+        return n
 
     def _estimate_single(self, item):
         """Return an estimate dict for one API item, or None to skip."""
@@ -168,8 +188,8 @@ class WaterEstimatorApp:
         if video_data["fps"] == 0:
             video_data["fps"] = 30
 
-        if video_data["duration"] >= 60:
-            print(f"  ⚠ Skipping {item_id}: duration {video_data['duration']:.1f}s > 60s")
+        if video_data["duration"] >= 120:
+            print(f"  ⚠ Skipping {item_id}: duration {video_data['duration']:.1f}s > 120s")
             return None
 
         width = video_data.get("width", 768)
@@ -280,6 +300,7 @@ if __name__ == "__main__":
         nsfw=config.get("nsfw", False),
         sort=config.get("sort", "Newest"),
         period=config.get("period", "Day"),
+        daily_target=config.get("daily_target", 250),
     )
 
     flask_thread = threading.Thread(target=app.start_flask_server, daemon=True)

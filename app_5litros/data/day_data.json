@@ -94,5 +94,11 @@
     "total_duration_seconds": 942.3815049999995,
     "total_liters": 127.94707092097067,
     "average_liters": 0.9204825246112999
+  },
+  "2026-08-19": {
+    "n_images_videos": 150,
+    "total_duration_seconds": 1550.7402310000011,
+    "total_liters": 200.40359150264172,
+    "average_liters": 1.3360239433509449
   }
 }

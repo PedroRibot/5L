@@ -2,7 +2,7 @@ import requests
 import json
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -78,6 +78,109 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
 
     print(f"✓ Successfully retrieved {len(all_items)} items total\n")
     return {"items": all_items[:limit]}
+
+
+def _load_filler_cursor(state_path):
+    try:
+        with open(state_path, "r") as f:
+            return json.load(f).get("cursor")
+    except (FileNotFoundError, json.JSONDecodeError, IOError):
+        return None
+
+
+def _save_filler_cursor(state_path, cursor):
+    try:
+        Path(state_path).parent.mkdir(parents=True, exist_ok=True)
+        with open(state_path, "w") as f:
+            json.dump({"cursor": cursor}, f)
+    except IOError as e:
+        print(f"  ⚠ Could not persist filler cursor: {e}")
+
+
+def fetch_filler_videos(needed, exclude_ids, min_age_days=15, nsfw=False,
+                        type="video", state_path="data/filler_state.json",
+                        max_pages=40):
+    """
+    Top up a day's videos with older, random Civitai items that satisfy:
+      1) createdAt is more than *min_age_days* days in the past.
+      2) item has non-empty meta.prompt.
+
+    Civitai's API has no date-filter param, so this walks `sort=Random`
+    pages via cursor (persisted on disk) until enough qualifying items are
+    found. The cursor position naturally drifts further into the past as
+    it advances, so each call continues where the last one left off
+    instead of re-scanning the same recent pages.
+    """
+    if needed <= 0:
+        return []
+
+    base_url = "https://civitai.com/api/v1/images"
+    cutoff = datetime.now(timezone.utc) - timedelta(days=min_age_days)
+    exclude_ids = set(exclude_ids)
+    collected = []
+    cursor = _load_filler_cursor(state_path)
+
+    for page in range(max_pages):
+        if len(collected) >= needed:
+            break
+
+        params = {
+            "limit": 200,
+            "sort": "Random",
+            "period": "AllTime",
+            "nsfw": nsfw,
+            "type": type,
+            "withMeta": True,
+        }
+        if cursor:
+            params["cursor"] = cursor
+
+        try:
+            print(f"  Fetching filler page {page + 1}/{max_pages} "
+                  f"({len(collected)}/{needed} found)...")
+            response = requests.get(base_url, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+        except requests.exceptions.RequestException as e:
+            print(f"  ✗ Filler request failed: {e}")
+            break
+
+        items = data.get("items", [])
+        if not items:
+            cursor = None  # exhausted history, wrap around next time
+            break
+
+        for item in items:
+            item_id = item.get("id")
+            if item_id in exclude_ids:
+                continue
+
+            meta = item.get("meta") or {}
+            if not meta.get("prompt"):
+                continue
+
+            created_at = item.get("createdAt", "")
+            try:
+                created_dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+            except ValueError:
+                continue
+            if created_dt > cutoff:
+                continue
+
+            exclude_ids.add(item_id)
+            collected.append(item)
+            if len(collected) >= needed:
+                break
+
+        cursor = data.get("metadata", {}).get("nextCursor")
+        if not cursor:
+            break  # reached the end of Civitai's history, wrap around next time
+
+        time.sleep(1.0)  # be polite to the API between pages
+
+    _save_filler_cursor(state_path, cursor)
+    print(f"✓ Filler fetch collected {len(collected)}/{needed} videos\n")
+    return collected[:needed]
 
 
 def load_backup_data(backup_dir="../downloads/backup"):

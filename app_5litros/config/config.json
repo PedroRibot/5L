@@ -1,7 +1,8 @@
 {
-    "limit": 61,
+    "limit": 60,
     "type": "video",
     "nsfw": false,
     "sort": "Newest",
-    "period": "Day"
+    "period": "Day",
+    "daily_target": 250
 }
