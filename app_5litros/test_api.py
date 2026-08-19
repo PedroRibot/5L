@@ -10,6 +10,7 @@ params = {
     "period": cfg["period"],
     "nsfw": cfg["nsfw"],
     "type": cfg["type"],
+    "withMeta": True,  # required for Civitai to include the generation "meta" (prompt, steps...)
 }
 
 print(f"Request params: {json.dumps(params, indent=2)}\n")

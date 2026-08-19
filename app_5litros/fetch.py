@@ -30,6 +30,7 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
             "period": period,
             "nsfw": nsfw,
             "type": type,
+            "withMeta": True,  # required for Civitai to include the generation "meta" (prompt, steps...)
         }
         if cursor:
             params["cursor"] = cursor
