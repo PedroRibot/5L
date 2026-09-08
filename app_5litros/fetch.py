@@ -1,4 +1,3 @@
-import concurrent.futures
 import requests
 import json
 import os
@@ -6,28 +5,6 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
-
-
-def _get_with_deadline(url, params, timeout=30):
-    """requests.get() with a hard, unconditional wall-clock deadline.
-
-    ``timeout=`` on requests only bounds socket I/O *after* a connection
-    attempt starts - DNS resolution (getaddrinfo) and OS-level proxy
-    auto-discovery (e.g. Windows WPAD) are NOT covered by it and can block
-    far longer than expected when the network is genuinely down. Running
-    the call in a worker thread and giving up after ``timeout + 10``s
-    guarantees callers never hang indefinitely regardless of the cause.
-    """
-    executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-    future = executor.submit(requests.get, url, params=params, timeout=timeout)
-    try:
-        return future.result(timeout=timeout + 10)
-    except concurrent.futures.TimeoutError:
-        raise requests.exceptions.Timeout(
-            f"Hard deadline of {timeout + 10}s exceeded (DNS/proxy likely stalled)"
-        )
-    finally:
-        executor.shutdown(wait=False)  # leave any still-stuck thread behind; never block on it
 
 
 def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
@@ -63,7 +40,7 @@ def fetch_top_civitai_images(limit=10, period="Day", sort="Most Reactions",
             try:
                 print(f"  Fetching batch ({len(all_items)}/{limit}) "
                       f"from Civitai (attempt {attempt})...")
-                response = _get_with_deadline(base_url, params, timeout=30)
+                response = requests.get(base_url, params=params, timeout=30)
                 response.raise_for_status()
                 data = response.json()
                 break
@@ -161,7 +138,7 @@ def fetch_filler_videos(needed, exclude_ids, min_age_days=15, nsfw=False,
         try:
             print(f"  Fetching filler page {page + 1}/{max_pages} "
                   f"({len(collected)}/{needed} found)...")
-            response = _get_with_deadline(base_url, params, timeout=30)
+            response = requests.get(base_url, params=params, timeout=30)
             response.raise_for_status()
             data = response.json()
         except requests.exceptions.RequestException as e:
