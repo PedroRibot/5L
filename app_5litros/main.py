@@ -173,9 +173,13 @@ class WaterEstimatorApp:
         n_words = len(prompt.split()) if prompt else 70
         n_steps = meta.get("steps", 25) or 25
 
-        # Video properties via ffprobe (URL)
+        # Video properties via ffprobe. Prefer the local backup file (if any)
+        # so probing never depends on a possibly-unreachable remote URL.
         url = item.get("url", "")
-        video_data = get_video_properties(url) if url else None
+        local_video_path = item.get("_local_video_path")
+        local_video_filename = item.get("_local_video_filename")
+        probe_source = local_video_path or url
+        video_data = get_video_properties(probe_source) if probe_source else None
 
         if not video_data:
             video_data = {
@@ -211,6 +215,7 @@ class WaterEstimatorApp:
             "metadata": {
                 "id": item.get("id", ""),
                 "url": url,
+                "local_video_filename": local_video_filename,
                 "created_at": item.get("createdAt", ""),
                 "created_by": item.get("username", ""),
                 "prompt": prompt,

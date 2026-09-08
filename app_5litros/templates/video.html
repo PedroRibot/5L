@@ -15,7 +15,7 @@
     <div class="video-container">
         
         <video id="videoPlayer" autoplay playsinline>
-            <source src="{{ metadata.get('url', '') }}" type="video/mp4">
+            <source src="{{ url_for('backup_media', filename=metadata.get('local_video_filename')) if metadata.get('local_video_filename') else metadata.get('url', '') }}" type="video/mp4">
         </video>
     </div>
 

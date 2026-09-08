@@ -183,10 +183,29 @@ def fetch_filler_videos(needed, exclude_ids, min_age_days=15, nsfw=False,
     return collected[:needed]
 
 
-def load_backup_data(backup_dir="../downloads/backup"):
+DEFAULT_BACKUP_DIR = "../downloads/backup"
+_BACKUP_VIDEO_EXTENSIONS = (".mp4", ".webm", ".mov")
+
+
+def _find_backup_video(backup_path, idx):
+    """Return the Path of the local backup video matching *idx*, or None."""
+    for ext in _BACKUP_VIDEO_EXTENSIONS:
+        candidate = backup_path / f"{idx}{ext}"
+        if candidate.is_file():
+            return candidate
+    return None
+
+
+def load_backup_data(backup_dir=DEFAULT_BACKUP_DIR):
     """
     Read local metadata JSON files from the backup directory and return them
     in the same {"items": [...]} format as the Civitai API.
+
+    Each item also gets two internal, non-persisted keys (when a matching
+    local video file is found) so the rest of the pipeline can use the
+    downloaded backup video instead of depending on a remote URL:
+      * "_local_video_path"     – absolute path, used for local ffprobe reads
+      * "_local_video_filename" – bare filename, safe to expose via the web app
     """
     backup_path = Path(backup_dir)
     if not backup_path.is_dir():
@@ -198,9 +217,19 @@ def load_backup_data(backup_dir="../downloads/backup"):
         try:
             with open(meta_file, "r", encoding="utf-8") as f:
                 item = json.load(f)
-            items.append(item)
         except (json.JSONDecodeError, IOError) as e:
             print(f"  ⚠ Skipping {meta_file.name}: {e}")
+            continue
+
+        idx = meta_file.stem.replace("_metadata", "")
+        video_path = _find_backup_video(backup_path, idx)
+        if video_path:
+            item["_local_video_path"] = str(video_path.resolve())
+            item["_local_video_filename"] = video_path.name
+        else:
+            print(f"  ⚠ No local video found for {meta_file.name}")
+
+        items.append(item)
 
     if not items:
         print("  ✗ No valid metadata files found in backup.")

@@ -82,6 +82,8 @@
         function fitTextToContainer() {
             const prompt = document.getElementById('promptText');
             if (!prompt) return;
+
+            
             const container = prompt.parentElement;
             const maxW = container.clientWidth;
             const maxH = container.clientHeight;
@@ -99,6 +101,10 @@
                 } else {
                     hi = mid - 1;
                 }
+            }
+
+            if (prompt.textContent.trim() === 'No prompt provided.') {
+                best = best * 0.5;
             }
             prompt.style.fontSize = best + 'px';
         }

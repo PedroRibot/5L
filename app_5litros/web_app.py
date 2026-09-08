@@ -25,12 +25,17 @@ from flask import (Flask, jsonify, render_template, request,
 from flask_socketio import SocketIO, emit
 import json
 
+from fetch import DEFAULT_BACKUP_DIR
+
 # ── App setup ───────────────────────────────────────────────────────────────
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "5litros-secret-key"
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
 
 DATA_DIR = Path("./data")
+# Same directory used by fetch.load_backup_data(), so local backup videos
+# referenced in metadata.local_video_filename always resolve here.
+BACKUP_DIR = Path(DEFAULT_BACKUP_DIR)
 
 
 def _today():
@@ -76,6 +81,17 @@ def _random_index():
 def home():
     """Landing page with navigation buttons."""
     return render_template("home.html")
+
+
+@app.route("/backup-media/<path:filename>")
+def backup_media(filename):
+    """
+    Serve a locally downloaded backup video by filename.
+
+    send_from_directory guards against path traversal, so only files that
+    live directly inside BACKUP_DIR can ever be returned.
+    """
+    return send_from_directory(BACKUP_DIR, filename)
 
 
 @app.route("/play/")
@@ -305,7 +321,12 @@ def data_explorer_view():
                 wl = entry.get("estimate", {}).get("w_tot_l", 0)
                 if wl > max_liters:
                     max_liters = wl
-                    max_video_url = entry.get("metadata", {}).get("url")
+                    meta = entry.get("metadata", {})
+                    local_filename = meta.get("local_video_filename")
+                    max_video_url = (
+                        url_for("backup_media", filename=local_filename)
+                        if local_filename else meta.get("url")
+                    )
 
         chart_points.append({
             "date": date_str,
