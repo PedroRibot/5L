@@ -19,6 +19,14 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
+# When stdout/stderr are redirected to a file (e.g. `>> pyapp.log`), Python
+# switches to full block-buffering instead of line-buffering, so log output
+# can lag minutes behind reality and make a slow-but-alive process look
+# "frozen". Force UTF-8 + line-buffering regardless of how the process is
+# launched.
+sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+sys.stderr.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+
 from fetch import fetch_top_civitai_images, fetch_filler_videos, load_backup_data
 from water_consumption_estimate import (
     calculate_water_consumption_estimate,
