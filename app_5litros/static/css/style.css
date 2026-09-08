@@ -159,6 +159,10 @@ html, body {
     gap: 2px;
     z-index: 10;
     pointer-events: none;
+    /* Promote to its own compositor layer so it stays above Chromium's
+       hardware (DirectComposition) video overlay on Windows, which
+       otherwise renders on top of everything else regardless of z-index. */
+    transform: translateZ(0);
 }
 
 .video-overlay-info span {
